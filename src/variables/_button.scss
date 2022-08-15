@@ -1,0 +1,15 @@
+@include cssvars(
+  (
+    button-padding-y: 0.5em,
+    button-padding-x: 0.75em,
+    button-border-width: 2px,
+    button-background-color: var(--#{$prefix}-base-color),
+    button-background-color-invert: var(--#{$prefix}-base-color-invert),
+    button-border-color: var(--#{$prefix}-base-color),
+    button-border-color-invert: var(--#{$prefix}-base-color),
+    button-color: var(--#{$prefix}-base-color),
+    button-color-invert: var(--#{$prefix}-base-color-invert),
+  ),
+  $prefix,
+  ".button"
+);

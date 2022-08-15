@@ -1,0 +1,26 @@
+%grid {
+  --grid-margin: #{cssvar(content-margin-phone)};
+  display: grid;
+  gap: cssvar(grid-gap);
+  grid-template-columns:
+    var(--grid-margin)
+    repeat(10, 1fr) var(--grid-margin);
+  grid-template-rows: 1fr;
+  width: 100%;
+
+  @include mobile-only {
+    --grid-margin: #{cssvar(content-margin-mobile)};
+  }
+  @include tablet-only {
+    --grid-margin: #{cssvar(content-margin-tablet)};
+  }
+  @include desktop-only {
+    --grid-margin: #{cssvar(content-margin-desktop)};
+  }
+  @include widescreen-only {
+    --grid-margin: #{cssvar(content-margin-widescreen)};
+  }
+  @include fullhd {
+    --grid-margin: #{cssvar(content-margin-fullhd)};
+  }
+}

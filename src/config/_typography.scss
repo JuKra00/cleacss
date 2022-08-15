@@ -1,0 +1,33 @@
+@mixin font-size($target: "") {
+  @for $size from 1 through 7 {
+    .is-size-#{$size}#{if($target == "", "", "-" + $target)} {
+      font-size: cssvar(size-#{$size}) !important;
+    }
+  }
+}
+
+@mixin responsive-font-size() {
+  @for $size from 1 through 7 {
+    .is-size-#{$size}-responsive {
+      font-size: clamp(
+        cssvar(size-#{$size}-min),
+        cssvar(size-#{$size}-pref),
+        cssvar(size-#{$size}-max)
+      ) !important;
+    }
+  }
+}
+
+@mixin followingTextElements() {
+  & + p,
+  & + ul,
+  & + ol,
+  & + h1,
+  & + h2,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + h6 {
+    @content;
+  }
+}

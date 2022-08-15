@@ -1,0 +1,21 @@
+table {
+  @include cssvar(table-border-color, cssvar(base-color));
+  @include cssvar(table-border-width, cssvar(border-width));
+  @include cssvar(table-padding-x, cssvar(input-padding-x));
+  @include cssvar(table-padding-y, cssvar(input-padding-y));
+  display: table;
+
+  tr {
+    background-color: transparent;
+    border: none;
+    &:nth-child(2n) {
+      background-color: transparent;
+    }
+  }
+}
+
+th,
+td {
+  border: cssvar(table-border-width) solid cssvar(table-border-color);
+  padding: cssvar(table-padding-x) cssvar(table-padding-y);
+}

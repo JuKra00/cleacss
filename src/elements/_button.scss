@@ -1,0 +1,72 @@
+/* Buttons */
+
+.button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+button {
+  appearance: none;
+  background: cssvar(button-background-color);
+  border: cssvar(button-border-width) solid cssvar(button-border-color);
+  border-radius: cssvar(border-radius);
+  color: cssvar(button-color-invert);
+  cursor: pointer;
+  display: inline-block;
+  font-family: cssvar(font-family);
+  font-weight: cssvar(font-weight-bold);
+  line-height: cssvar(line-height);
+  outline: none;
+  padding: cssvar(button-padding-y) cssvar(button-padding-x);
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s, color 0.2s,
+    transform 0.1s;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:focus {
+    @include shadow();
+  }
+
+  &:focus,
+  &:hover {
+    background: cssvar(button-background-color-invert);
+    border-color: cssvar(button-bordr-color-invert);
+    color: cssvar(button-color);
+    text-decoration: none;
+  }
+
+  &:active,
+  &.is-active {
+    transform: scale(0.95);
+  }
+
+  &.is-hovered,
+  &.is-active {
+    background: cssvar(button-background-color-invert);
+    border-color: cssvar(button-border-color-invert);
+    color: cssvar(button-color);
+    text-decoration: none;
+  }
+
+  &[disabled],
+  &:disabled,
+  &.is-disabled {
+    cursor: default;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+/* --------------------------------------------------------------
+# Button Group
+-------------------------------------------------------------- */
+
+.buttons {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: cssvar(gap-small);
+  justify-content: flex-start;
+}

@@ -1,0 +1,35 @@
+@import "../config/typography";
+
+%title {
+  display: block;
+  font-family: cssvar(font-family);
+  font-size: cssvar(size-3);
+  font-weight: cssvar(font-weight-bold);
+  line-height: cssvar(title-line-height);
+
+  @include followingTextElements {
+    margin-top: cssvar(gap);
+  }
+}
+
+.title {
+  @extend %title;
+}
+
+.subtitle {
+  display: block;
+  font-family: cssvar(font-family);
+  font-size: cssvar(size-3);
+  font-weight: cssvar(font-weight-light);
+  line-height: cssvar(line-height);
+  @include followingTextElements {
+    margin-top: cssvar(gap);
+  }
+}
+
+@for $num from 1 through 6 {
+  h#{$num} {
+    @extend %title;
+    font-size: cssvar(size-#{$num});
+  }
+}

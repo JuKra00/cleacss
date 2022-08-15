@@ -1,0 +1,91 @@
+/* --------------------------------------------------------------
+# Grid
+-------------------------------------------------------------- */
+
+.grid {
+  @extend %grid;
+
+  .container:not(.is-fullwidth) & {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  > .column {
+    grid-column-end: span 1;
+    grid-row: span 1;
+  }
+
+  &.is-vcentered {
+    align-items: center;
+  }
+}
+
+@mixin generateGridColumns($suffix: "") {
+  .grid.is-oneline#{if($suffix == "", "", "-" + $suffix)} {
+    > .column {
+      grid-row: 1/-1;
+    }
+  }
+
+  .grid.is-gapless#{if($suffix == "", "", "-" + $suffix)} {
+    gap: 0;
+  }
+
+  @for $i from 1 through 11 {
+    $num: $i;
+    .grid > .column.is-#{$num}#{if($suffix == "", "", "-" + $suffix)} {
+      grid-column-end: span $num;
+    }
+  }
+
+  @for $num from 0 through 10 {
+    .grid > .column.is-offset-#{$num}#{if($suffix == "", "", "-" + $suffix)} {
+      grid-column-start: $num + 1;
+    }
+  }
+
+  .grid > .column.is-12#{if($suffix == "", "", "-" + $suffix)} {
+    grid-column-end: span 12;
+  }
+}
+
+@include generateGridColumns();
+
+@include phone {
+  @include generateGridColumns("phone");
+}
+
+@include mobile {
+  @include generateGridColumns("mobile");
+}
+
+@include tablet {
+  @include generateGridColumns("tablet");
+}
+
+@include desktop {
+  @include generateGridColumns("desktop");
+}
+
+@include widescreen {
+  @include generateGridColumns("widescreen");
+}
+
+@include fullhd {
+  @include generateGridColumns("fullhd");
+}
+
+@include mobile-only {
+  @include generateGridColumns("mobile-only");
+}
+
+@include tablet-only {
+  @include generateGridColumns("tablet-only");
+}
+
+@include desktop-only {
+  @include generateGridColumns("desktop-only");
+}
+
+@include widescreen-only {
+  @include generateGridColumns("widescreen-only");
+}

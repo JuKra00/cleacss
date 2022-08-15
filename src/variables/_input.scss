@@ -1,0 +1,14 @@
+@include cssvars(
+  (
+    input-padding-y: 0.5em,
+    input-padding-x: 0.75em,
+    input-border-width: 2px,
+    input-border-color: var(--#{$prefix}-base-color),
+    input-background-color: #fff,
+    input-outline-color: rgb(230, 230, 230),
+    input-placeholder-color: rgb(121, 121, 121),
+    input-error-color: hsl(0, 100%, 50%),
+  ),
+  $prefix,
+  ".input"
+);

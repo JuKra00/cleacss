@@ -1,0 +1,71 @@
+/* --------------------------------------------------------------
+# Media Query Mixins
+-------------------------------------------------------------- */
+$breakpoints: (
+  phone: 479px,
+  mobile: 480px,
+  tablet: 840px,
+  desktop: 960px,
+  widescreen: 1280px,
+  fullhd: 1440px,
+);
+
+@mixin phone {
+  @media screen and (max-width: calc(map-get($breakpoints, "phone"))) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (min-width: map-get($breakpoints, "mobile")) {
+    @content;
+  }
+}
+
+@mixin mobile-only {
+  @media screen and (min-width: map-get($breakpoints, "mobile")) and (max-width: calc(map-get($breakpoints, "tablet") - 1px)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media screen and (min-width: map-get($breakpoints, "mobile")) and (max-width: calc(map-get($breakpoints, "desktop") - 1px)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: map-get($breakpoints, "desktop")) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media screen and (min-width: map-get($breakpoints, "desktop")) and (max-width: calc(map-get($breakpoints, "widescreen") - 1px)) {
+    @content;
+  }
+}
+
+@mixin widescreen {
+  @media screen and (min-width: map-get($breakpoints, "widescreen")) {
+    @content;
+  }
+}
+
+@mixin widescreen-only {
+  @media screen and (min-width: map-get($breakpoints, "widescreen")) and (max-width: calc(map-get($breakpoints, "fullhd") - 1px)) {
+    @content;
+  }
+}
+
+@mixin fullhd {
+  @media screen and (min-width: map-get($breakpoints, "fullhd")) {
+    @content;
+  }
+}

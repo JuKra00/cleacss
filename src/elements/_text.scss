@@ -1,0 +1,123 @@
+.text {
+  display: block;
+
+  > p {
+    display: block;
+    margin: 0;
+
+    + p {
+      margin-top: cssvar(gap);
+    }
+
+    strong {
+      font-family: cssvar(font-family);
+      font-weight: cssvar(font-weight-bold);
+    }
+
+    em {
+      font-family: cssvar(font-family);
+      font-style: italic;
+    }
+
+    a:not(.button) {
+      color: cssvar(link-color);
+      cursor: pointer;
+      font-size: inherit;
+      text-decoration: underline;
+      text-decoration-skip-ink: all;
+      text-decoration-style: dotted;
+      text-decoration-thickness: 0.1em;
+      text-underline-offset: 0.2em;
+
+      &:visited {
+        color: cssvar(link-color);
+      }
+    }
+  }
+
+  hr {
+    border: none;
+    display: block;
+    height: 2px;
+    margin: cssvar(gap) 0;
+    width: 100%;
+  }
+
+  ul {
+    li {
+      list-style-image: none;
+      list-style-position: inside;
+      list-style-type: square;
+    }
+  }
+
+  ol {
+    counter-reset: list-item 0;
+    li {
+      list-style-image: none;
+      list-style-position: inside;
+      list-style-type: decimal;
+    }
+  }
+
+  ul,
+  ol {
+    display: block;
+
+    li {
+      display: list-item;
+
+      p {
+        display: inline-block;
+      }
+
+      + li {
+        margin-top: cssvar(gap-small);
+      }
+
+      ol {
+        counter-reset: list-item 0;
+        li {
+          list-style-type: decimal;
+        }
+      }
+
+      ul {
+        li {
+          list-style-type: circle;
+        }
+      }
+
+      ul,
+      ol {
+        $gap: cssvar(gap);
+        margin-left: calc($gap * 2);
+        margin-top: cssvar(gap-small);
+      }
+    }
+  }
+
+  @for $i from 1 through 6 {
+    h#{$i} {
+      @extend %title;
+
+      font-size: clamp(
+        cssvar(size-#{$i}-min),
+        cssvar(size-#{$i}-pref),
+        cssvar(size-#{$i}-max)
+      );
+
+      & + h1,
+      & + h2,
+      & + h3,
+      & + h4,
+      & + h5,
+      & + h6,
+      & + p,
+      & + ul,
+      & + ol {
+        margin-top: cssvar(gap);
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@include cssvars(
+  (
+    columns-gap: 1.5rem,
+  ),
+  $prefix,
+  ".columns"
+);

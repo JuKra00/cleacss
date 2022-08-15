@@ -1,0 +1,28 @@
+/* --------------------------------------------------------------
+# Images
+-------------------------------------------------------------- */
+
+img,
+.img {
+  display: block;
+  max-width: 100%;
+
+  &.img--responsive {
+    width: 100%;
+  }
+}
+
+figure,
+.figure {
+  display: block;
+
+  figcaption {
+    display: block;
+    font-family: cssvar(font-family);
+    font-size: cssvar(size-7);
+    margin-top: 0.25rem;
+    a {
+      font-size: inherit;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+/docs/
+.release-it.json
+.stylelintrc.json
+pnpm-lock.yaml
+postcss.config.js
+.nvmrc
+.editorconfig
+.gitattributes
+.git

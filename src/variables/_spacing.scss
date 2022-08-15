@@ -1,0 +1,16 @@
+/* --------------------------------------------------------------
+# Spacing
+-------------------------------------------------------------- */
+
+@include cssvars(
+  (
+    spacing-0: cssvar(size-0),
+    spacing-1: cssvar(size-1),
+    spacing-2: cssvar(size-2),
+    spacing-3: cssvar(size-3),
+    spacing-4: cssvar(size-4),
+    spacing-5: cssvar(size-5),
+    spacing-6: cssvar(size-6),
+    spacing-7: cssvar(size-7),
+  )
+);
