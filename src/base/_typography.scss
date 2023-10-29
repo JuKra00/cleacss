@@ -19,6 +19,7 @@ p {
   font-family: cssvar(font-family);
   font-weight: cssvar(font-weight-normal);
   line-height: cssvar(line-height);
+
   @include followingTextElements {
     margin-top: cssvar(gap-small);
   }
@@ -48,147 +49,28 @@ code {
 }
 
 /* --------------------------------------------------------------
-# Generate Font sizes
--------------------------------------------------------------- */
-
-@include font-size();
-@include responsive-font-size();
-
-@include phone {
-  @include font-size("phone");
-}
-
-@include mobile {
-  @include font-size("mobile");
-}
-
-@include tablet {
-  @include font-size("tablet");
-}
-
-@include desktop {
-  @include font-size("desktop");
-}
-
-@include widescreen {
-  @include font-size("widescreen");
-}
-
-@include fullhd {
-  @include font-size("fullhd");
-}
-
-/* --------------------------------------------------------------
-# Generate alignment classes
--------------------------------------------------------------- */
-
-$alignments: (
-  "centered": "center",
-  "justified": "justify",
-  "left": "left",
-  "right": "right",
-);
-
-@each $alignment, $text-align in $alignments {
-  .has-text-#{$alignment} {
-    text-align: #{$text-align} !important;
-  }
-}
-
-@each $alignment, $text-align in $alignments {
-  @include phone {
-    .has-text-#{$alignment}-phone {
-      text-align: #{$text-align} !important;
-    }
-  }
-
-  @include mobile {
-    .has-text-#{$alignment}-mobile {
-      text-align: #{$text-align} !important;
-    }
-  }
-
-  @include mobile-only {
-    .has-text-#{$alignment}-mobile-only {
-      text-align: #{$text-align} !important;
-    }
-  }
-
-  @include tablet {
-    .has-text-#{$alignment}-tablet {
-      text-align: #{$text-align} !important;
-    }
-  }
-
-  @include tablet-only {
-    .has-text-#{$alignment}-tablet-only {
-      text-align: #{$text-align} !important;
-    }
-  }
-
-  @include desktop {
-    .has-text-#{$alignment}-desktop {
-      text-align: #{$text-align} !important;
-    }
-  }
-
-  @include desktop-only {
-    .has-text-#{$alignment}-desktop-only {
-      text-align: #{$text-align} !important;
-    }
-  }
-
-  @include widescreen {
-    .has-text-#{$alignment}-widescreen {
-      text-align: #{$text-align} !important;
-    }
-  }
-
-  @include widescreen-only {
-    .has-text-#{$alignment}-widescreen-only {
-      text-align: #{$text-align} !important;
-    }
-  }
-
-  @include fullhd {
-    .has-text-#{$alignment}-fullhd {
-      text-align: #{$text-align} !important;
-    }
-  }
-}
-
-/* --------------------------------------------------------------
 # Text style
 -------------------------------------------------------------- */
+@layer has {
 
-.has-text-italic {
-  font-style: italic !important;
-}
+  .has-text-italic {
+    font-style: italic;
+  }
 
-.has-text-uppercase {
-  text-transform: uppercase;
-}
+  .has-text-uppercase {
+    text-transform: uppercase;
+  }
 
-.has-text-bold,
-.has-text-strong {
-  font-weight: cssvar(font-weight-bold) !important;
-}
+  .has-text-bold,
+  .has-text-strong {
+    font-weight: cssvar(font-weight-bold);
+  }
 
-.has-text-light {
-  font-weight: cssvar(font-weight-light) !important;
-}
+  .has-text-light {
+    font-weight: cssvar(font-weight-light);
+  }
 
-.has-text-normal {
-  font-weight: cssvar(font-weight-normal) !important;
-}
-
-/* --------------------------------------------------------------
-# Text colors
--------------------------------------------------------------- */
-.has-text-primary {
-  color: cssvar(base-color) !important;
-}
-
-.has-text-secondary {
-  color: cssvar(base-color) !important;
+  .has-text-normal {
+    font-weight: cssvar(font-weight-normal);
+  }
 }

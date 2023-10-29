@@ -35,22 +35,22 @@ You can group multiple buttons by using the `.buttons` class.
 
 ## Sizes
 
-To modify button sizing, you can use the size classes `is-size-1` (largest) to `is-size-7` (smallest). Default is `size-6`. Ofcourse you can combine those with the breakpoints, e.g. `is-size-4-desktop`
+To modify button sizing, you can use the size classes `has-size-1` (largest) to `has-size-7` (smallest). Default is `size-6`. Ofcourse you can combine those with the breakpoints, e.g. `has-size-4-desktop`
 
 <div class="cleacss-demo">
   <div class="buttons">
-    <a href="#" class="button is-size-7">Click me</a>
+    <a href="#" class="button has-size-7">Click me</a>
     <a href="#" class="button">Click me</a>
-    <a href="#" class="button is-size-5">Click me</a>
-    <a href="#" class="button is-size-4-desktop">Click me</a>
+    <a href="#" class="button has-size-5">Click me</a>
+    <a href="#" class="button has-size-4-desktop">Click me</a>
   </div>
 </div>
 
 ```html
-<a href="#" class="button is-size-7">Click me</a>
+<a href="#" class="button has-size-7">Click me</a>
 <a href="#" class="button">Click me</a>
-<a href="#" class="button is-size-5">Click me</a>
-<a href="#" class="button is-size-4-desktop">Click me</a>
+<a href="#" class="button has-size-5">Click me</a>
+<a href="#" class="button has-size-4-desktop">Click me</a>
 ```
 
 ## States

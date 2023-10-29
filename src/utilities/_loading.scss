@@ -2,35 +2,38 @@
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
 
-.is-loading {
-  color: transparent !important;
-  min-height: 1em;
-  pointer-events: none;
-  position: relative;
+@layer is {
+  .is-loading {
+    color: transparent !important;
+    min-height: 1em;
+    pointer-events: none;
+    position: relative;
 
-  &::after {
-    animation: loading 600ms infinite linear;
-    background: transparent;
-    border: 2px solid cssvar(base-color-invert);
-    border-radius: 50%;
-    border-right-color: transparent;
-    border-top-color: transparent;
-    content: "";
-    display: block;
-    height: 1em;
-    left: 50%;
-    margin-left: -0.5em;
-    margin-top: -0.5em;
-    opacity: 1;
-    padding: 0;
-    position: absolute;
-    top: 50%;
-    width: 1em;
-    z-index: 0;
+    &::after {
+      animation: loading 600ms infinite linear;
+      background: transparent;
+      border: 2px solid cssvar(base-color-invert);
+      border-radius: 50%;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      content: "";
+      display: block;
+      height: 1em;
+      left: 50%;
+      margin-left: -0.5em;
+      margin-top: -0.5em;
+      opacity: 1;
+      padding: 0;
+      position: absolute;
+      top: 50%;
+      width: 1em;
+      z-index: 0;
+    }
   }
 }

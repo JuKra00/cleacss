@@ -53,8 +53,8 @@ If you combine `.section` with a child `.container`, it creates a grid used to l
     <div class="columns mb-2">
       <div class="column has-text-right">
         <div class="infobox">
-          <p class="title is-size-7 my-0">Window Width: {{ width }}px</p>
-          <p class="title is-size-7 my-0">Container Width: {{ containerWidth }}px</p>
+          <p class="title has-size-7 my-0">Window Width: {{ width }}px</p>
+          <p class="title has-size-7 my-0">Container Width: {{ containerWidth }}px</p>
         </div>
       </div>
     </div>

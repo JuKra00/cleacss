@@ -18,10 +18,10 @@ customLayout: true
         <div class="grid is-vcentered is-oneline-tablet is-gapless">
           <div class="column is-5-tablet is-offset-1-tablet is-12 has-z-index-2">
             <div class="text has-background-mobile-only has-background-phone p-3">
-              <h1 class="title is-size-1-responsive">
+              <h1 class="title has-size-1">
                 Playground
               </h1>
-              <p class="subtitle is-size-4-responsive">
+              <p class="subtitle has-size-4">
                 Most parts of cleacss can easily be modified by css variables.
               </p>
               <div class="columns pt-2">
@@ -44,19 +44,19 @@ customLayout: true
     <div class="container">
       <div class="columns">
         <div class="column is-4 has-text-centered">
-          <p class="title is-size-1">📏</p>
-          <p class="title is-size-4-responsive">
+          <p class="title has-size-1">📏</p>
+          <p class="title has-size-4">
             Responsive Typography
           </p>
           <div class="text">
             <p>
-              You can use size classes <code>is-size-1-responsive</code> to <code>is-size-7-responsive</code> to style typography that is resized according to the viewport. <a href="/guide/elements/title.html#responsive-sizes" class="">Read more</a>
+              You can use size classes <code>has-size-1</code> to <code>has-size-7</code> to style typography that is resized according to the viewport. <a href="/guide/elements/title.html#responsive-sizes" class="">Read more</a>
             </p>
           </div>
         </div>
         <div class="column is-4 has-text-centered">
-          <p class="title is-size-1">💭</p>
-          <p class="title is-size-4-responsive">
+          <p class="title has-size-1">💭</p>
+          <p class="title has-size-4">
             Bring your own css
           </p>
           <div class="text">
@@ -64,8 +64,8 @@ customLayout: true
           </div>
         </div>
         <div class="column is-4 has-text-centered">
-          <p class="title is-size-1">👌</p>
-          <p class="title is-size-4-responsive">
+          <p class="title has-size-1">👌</p>
+          <p class="title has-size-4">
           Helpers are your friend
           </p>
           <div class="text">

@@ -1,55 +1,74 @@
+/*--------------------------------------------------------------
+# Layers
+--------------------------------------------------------------*/
+@layer reset;
+@layer variables;
+@layer base;
+@layer layout;
+@layer element;
+@layer is;
+@layer has;
 /* --------------------------------------------------------------
 # Global
 -------------------------------------------------------------- */
 @import "./global";
+
 /* --------------------------------------------------------------
 # Variables
 -------------------------------------------------------------- */
-@import "./variables/colors";
-@import "./variables/sizes";
-@import "./variables/typography";
-@import "./variables/gap";
-@import "./variables/radius";
-@import "./variables/border";
-@import "./variables/input";
-@import "./variables/section";
-@import "./variables/content";
-@import "./variables/grid";
-@import "./variables/columns";
-@import "./variables/spacing";
-@import "./variables/button";
-@import "./variables/title";
+@layer variables {
+  @import "./variables/colors";
+  @import "./variables/sizes";
+  @import "./variables/typography";
+  @import "./variables/gap";
+  @import "./variables/radius";
+  @import "./variables/border";
+  @import "./variables/input";
+  @import "./variables/section";
+  @import "./variables/content";
+  @import "./variables/grid";
+  @import "./variables/columns";
+  @import "./variables/spacing";
+  @import "./variables/button";
+  @import "./variables/title";
+}
 
 /* --------------------------------------------------------------
 # Reset
 -------------------------------------------------------------- */
-@import "./config/reset";
+@layer reset {
+  @import "./config/reset";
+}
 
 /* --------------------------------------------------------------
 # Base
 -------------------------------------------------------------- */
-
-@import "./base/spacing";
-@import "./base/typography";
-@import "./base/shadow";
-@import "./base/media";
+@layer base {
+  @import "./base/spacing";
+  @import "./base/typography";
+  @import "./base/media";
+}
 
 /* --------------------------------------------------------------
 # Layout
 -------------------------------------------------------------- */
-@import "./layout/container";
-@import "./layout/columns";
-@import "./layout/grid";
-@import "./layout/section";
+@layer layout {
+  @import "./layout/container";
+  @import "./layout/columns";
+  @import "./layout/grid";
+  @import "./layout/section";
+}
 
 /* --------------------------------------------------------------
 # Elements
 -------------------------------------------------------------- */
-@import "./elements/button";
-@import "./elements/title";
-@import "./elements/text";
-@import "./elements/table";
-@import "./elements/input";
+@layer elements {
+  @import "./elements/button";
+  @import "./elements/title";
+  @import "./elements/text";
+  @import "./elements/table";
+  @import "./elements/input";
+}
 
 /* --------------------------------------------------------------
 # Utilities
@@ -59,3 +78,5 @@
 @import "./utilities/background";
 @import "./utilities/aspect-ratio";
 @import "./utilities/visibility";
+@import "./utilities/alignments";
+@import "./utilities/font-sizes";

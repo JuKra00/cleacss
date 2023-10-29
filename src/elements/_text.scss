@@ -1,11 +1,11 @@
 .text {
   display: block;
 
-  > p {
+  >p {
     display: block;
     margin: 0;
 
-    + p {
+    +p {
       margin-top: cssvar(gap);
     }
 
@@ -53,6 +53,7 @@
 
   ol {
     counter-reset: list-item 0;
+
     li {
       list-style-image: none;
       list-style-position: inside;
@@ -71,12 +72,13 @@
         display: inline-block;
       }
 
-      + li {
+      +li {
         margin-top: cssvar(gap-small);
       }
 
       ol {
         counter-reset: list-item 0;
+
         li {
           list-style-type: decimal;
         }
@@ -101,21 +103,19 @@
     h#{$i} {
       @extend %title;
 
-      font-size: clamp(
-        cssvar(size-#{$i}-min),
+      font-size: clamp(cssvar(size-#{$i}-min),
         cssvar(size-#{$i}-pref),
-        cssvar(size-#{$i}-max)
-      );
+        cssvar(size-#{$i}-max));
 
-      & + h1,
-      & + h2,
-      & + h3,
-      & + h4,
-      & + h5,
-      & + h6,
-      & + p,
-      & + ul,
-      & + ol {
+      &+h1,
+      &+h2,
+      &+h3,
+      &+h4,
+      &+h5,
+      &+h6,
+      &+p,
+      &+ul,
+      &+ol {
         margin-top: cssvar(gap);
       }
     }
