@@ -3,7 +3,7 @@
 
 # Spacing
 
-There are spacing classes built in, which you can use to define the `margin` and `padding` of your elements. You can use numbers from `0` to `7` which resonate to the sizing values used for typography. Of course you can make them responsive using the [breakpoint modifiers](/guide/#breakpoints), e.g. `mt-1-desktop`.
+There are spacing classes built in, which you can use to define the `margin` and `padding` of your elements. You can use numbers from `0` to `7` which resonate to the sizing values used for typography.
 
 | classname | description                          |
 | --------- | ------------------------------------ |
@@ -84,3 +84,50 @@ There are spacing classes built in, which you can use to define the `margin` and
     </div>
   </section>
 </div>
+
+## Extend to use breakpoints
+
+
+If you use the scss version you can make them responsive using the [breakpoint modifiers](/guide/#breakpoints), e.g. `mt-1-desktop` by extending using the `spacing` mixin like this. But be aware, that this add a lot of size to the css file.
+
+```css
+@include phone {
+  @include spacing("phone");
+}
+
+@include mobile {
+  @include spacing("mobile");
+}
+
+@include mobile-only {
+  @include spacing("mobile-only");
+}
+
+@include tablet {
+  @include spacing("tablet");
+}
+
+@include tablet-only {
+  @include spacing("tablet-only");
+}
+
+@include desktop {
+  @include spacing("desktop");
+}
+
+@include desktop-only {
+  @include spacing("desktop-only");
+}
+
+@include widescreen {
+  @include spacing("widescreen");
+}
+
+@include widescreen-only {
+  @include spacing("widescreen-only");
+}
+
+@include fullhd {
+  @include spacing("fullhd");
+}
+```

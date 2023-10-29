@@ -5,117 +5,71 @@
 @mixin spacing($target: "") {
   @for $i from 0 through 7 {
     .p-#{$i}#{if($target == "", "", "-" + $target)} {
-      padding: cssvar(spacing-#{$i}) !important;
+      padding: cssvar(spacing-#{$i});
     }
 
     .px-#{$i}#{if($target == "", "", "-" + $target)} {
-      padding-left: cssvar(spacing-#{$i}) !important;
-      padding-right: cssvar(spacing-#{$i}) !important;
+      padding-inline: cssvar(spacing-#{$i});
     }
 
     .pl-#{$i}#{if($target == "", "", "-" + $target)} {
-      padding-left: cssvar(spacing-#{$i}) !important;
+      padding-left: cssvar(spacing-#{$i});
     }
 
     .pr-#{$i}#{if($target == "", "", "-" + $target)} {
-      padding-right: cssvar(spacing-#{$i}) !important;
+      padding-right: cssvar(spacing-#{$i});
     }
 
     .pb-#{$i}#{if($target == "", "", "-" + $target)} {
-      padding-bottom: cssvar(spacing-#{$i}) !important;
+      padding-bottom: cssvar(spacing-#{$i});
     }
 
     .pt-#{$i}#{if($target == "", "", "-" + $target)} {
-      padding-top: cssvar(spacing-#{$i}) !important;
+      padding-top: cssvar(spacing-#{$i});
     }
 
     .py-#{$i}#{if($target == "", "", "-" + $target)} {
-      padding-bottom: cssvar(spacing-#{$i}) !important;
-      padding-top: cssvar(spacing-#{$i}) !important;
+      padding-block: cssvar(spacing-#{$i});
     }
 
     .m-#{$i}#{if($target == "", "", "-" + $target)} {
-      margin: cssvar(spacing-#{$i}) !important;
+      margin: cssvar(spacing-#{$i});
     }
 
     .mx-#{$i}#{if($target == "", "", "-" + $target)} {
-      margin-left: cssvar(spacing-#{$i}) !important;
-      margin-right: cssvar(spacing-#{$i}) !important;
+      margin-inline: cssvar(spacing-#{$i});
     }
 
     .my-#{$i}#{if($target == "", "", "-" + $target)} {
-      margin-bottom: cssvar(spacing-#{$i}) !important;
-      margin-top: cssvar(spacing-#{$i}) !important;
+      margin-block: cssvar(spacing-#{$i});
     }
 
     .ml-#{$i}#{if($target == "", "", "-" + $target)} {
-      margin-left: cssvar(spacing-#{$i}) !important;
+      margin-left: cssvar(spacing-#{$i});
     }
 
     .mr-#{$i}#{if($target == "", "", "-" + $target)} {
-      margin-right: cssvar(spacing-#{$i}) !important;
+      margin-right: cssvar(spacing-#{$i});
     }
 
     .mb-#{$i}#{if($target == "", "", "-" + $target)} {
-      margin-bottom: cssvar(spacing-#{$i}) !important;
+      margin-bottom: cssvar(spacing-#{$i});
     }
 
     .mt-#{$i}#{if($target == "", "", "-" + $target)} {
-      margin-top: cssvar(spacing-#{$i}) !important;
+      margin-top: cssvar(spacing-#{$i});
     }
   }
 }
 
 @include spacing();
 
-@include phone {
-  @include spacing("phone");
-}
-
-@include mobile {
-  @include spacing("mobile");
-}
-
-@include mobile-only {
-  @include spacing("mobile-only");
-}
-
-@include tablet {
-  @include spacing("tablet");
-}
-
-@include tablet-only {
-  @include spacing("tablet-only");
-}
-
-@include desktop {
-  @include spacing("desktop");
-}
-
-@include desktop-only {
-  @include spacing("desktop-only");
-}
-
-@include widescreen {
-  @include spacing("widescreen");
-}
-
-@include widescreen-only {
-  @include spacing("widescreen-only");
-}
-
-@include fullhd {
-  @include spacing("fullhd");
-}
-
 .mx-a {
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
 }
 
 .my-a {
-  margin-bottom: auto;
-  margin-top: auto;
+  margin-block: auto;
 }
 
 .ml-a {
