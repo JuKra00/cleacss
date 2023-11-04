@@ -1,10 +1,10 @@
 :root {
-  --c-brand: #b34bf2;
-  --c-brand-light: #bc68f0;
-  --c-brand-secondary: #ffd645;
-  --c-text: var(--clea-base-color);
-  --c-bg: var(--clea-base-color-invert);
-  --code-bg-color: #1a0b23;
+  --c-brand: #b34bf2 !important;
+  --c-brand-light: #bc68f0 !important;
+  --c-brand-secondary: #ffd645 !important;
+  --c-text: var(--clea-base-color) !important;
+  --c-bg: var(--clea-base-color-invert) !important;
+  --code-bg-color: #1a0b23 !important;
 }
 
 html[color-scheme="dark"] {
@@ -16,7 +16,9 @@ html[color-scheme="dark"] {
   --c-text-light: #ffd645;
 }
 
-html[color-scheme="dark"] .input, html[color-scheme="dark"] .radio, html[color-scheme="dark"] .checkbox {
+html[color-scheme="dark"] .input,
+html[color-scheme="dark"] .radio,
+html[color-scheme="dark"] .checkbox {
   --clea-input-background-color: #0b050f;
   --clea-input-border-color: #473b51;
   --clea-input-outline-color: #d4adec;
@@ -127,12 +129,15 @@ h2[tabindex="-1"] {
   border-bottom: 2px dotted var(--c-brand);
   padding-bottom: 1rem;
 }
+
 .content a:not(.button) {
   text-decoration: underline;
 }
+
 .content a:not(.button):hover {
   color: var(--c-brand);
 }
+
 .cleacss-demo {
   margin: 2rem 0;
 }

@@ -18,9 +18,9 @@ customLayout: true
         <div class="grid is-vcentered is-oneline-tablet is-gapless">
           <div class="column is-5-tablet is-offset-1-tablet is-12 has-z-index-2">
             <div class="text has-background-mobile-only has-background-phone p-3">
-              <h1 class="title has-size-1">
+              <p class="title has-size-1">
                 Playground
-              </h1>
+              </p>
               <p class="subtitle has-size-4">
                 Most parts of cleacss can easily be modified by css variables.
               </p>

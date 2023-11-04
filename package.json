@@ -2,7 +2,10 @@
   "name": "cleacss",
   "version": "0.0.0",
   "description": "A minimal framework for css enthusiasts",
-  "keywords": ["css", "cssframework"],
+  "keywords": [
+    "css",
+    "cssframework"
+  ],
   "main": "src/cleacss.scss",
   "repository": "git@github.com:JuKra00/cleacss.git",
   "homepage": "https://cleacss.dev",
@@ -10,9 +13,12 @@
   "license": "MIT",
   "private": false,
   "browserslist": [
-    "defaults",
-    "not IE 11",
-    "maintained node versions"
+    "last 2 versions",
+    ">= 0.4%",
+    "not dead",
+    "Firefox ESR",
+    "not op_mini all",
+    "not and_uc > 0"
   ],
   "exports": {
     ".": {
@@ -25,8 +31,9 @@
   "scripts": {
     "dev": "sass src/cleacss.scss:dist/cleacss.css --watch",
     "sass": "sass src/cleacss.scss:dist/cleacss.css",
-    "build": "pnpm clean && pnpm sass && pnpm postcss",
-    "postcss": "postcss dist/cleacss.css -o dist/cleacss.css --env production",
+    "build": "pnpm clean && pnpm sass && pnpm minify",
+    "minify": "lightningcss --minify --bundle --browserslist dist/cleacss.css -o dist/cleacss.css",
+    "help": "lightningcss --help",
     "clean": "rimraf dist",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
@@ -35,23 +42,16 @@
     "release": "release-it"
   },
   "devDependencies": {
-    "@parcel/core": ">=2.7.0 <3.0.0",
-    "@parcel/transformer-sass": "^2.7.0",
-    "@release-it/conventional-changelog": "^5.0.0",
-    "@vueuse/core": "^9.1.0",
-    "autoprefixer": "^10.4.8",
-    "clean-css-cli": "^5.6.1",
-    "cssnano": "^5.1.13",
-    "cssnano-preset-advanced": "^5.3.8",
-    "parcel": "^2.7.0",
-    "postcss": "^8",
-    "postcss-cli": "^10.0.0",
-    "release-it": "^15.3.0",
-    "rimraf": "^3.0.2",
-    "sass": "^1.54.4",
-    "stylelint": "^14.10.0",
-    "stylelint-config-recommended-scss": "^7.0.0",
-    "stylelint-order": "^5.0.0",
-    "vitepress": "^0.22"
+    "@release-it/conventional-changelog": "^7.0.2",
+    "@vueuse/core": "^10.5.0",
+    "clean-css-cli": "^5.6.2",
+    "lightningcss-cli": "^1.22.0",
+    "release-it": "^16.2.1",
+    "rimraf": "^5.0.5",
+    "sass": "^1.69.5",
+    "stylelint": "^15.11.0",
+    "stylelint-config-recommended-scss": "^13.0.0",
+    "stylelint-order": "^6.0.3",
+    "vitepress": "^0.22.4"
   }
 }

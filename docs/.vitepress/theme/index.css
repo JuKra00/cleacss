@@ -1,0 +1,7 @@
+@import "vitepress/dist/client/theme-default/styles/vars.css" layer(default-theme);
+@import "vitepress/dist/client/theme-default/styles/layout.css" layer(default-theme);
+@import "vitepress/dist/client/theme-default/styles/code.css" layer(default-theme);
+@import "vitepress/dist/client/theme-default/styles/custom-blocks.css" layer(default-theme);
+@import "vitepress/dist/client/theme-default/styles/sidebar-links.css" layer(default-theme);
+@import "../../../dist/cleacss.css";
+@import "./custom.css" layer(theme);
