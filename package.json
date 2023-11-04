@@ -39,7 +39,7 @@
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs --port 2000",
     "lint": "stylelint '**/*.scss' --customSyntax postcss-scss",
-    "release": "release-it"
+    "release": "release-it --preRelease"
   },
   "devDependencies": {
     "@release-it/conventional-changelog": "^7.0.2",
