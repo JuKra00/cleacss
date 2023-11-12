@@ -6,6 +6,8 @@
   font-size: cssvar(size-3);
   font-weight: cssvar(font-weight-bold);
   line-height: cssvar(title-line-height);
+  text-wrap: balance;
+  hyphens: auto;
 
   @include followingTextElements {
     margin-top: cssvar(gap);
@@ -22,6 +24,7 @@
   font-size: cssvar(size-3);
   font-weight: cssvar(font-weight-light);
   line-height: cssvar(line-height);
+
   @include followingTextElements {
     margin-top: cssvar(gap);
   }
