@@ -22,7 +22,7 @@
     overflow-x: auto;
   }
 
-  > .column {
+  >.column {
     display: block;
     flex: 1;
     max-width: 100%;
@@ -33,25 +33,25 @@
 @mixin generateColumns($suffix: "") {
   @for $i from 1 through 11 {
     $num: $i;
-    .columns > .column.is-#{$num}#{if($suffix == "", "", "-" + $suffix)} {
+
+    .columns>.column.column-#{$num}#{if($suffix == "", "", "-" + $suffix)} {
       // flex basis to keep flex wrap going
       flex: 1 1 100%;
       max-width: math.percentage(math.div($num, 12));
     }
 
-    .columns.is-oneline
-      > .column.is-#{$num}#{if($suffix == "", "", "-" + $suffix)} {
+    .columns.is-oneline>.column.column-#{$num}#{if($suffix == "", "", "-" + $suffix)} {
       flex: none;
       width: math.percentage(math.div($num, 12));
     }
   }
 
-  .columns > .column.is-12#{if($suffix == "", "", "-" + $suffix)} {
+  .columns>.column.column-12#{if($suffix == "", "", "-" + $suffix)} {
     flex: none;
     width: 100%;
   }
 
-  .columns > .column.is-narrow#{if($suffix == "", "", "-" + $suffix)} {
+  .columns>.column.column-narrow#{if($suffix == "", "", "-" + $suffix)} {
     max-width: fit-content;
   }
 }
@@ -100,7 +100,7 @@
 
 .columns:not(.is-phone) {
   @include phone {
-    > .column {
+    >.column {
       flex: 0 0 100%;
       max-width: 100%;
     }

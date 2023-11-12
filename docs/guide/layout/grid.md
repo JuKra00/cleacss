@@ -56,47 +56,47 @@ Appart from `.columns`, there is the option to use `.grid` for layout purposes, 
 
 ## Sizing
 
-You can use classes `is-1` to `is-12` to size individual columns. The Grid will wrap, if the sum of all numbers used in classes exceeds 12.
+You can use classes `column-1` to `column-12` to size individual columns. The Grid will wrap, if the sum of all numbers used in classes exceeds 12.
 
 <div class="cleacss-demo">
   <div class="grid">
-    <div class="column is-3">
-      <div class="cleacss-column-demo">is-3</div>
+    <div class="column column-3">
+      <div class="cleacss-column-demo">column-3</div>
     </div>
-    <div class="column is-9">
-      <div class="cleacss-column-demo">is-9</div>
+    <div class="column column-9">
+      <div class="cleacss-column-demo">column-9</div>
     </div>
   </div>
 </div>
 
 ```html
 <div class="grid">
-  <div class="column is-3"></div>
-  <div class="column is-9"></div>
+  <div class="column column-3"></div>
+  <div class="column column-9"></div>
 </div>
 ```
 
 ## Responsive sizing
 
-To configure breakpoint based column sizing, you can append the corresponding breakpoint name on the sizing class, e.g. `is-6-desktop` meaning the column will be 6 grid columns wide starting from the desktop breakpoint. Have a look at the [available breakpoints](/guide/#breakpoints).
+To configure breakpoint based column sizing, you can append the corresponding breakpoint name on the sizing class, e.g. `column-6-desktop` meaning the column will be 6 grid columns wide starting from the desktop breakpoint. Have a look at the [available breakpoints](/guide/#breakpoints).
 
 <div class="cleacss-demo">
   <div class="grid">
-    <div class="column is-12-phone is-3-desktop is-6-tablet is-12-mobile">
-      <div class="cleacss-column-demo">is-3</div>
+    <div class="column column-12-phone column-3-desktop column-6-tablet column-12-mobile">
+      <div class="cleacss-column-demo">column-3</div>
     </div>
-    <div class="column is-12-phone is-9-desktop is-6-tablet is-12-mobile">
-      <div class="cleacss-column-demo">is-9</div>
+    <div class="column column-12-phone column-9-desktop column-6-tablet column-12-mobile">
+      <div class="cleacss-column-demo">column-9</div>
     </div>
   </div>
 </div>
 
 ```html
 <div class="grid">
-  <div class="column is-6-phone is-3-desktop is-6-tablet is-12-mobile">
-    <div class="cleacss-column-demo">is-3</div>
+  <div class="column column-6-phone column-3-desktop column-6-tablet column-12-mobile">
+    <div class="cleacss-column-demo">column-3</div>
   </div>
-  <div class="column is-12-phone is-9-desktop is-6-tablet is-12-mobile">
+  <div class="column column-12-phone column-9-desktop column-6-tablet is-12-mobile">
     <div class="cleacss-column-demo">is-9</div>
   </div>
 </div>

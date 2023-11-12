@@ -1,15 +1,15 @@
 .has-aspect-ratio-landscape {
-  @include aspect-ratio(3,2);
+  @include aspect-ratio(3, 2);
 }
 
 .has-aspect-ratio-portrait {
-  @include aspect-ratio(2,3);
+  @include aspect-ratio(2, 3);
 }
 
 .has-aspect-ratio-hd {
-  @include aspect-ratio(16,9);
+  @include aspect-ratio(16, 9);
 }
 
 .has-aspect-ratio-square {
-  @include aspect-ratio(1,1);
+  @include aspect-ratio(1, 1);
 }

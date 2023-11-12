@@ -9,7 +9,7 @@
     grid-template-columns: repeat(12, 1fr);
   }
 
-  > .column {
+  >.column {
     grid-column-end: span 1;
     grid-row: span 1;
   }
@@ -21,7 +21,7 @@
 
 @mixin generateGridColumns($suffix: "") {
   .grid.is-oneline#{if($suffix == "", "", "-" + $suffix)} {
-    > .column {
+    >.column {
       grid-row: 1/-1;
     }
   }
@@ -32,18 +32,19 @@
 
   @for $i from 1 through 11 {
     $num: $i;
-    .grid > .column.is-#{$num}#{if($suffix == "", "", "-" + $suffix)} {
+
+    .grid>.column.column-#{$num}#{if($suffix == "", "", "-" + $suffix)} {
       grid-column-end: span $num;
     }
   }
 
   @for $num from 0 through 10 {
-    .grid > .column.is-offset-#{$num}#{if($suffix == "", "", "-" + $suffix)} {
+    .grid>.column.column-offset-#{$num}#{if($suffix == "", "", "-" + $suffix)} {
       grid-column-start: $num + 1;
     }
   }
 
-  .grid > .column.is-12#{if($suffix == "", "", "-" + $suffix)} {
+  .grid>.column.column-12#{if($suffix == "", "", "-" + $suffix)} {
     grid-column-end: span 12;
   }
 }

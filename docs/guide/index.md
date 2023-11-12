@@ -86,13 +86,13 @@ To handle responsiveness, cleacss has 5 breakpoints built-in. If your using the 
 
 | name              | min-width | max-width |
 | ----------------- | --------- | --------- |
-| `phone`           | -         | `479px`   |
-| `mobile`          | `480px`   | -         |
-| `mobile-only`     | `480px`   | `839px`   |
-| `tablet`          | `840px`   | -         |
-| `tablet-only`     | `840px`   | `959px`   |
-| `desktop`         | `960px`   | -         |
-| `desktop-only`    | `960px`   | `1279px`  |
-| `widescreen`      | `1280px`  | -         |
-| `widescreen-only` | `1280px`  | `1439px`  |
-| `fullhd`          | `1440px`  | -         |
+| `phone`           | -         | `30em`    |
+| `mobile`          | `30em`    | -         |
+| `mobile-only`     | `30em`    | `48em`    |
+| `tablet`          | `48em`    | -         |
+| `tablet-only`     | `48em`    | `64em`    |
+| `desktop`         | `64em`    | -         |
+| `desktop-only`    | `64em`    | `80em`    |
+| `widescreen`      | `80em`    | -         |
+| `widescreen-only` | `80em`    | `120em`   |
+| `fullhd`          | `120em`   | -         |
