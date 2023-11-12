@@ -1,10 +1,13 @@
-@include cssvars(
-  (
-    content-margin-phone: 1rem,
-    content-margin-mobile: 1.5rem,
-    content-margin-tablet: 5vw,
-    content-margin-desktop: 5vw,
-    content-margin-widescreen: 5vw,
-    content-margin-fullhd: 6vw,
-  )
+$content-margins: (
+  content-margin-phone: 1.5rem,
+  content-margin-mobile: 1.5rem,
+  content-margin-tablet: max(((100vw - #{cssvar(tablet)}) / 2),
+    1.5rem),
+  content-margin-desktop: max(((100vw - #{cssvar(desktop)}) / 2),
+    1.5rem),
+  content-margin-widescreen: max(((100vw - #{cssvar(widescreen)}) / 2),
+    1.5rem),
+  content-margin-fullhd: max(((100vw - #{cssvar(fullhd)}) / 2), 1.5rem),
 );
+
+@include cssvars($content-margins);

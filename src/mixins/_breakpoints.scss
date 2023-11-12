@@ -1,6 +1,3 @@
-/* --------------------------------------------------------------
-# Media Query Mixins
--------------------------------------------------------------- */
 $breakpoints: (
   mobile: 30em,
   tablet: 48em,
@@ -9,6 +6,9 @@ $breakpoints: (
   fullhd: 120em,
 );
 
+/* --------------------------------------------------------------
+# Media Query Mixins
+-------------------------------------------------------------- */
 @mixin phone {
   @media screen and (max-width: calc(map-get($breakpoints, "mobile"))) {
     @content;
