@@ -26,13 +26,14 @@
       "require": "./src/cleacss.scss"
     },
     "./global": "./src/global.scss",
+    "./css/variables": "./dist/variables.css",
     "./css": "./dist/cleacss.css"
   },
   "scripts": {
-    "dev": "sass src/cleacss.scss:dist/cleacss.css --watch",
-    "sass": "sass src/cleacss.scss:dist/cleacss.css",
+    "dev": "sass src/cleacss.scss:dist/cleacss.css src/variables.scss:dist/variables.css --watch",
+    "sass": "sass src/cleacss.scss:dist/cleacss.css src/variables.scss:dist/variables.css",
     "build": "pnpm clean && pnpm sass && pnpm minify",
-    "minify": "lightningcss --minify --bundle --browserslist dist/cleacss.css -o dist/cleacss.css",
+    "minify": "lightningcss --minify --bundle --browserslist dist/cleacss.css -o dist/cleacss.css & lightningcss --minify --bundle --browserslist dist/variables.css -o dist/variables.css",
     "help": "lightningcss --help",
     "clean": "rimraf dist",
     "docs:dev": "vitepress dev docs",

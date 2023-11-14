@@ -1,0 +1,25 @@
+/* --------------------------------------------------------------
+# Global
+-------------------------------------------------------------- */
+@import "./global";
+
+/* --------------------------------------------------------------
+# Variables
+-------------------------------------------------------------- */
+@layer variables {
+  @import "./variables/colors";
+  @import "./variables/sizes";
+  @import "./variables/typography";
+  @import "./variables/gap";
+  @import "./variables/radius";
+  @import "./variables/border";
+  @import "./variables/input";
+  @import "./variables/section";
+  @import "./variables/content";
+  @import "./variables/grid";
+  @import "./variables/columns";
+  @import "./variables/spacing";
+  @import "./variables/button";
+  @import "./variables/title";
+  @import "./variables/breakpoints";
+}
