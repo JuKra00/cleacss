@@ -6,6 +6,7 @@ img,
 .img {
   display: block;
   max-width: 100%;
+  height: auto;
 
   &.img--responsive {
     width: 100%;
@@ -21,6 +22,7 @@ figure,
     font-family: cssvar(font-family);
     font-size: cssvar(size-7);
     margin-top: 0.25rem;
+
     a {
       font-size: inherit;
     }
