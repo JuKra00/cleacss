@@ -1,5 +1,19 @@
 
 
+## [1.0.0-beta.2](https://github.com/JuKra00/cleacss/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2023-11-26)
+
+
+### Features
+
+* add breakpoints as vars, update grid, update content margin ([6523348](https://github.com/JuKra00/cleacss/commit/6523348a837a694d0eb19b6f7da1254b1354fdb5))
+* Add text-wrap balance ([6972931](https://github.com/JuKra00/cleacss/commit/697293181292e1495f0293202c4cd75af385134f))
+* Add variables only export ([52f3d4d](https://github.com/JuKra00/cleacss/commit/52f3d4dae2abc16dbdd185de37dd957cd41f08ef))
+
+
+### Bug Fixes
+
+* add auto-height to img ([02773e8](https://github.com/JuKra00/cleacss/commit/02773e8adc011edfa67bde86cd935fc59587cd4a))
+
 ## [1.0.0-beta.1](https://github.com/JuKra00/cleacss/compare/v1.0.0-beta.0...v1.0.0-beta.1) (2023-11-04)
 
 
