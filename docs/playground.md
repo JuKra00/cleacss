@@ -16,7 +16,7 @@ customLayout: true
   <section class="hero section">
     <div class="container is-fullwidth">
         <div class="grid is-vcentered is-oneline-tablet is-gapless">
-          <div class="column is-5-tablet is-offset-1-tablet is-12 has-z-index-2">
+          <div class="column column-5-tablet column-offset-1-tablet column-12 has-z-index-2">
             <div class="text has-background-mobile-only has-background-phone p-3">
               <p class="title has-size-1">
                 Playground
@@ -25,7 +25,7 @@ customLayout: true
                 Most parts of cleacss can easily be modified by css variables.
               </p>
               <div class="columns pt-2">
-                <div class="column is-6">
+                <div class="column column-6">
                   <div class="input">
                     <label for="basecolor">--clea-base-color: {{newColor}}</label>
                     <input type="range" id="basecolor" min="0" max="5" v-model="baseColor" />
@@ -34,7 +34,7 @@ customLayout: true
               </div>
             </div>
           </div>
-          <div class="column is-8-tablet is-offset-4-tablet is-12 is-hidden-mobile-only is-hidden-phone">
+          <div class="column column-8-tablet column-offset-4-tablet column-12 column-hidden-mobile-only column-hidden-phone">
             <div class="has-background has-aspect-ratio-hd"></div>
           </div>
       </div>
@@ -43,7 +43,7 @@ customLayout: true
   <section class="section py-1">
     <div class="container">
       <div class="columns">
-        <div class="column is-4 has-text-centered">
+        <div class="column column-4 has-text-centered">
           <p class="title has-size-1">📏</p>
           <p class="title has-size-4">
             Responsive Typography
@@ -54,7 +54,7 @@ customLayout: true
             </p>
           </div>
         </div>
-        <div class="column is-4 has-text-centered">
+        <div class="column column-4 has-text-centered">
           <p class="title has-size-1">💭</p>
           <p class="title has-size-4">
             Bring your own css
@@ -63,7 +63,7 @@ customLayout: true
             <p>Since cleacss aims to give you a solid base for your own creations, you should bring your own style, may it be BEM, [data]-Attributes or any other way you like.</p>
           </div>
         </div>
-        <div class="column is-4 has-text-centered">
+        <div class="column column-4 has-text-centered">
           <p class="title has-size-1">👌</p>
           <p class="title has-size-4">
           Helpers are your friend
@@ -78,7 +78,7 @@ customLayout: true
   <section class="section">
     <div class="container">
       <div class="columns pt-2">
-        <div class="column is-6 is-3-desktop ml-a">
+        <div class="column column-6 column-3-desktop ml-a">
           <div class="input mb-6">
             <label for="sectiongap">--clea-section-gap: {{sectionGap}}em</label>
             <input type="range" id="sectiongap" min="3" max="8" v-model="sectionGap" />
@@ -95,7 +95,7 @@ customLayout: true
   <section class="section" :style="{'--clea-section-gap': sectionGap + 'em'}">
     <div class="container">
       <div class="columns is-bottom" :style="{'--clea-columns-gap': columnsGap + 'em'}">
-        <div class="column is-6">
+        <div class="column column-6">
           <div class="text">
             <h3>The .columns you all know & like</h3>
             <p>
@@ -103,7 +103,7 @@ customLayout: true
             </p>
           </div>
         </div>
-         <div class="column is-6">
+         <div class="column column-6">
           <div class="text">
             <p>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
@@ -118,7 +118,7 @@ customLayout: true
    <section class="section mb-0">
     <div class="container is-fullwidth">
       <div class="grid is-vcentered">
-        <div class="column is-6-tablet is-12">
+        <div class="column column-6-tablet column-12">
           <div class="text">
             <figure>
             <img src="/woods.jpg" />
@@ -128,7 +128,7 @@ customLayout: true
             </figure>
           </div>
         </div>
-         <div class="column is-5-tablet is-10 is-offset-1-phone is-offset-1-mobile-only">
+         <div class="column column-5-tablet column-10 column-offset-1-phone column-offset-1-mobile-only">
           <div class="text pl-1-tablet">
             <h3>Powerful .grid</h3>
             <p>
