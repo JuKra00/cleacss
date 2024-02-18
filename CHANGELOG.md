@@ -1,5 +1,17 @@
 
 
+## [1.0.0-beta.3](https://github.com/JuKra00/cleacss/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2024-02-18)
+
+
+### Features
+
+* add select input ([a9b0308](https://github.com/JuKra00/cleacss/commit/a9b0308c621601397002466551b2bbeb0c5c8b57))
+
+
+### Bug Fixes
+
+* docs example use new classes ([2c456e2](https://github.com/JuKra00/cleacss/commit/2c456e248619ff3e44bbd5fc9fd23070fa70266d))
+
 ## [1.0.0-beta.2](https://github.com/JuKra00/cleacss/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2023-11-26)
 
 
