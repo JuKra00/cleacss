@@ -17,6 +17,7 @@
     display: flex;
     gap: 1em;
     line-height: 1.2;
+
     &[for] {
       cursor: pointer;
     }
@@ -29,7 +30,8 @@
 
 .input,
 .checkbox,
-.radio {
+.radio,
+.select {
   color: inherit;
   display: grid;
   gap: 0.4em;
@@ -37,7 +39,8 @@
   grid-template-rows: auto 1fr auto;
 
   input,
-  textarea {
+  textarea,
+  select {
     appearance: none;
     background-color: cssvar(input-background-color);
     border: cssvar(input-border-width) solid cssvar(input-border-color);
@@ -69,6 +72,7 @@
     font-size: cssvar(size-7);
     grid-column: 1 /-1;
   }
+
   .message.message--error {
     color: cssvar(input-error-color);
   }
@@ -124,9 +128,11 @@
     &::-moz-range-track {
       @include track;
     }
+
     &::-ms-track {
       @include track;
     }
+
     &::-webkit-slider-runnable-track {
       @include track;
     }
@@ -135,10 +141,12 @@
     &::-moz-range-thumb {
       @include handle;
     }
+
     &::-webkit-slider-thumb {
       @include handle;
       margin-top: -0.55em;
     }
+
     &::-ms-thumb {
       @include handle;
     }
@@ -245,6 +253,7 @@
   &.is-disabled {
     label {
       opacity: 0.7;
+
       &[for] {
         cursor: not-allowed;
       }
@@ -269,8 +278,25 @@
   }
 
   input:focus,
-  textarea:focus {
+  textarea:focus,
+  select:focus {
     box-shadow: 0 0 0 cssvar(input-border-width) cssvar(input-outline-color);
     outline: cssvar(input-border-width) solid transparent;
+  }
+}
+
+.select {
+  &::after {
+    content: "";
+    height: 0.65em;
+    width: 0.65em;
+    display: block;
+    box-shadow: inset 1em 1em cssvar(base-color);
+    clip-path: polygon(50% 100%, 0% 25%, 100% 25%);
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    align-self: center;
+    justify-self: end;
+    margin-right: cssvar(input-padding-x);
   }
 }
