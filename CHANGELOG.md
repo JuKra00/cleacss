@@ -1,5 +1,12 @@
 
 
+## [1.0.0-beta.4](https://github.com/JuKra00/cleacss/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2024-06-11)
+
+
+### Bug Fixes
+
+* move spacing to has layer ([f106215](https://github.com/JuKra00/cleacss/commit/f10621532f59c091492f1b26c632638655733131))
+
 ## [1.0.0-beta.3](https://github.com/JuKra00/cleacss/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2024-02-18)
 
 
