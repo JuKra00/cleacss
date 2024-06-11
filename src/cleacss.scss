@@ -45,7 +45,6 @@
 # Base
 -------------------------------------------------------------- */
 @layer base {
-  @import "./base/spacing";
   @import "./base/typography";
   @import "./base/media";
 }
@@ -74,10 +73,16 @@
 /* --------------------------------------------------------------
 # Utilities
 -------------------------------------------------------------- */
-@import "./utilities/loading";
-@import "./utilities/zindex";
-@import "./utilities/background";
-@import "./utilities/aspect-ratio";
-@import "./utilities/visibility";
-@import "./utilities/alignments";
-@import "./utilities/font-sizes";
+@layer is {
+  @import "./utilities/loading";
+  @import "./utilities/visibility";
+}
+
+@layer has {
+  @import "./utilities/zindex";
+  @import "./utilities/background";
+  @import "./utilities/aspect-ratio";
+  @import "./utilities/alignments";
+  @import "./utilities/font-sizes";
+  @import "./utilities/spacing";
+}
