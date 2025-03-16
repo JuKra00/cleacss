@@ -1,92 +1,145 @@
-/* --------------------------------------------------------------
-# Grid
--------------------------------------------------------------- */
+@use "../config/breakpoints" as bp;
+@use "../config/space" as space;
 
-.grid {
-  @extend %grid;
-
-  .container:not(.is-fullwidth) & {
-    grid-template-columns: repeat(12, 1fr);
+@layer layout {
+  .grid {
+    column-gap: var(--grid-x-gap);
+    display: grid;
+    grid-template-columns:
+      [full-start] minmax(var(--grid-margin-min), var(--grid-margin-max)) [content-start] repeat(10, minmax(0, 1fr)) [content-end] minmax(var(--grid-margin-min), var(--grid-margin-max)) [full-end];
+    place-content: start;
+    row-gap: var(--grid-y-gap);
+    width: 100%;
   }
 
-  >.column {
-    grid-column-end: span 1;
-    grid-row: span 1;
+  .gap-collapse {
+    margin-top: calc(var(--grid-y-gap) * -1);
   }
 
-  &.is-vcentered {
-    align-items: center;
+  .gap-x-0 {
+    --grid-x-gap: 0;
   }
-}
 
-@mixin generateGridColumns($suffix: "") {
-  .grid.is-oneline#{if($suffix == "", "", "-" + $suffix)} {
-    >.column {
-      grid-row: 1/-1;
+  .gap-y-0 {
+    --grid-y-gap: 0;
+  }
+
+  @each $name, $space in space.$space-scales {
+    .gap-x-#{$name} {
+      --grid-x-gap: var(--space-#{$name});
+    }
+
+    .gap-y-#{$name} {
+      --grid-y-gap: var(--space-#{$name});
     }
   }
 
-  .grid.is-gapless#{if($suffix == "", "", "-" + $suffix)} {
-    gap: 0;
+  // Full width column
+  .span-full {
+    grid-column-end: -1;
+    grid-column-start: 1;
+
+    @each $name, $value in bp.$breakpoints {
+      @media (--#{$name}) {
+        .span-full\:#{$name} {
+          grid-column-end: -1;
+          grid-column-start: 1;
+        }
+      }
+    }
+  }
+
+  // Content width
+  .span-content {
+    grid-column-end: -2;
+    grid-column-start: 2;
+
+    @each $name, $value in bp.$breakpoints {
+      @media (--#{$name}) {
+        .span-content\:#{$name} {
+          grid-column-end: -2;
+          grid-column-start: 2;
+        }
+      }
+    }
+  }
+
+  // Generate .col-x classes
+  @for $i from 1 through 12 {
+    $num: $i;
+
+    .span-#{$num} {
+      grid-column-end: span $num;
+      grid-column-start: auto;
+    }
   }
 
   @for $i from 1 through 11 {
     $num: $i;
 
-    .grid>.column.column-#{$num}#{if($suffix == "", "", "-" + $suffix)} {
-      grid-column-end: span $num;
+    @each $name, $value in bp.$breakpoints {
+      @media (--#{$name}) {
+        .span-#{$num}\:#{$name} {
+          grid-column-end: span $num;
+          grid-column-start: auto;
+        }
+      }
     }
   }
 
-  @for $num from 0 through 10 {
-    .grid>.column.column-offset-#{$num}#{if($suffix == "", "", "-" + $suffix)} {
+  // Generate .col-start-x classes
+  @for $i from 0 through 11 {
+    $num: $i;
+
+    .start-#{$num} {
       grid-column-start: $num + 1;
     }
   }
 
-  .grid>.column.column-12#{if($suffix == "", "", "-" + $suffix)} {
-    grid-column-end: span 12;
+  @for $i from 0 through 11 {
+    $num: $i;
+
+    @each $name, $value in bp.$breakpoints {
+      @media (--#{$name}) {
+        .start-#{$num}\:#{$name} {
+          grid-column-start: $num + 1;
+        }
+
+        .subgrid .start-#{$num}\:#{$name} {
+          grid-column-start: $num;
+        }
+      }
+    }
   }
-}
 
-@include generateGridColumns();
 
-@include phone {
-  @include generateGridColumns("phone");
-}
+  // Generate .col-start-x classes to be used in .col-content
+  @for $i from 1 through 10 {
+    $num: $i;
 
-@include mobile {
-  @include generateGridColumns("mobile");
-}
+    .span-content .start-#{$num} {
+      grid-column-start: $num;
+    }
+  }
 
-@include tablet {
-  @include generateGridColumns("tablet");
-}
 
-@include desktop {
-  @include generateGridColumns("desktop");
-}
+  @for $i from 1 through 10 {
+    $num: $i;
 
-@include widescreen {
-  @include generateGridColumns("widescreen");
-}
+    @each $name, $value in bp.$breakpoints {
+      @media (--#{$name}) {
+        .span-content .start-#{$num}\:#{$name} {
+          grid-column-start: $num;
+        }
+      }
+    }
+  }
 
-@include fullhd {
-  @include generateGridColumns("fullhd");
-}
-
-@include mobile-only {
-  @include generateGridColumns("mobile-only");
-}
-
-@include tablet-only {
-  @include generateGridColumns("tablet-only");
-}
-
-@include desktop-only {
-  @include generateGridColumns("desktop-only");
-}
-
-@include widescreen-only {
-  @include generateGridColumns("widescreen-only");
+  // Subgrid
+  .subgrid {
+    display: grid;
+    gap: inherit;
+    grid-template-columns: subgrid;
+    place-content: start;
+  }
 }

@@ -1,69 +1,37 @@
-/* Buttons */
+@layer elements {
 
-.button,
-input[type="submit"],
-input[type="button"],
-input[type="reset"],
-button {
-  appearance: none;
-  background: cssvar(button-background-color);
-  border: cssvar(button-border-width) solid cssvar(button-border-color);
-  border-radius: cssvar(border-radius);
-  color: cssvar(button-color-invert);
-  cursor: pointer;
-  display: inline-block;
-  font-family: cssvar(font-family);
-  font-weight: cssvar(font-weight-bold);
-  line-height: cssvar(line-height);
-  outline: none;
-  padding: cssvar(button-padding-y) cssvar(button-padding-x);
-  text-align: center;
-  text-decoration: none;
-  transition: background 0.2s, border 0.2s, box-shadow 0.2s, color 0.2s,
-    transform 0.1s;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-
-  &:focus,
-  &:hover {
-    background: cssvar(button-background-color-invert);
-    border-color: cssvar(button-bordr-color-invert);
-    color: cssvar(button-color);
+  .button,
+  input[type="submit"],
+  input[type="button"],
+  input[type="reset"],
+  button {
+    align-items: center;
+    appearance: none;
+    background: var(--button-background-color);
+    border: var(--button-border-width) solid var(--button-border-color);
+    border-radius: var(--button-border-radius);
+    color: var(--button-color);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-bold);
+    gap: var(--space-2xs);
+    justify-content: center;
+    line-height: var(--line-height);
+    padding: var(--button-padding-y) var(--button-padding-x);
     text-decoration: none;
+    user-select: none;
+    white-space: nowrap;
+
+    @layer is {
+
+      &[disabled],
+      &.is-disabled {
+        cursor: default;
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    }
+
   }
-
-  @layer is {
-    &.is-active {
-      transform: scale(0.95);
-    }
-
-    &.is-hovered,
-    &.is-active {
-      background: cssvar(button-background-color-invert);
-      border-color: cssvar(button-border-color-invert);
-      color: cssvar(button-color);
-      text-decoration: none;
-    }
-
-    &[disabled],
-    &.is-disabled {
-      cursor: default;
-      opacity: 0.5;
-      pointer-events: none;
-    }
-  }
-
-}
-
-/* --------------------------------------------------------------
-# Button Group
--------------------------------------------------------------- */
-
-.buttons {
-  align-items: flex-end;
-  display: flex;
-  flex-wrap: wrap;
-  gap: cssvar(gap-small);
-  justify-content: flex-start;
 }

@@ -1,0 +1,8 @@
+@layer elements {
+  .input {
+    textarea {
+      min-height: 8rem;
+      resize: vertical;
+    }
+  }
+}

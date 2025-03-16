@@ -1,0 +1,17 @@
+@layer elements {
+  .select {
+    &::after {
+      align-self: center;
+      box-shadow: inset 1em 1em var(--input-select-accent);
+      clip-path: polygon(50% 100%, 0% 25%, 100% 25%);
+      content: "";
+      display: block;
+      grid-column: 1/-1;
+      grid-row: 2/3;
+      height: 0.65em;
+      justify-self: end;
+      margin-right: var(--input-padding-x);
+      width: 0.65em;
+    }
+  }
+}

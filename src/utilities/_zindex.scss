@@ -1,7 +1,0 @@
-$indexes: (1, 2, 3, 4, 5, 6, 7);
-
-@each $i in $indexes {
-  .has-z-index-#{$i} {
-    z-index: $i;
-  }
-}

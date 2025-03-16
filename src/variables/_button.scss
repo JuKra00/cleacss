@@ -1,15 +1,9 @@
-@include cssvars(
-  (
-    button-padding-y: 0.5em,
-    button-padding-x: 0.75em,
-    button-border-width: 2px,
-    button-background-color: var(--#{$prefix}-base-color),
-    button-background-color-invert: var(--#{$prefix}-base-color-invert),
-    button-border-color: var(--#{$prefix}-base-color),
-    button-border-color-invert: var(--#{$prefix}-base-color),
-    button-color: var(--#{$prefix}-base-color),
-    button-color-invert: var(--#{$prefix}-base-color-invert),
-  ),
-  $prefix,
-  ".button"
-);
+:root {
+  --button-padding-y: 0.5em;
+  --button-padding-x: 1.5em;
+  --button-border-width: 2px;
+  --button-border-radius: var(--border-radius-rounded);
+  --button-background-color: var(--color-accent);
+  --button-border-color: var(--color-accent);
+  --button-color: var(--color-accent-dark);
+}

@@ -1,38 +1,36 @@
-@import "../config/typography";
-
 %title {
   display: block;
-  font-family: cssvar(font-family);
-  font-size: cssvar(size-3);
-  font-weight: cssvar(font-weight-bold);
-  line-height: cssvar(title-line-height);
-  text-wrap: balance;
+  font-family: var(--font-family-title);
+  font-feature-settings: "liga", "kern", "calt";
   hyphens: auto;
+  line-height: var(--line-height-title);
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.125em;
+  text-wrap: balance;
 
-  @include followingTextElements {
-    margin-top: cssvar(gap);
+  u {
+    text-decoration-thickness: 0.1em;
   }
 }
 
-.title {
-  @extend %title;
-}
+@layer elements {
 
-.subtitle {
-  display: block;
-  font-family: cssvar(font-family);
-  font-size: cssvar(size-3);
-  font-weight: cssvar(font-weight-light);
-  line-height: cssvar(line-height);
-
-  @include followingTextElements {
-    margin-top: cssvar(gap);
+  @for $num from 1 through 6 {
+    h#{$num} {
+      @extend %title;
+      font-size: var(--font-size-#{$num});
+      font-weight: var(--font-weight-bold);
+      max-width: var(--max-width-size-#{$num});
+    }
   }
-}
 
-@for $num from 1 through 6 {
-  h#{$num} {
+  .title {
     @extend %title;
-    font-size: cssvar(size-#{$num});
+    font-weight: var(--font-weight-bold);
+  }
+
+  .subtitle {
+    @extend %title;
+    font-weight: var(--font-weight-light);
   }
 }

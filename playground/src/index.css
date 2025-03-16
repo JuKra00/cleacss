@@ -1,0 +1,57 @@
+@import "../../dist/cleacss.css";
+
+body>*:not(grid-visualizer):not(.demo) {
+  background-color: var(--color-neutral-100);
+  position: relative;
+
+  &::before {
+    content: attr(class);
+    white-space: nowrap;
+    position: absolute;
+    top: var(--space-2xs);
+    left: var(--space-2xs);
+    background-color: var(--color-neutral-200);
+    font-size: var(--font-size-8);
+    padding: var(--space-2xs) var(--space-xs);
+    z-index: 99;
+    border-radius: var(--border-radius);
+  }
+}
+
+.grid-block {
+  background-color: var(--color-neutral-300);
+  border: 1px solid var(--color-neutral-900);
+  border-radius: var(--border-radius);
+  padding: var(--space-s-m);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-7);
+  position: relative;
+}
+
+.grid-block::after {
+  content: attr(class);
+  opacity: 0.7;
+}
+
+.flow-block {
+  background-color: var(--color-neutral-300);
+  border: 1px solid var(--color-neutral-900);
+  border-radius: var(--border-radius);
+  padding: var(--space-s-m);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-7);
+  position: relative;
+  flex: 1 1 100%;
+  width: 100%;
+}
+
+.flow-block::after {
+  content: attr(class);
+  opacity: 0.7;
+}

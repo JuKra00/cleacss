@@ -1,0 +1,39 @@
+@layer elements {
+  .radio {
+    input[type="radio"] {
+      border: var(--input-border-width) solid var(--input-border-color);
+      border-radius: var(--input-radio-border-radius);
+      display: grid;
+      flex: 0 0 1em;
+      height: 1em;
+      min-height: 0;
+      padding: 0;
+      place-content: center;
+      width: 1em;
+
+      &::before {
+        border-radius: var(--input-radio-border-radius);
+        box-shadow: inset 1em 1em var(--input-radio-accent);
+        content: "";
+        height: 0.5em;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        width: 0.5em;
+      }
+
+      &:checked::before {
+        transform: scale(1);
+      }
+
+      &[readonly] {
+        border-style: dotted;
+        cursor: not-allowed;
+      }
+
+      &[disabled] {
+        color: var(--input-color-disabled);
+        cursor: not-allowed;
+      }
+    }
+  }
+}

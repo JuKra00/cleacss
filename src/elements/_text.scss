@@ -1,122 +1,68 @@
-.text {
-  display: block;
+@layer elements {
+  .text {
 
-  >p {
-    display: block;
-    margin: 0;
-
-    +p {
-      margin-top: cssvar(gap);
-    }
-
-    strong {
-      font-family: cssvar(font-family);
-      font-weight: cssvar(font-weight-bold);
-    }
-
-    em {
-      font-family: cssvar(font-family);
-      font-style: italic;
-    }
-
-    a:not(.button) {
-      color: cssvar(link-color);
-      cursor: pointer;
+    a {
+      color: inherit;
       font-size: inherit;
       text-decoration: underline;
-      text-decoration-skip-ink: all;
-      text-decoration-style: dotted;
+      text-decoration-color: var(--color-accent);
       text-decoration-thickness: 0.1em;
-      text-underline-offset: 0.2em;
+      text-underline-offset: 0.15em;
 
-      &:visited {
-        color: cssvar(link-color);
+      &:focus-visible {
+        outline: 2px solid var(--color-accent);
+      }
+
+      &:hover {
+        color: var(--color-accent);
       }
     }
-  }
 
-  hr {
-    border: none;
-    display: block;
-    height: 2px;
-    margin: cssvar(gap) 0;
-    width: 100%;
-  }
-
-  ul {
-    li {
-      list-style-image: none;
-      list-style-position: inside;
-      list-style-type: square;
+    ul {
+      list-style: square;
+      margin-left: 1em;
     }
-  }
 
-  ol {
-    counter-reset: list-item 0;
-
-    li {
-      list-style-image: none;
-      list-style-position: inside;
-      list-style-type: decimal;
+    ol {
+      list-style: decimal;
+      margin-left: 1.1em;
     }
-  }
 
-  ul,
-  ol {
-    display: block;
-
-    li {
-      display: list-item;
-
-      p {
-        display: inline-block;
-      }
-
-      +li {
-        margin-top: cssvar(gap-small);
-      }
-
-      ol {
-        counter-reset: list-item 0;
-
-        li {
-          list-style-type: decimal;
-        }
-      }
-
-      ul {
-        li {
-          list-style-type: circle;
-        }
-      }
-
-      ul,
-      ol {
-        $gap: cssvar(gap);
-        margin-left: calc($gap * 2);
-        margin-top: cssvar(gap-small);
-      }
+    hr {
+      background-color: var(--color-neutral-200);
+      border: none;
+      display: block;
+      height: 2px;
+      margin: 0;
+      width: 100%;
     }
-  }
 
-  @for $i from 1 through 6 {
-    h#{$i} {
-      @extend %title;
+    code {
+      background-color: var(--color-neutral-800);
+      border-radius: var(--border-radius-s);
+      color: var(--color-neutral-50);
+      display: inline-block;
+      font-family: var(--font-family-mono);
+      font-size: var(--font-size-7);
+      line-height: 1;
+      margin: 0;
+      padding: var(--space-2xs);
+    }
 
-      font-size: clamp(cssvar(size-#{$i}-min),
-        cssvar(size-#{$i}-pref),
-        cssvar(size-#{$i}-max));
+    pre {
+      background-color: var(--color-neutral-800);
+      border-radius: var(--border-radius);
+      color: var(--color-neutral-50);
+      display: block;
+      font-family: var(--font-family-mono);
+      margin: 0;
+      overflow-x: auto;
+      padding: var(--space-xs) var(--space-s);
+      width: 100%;
 
-      &+h1,
-      &+h2,
-      &+h3,
-      &+h4,
-      &+h5,
-      &+h6,
-      &+p,
-      &+ul,
-      &+ol {
-        margin-top: cssvar(gap);
+      code {
+        background-color: transparent;
+        padding: 0;
       }
     }
   }
