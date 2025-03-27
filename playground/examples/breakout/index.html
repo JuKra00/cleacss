@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <grid-visualizer></grid-visualizer>
+
+  <div class="grid">
+    <div class="span-content grid start-1">
+      <div class="span-4 start-1">
+        <div class="grid-block"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="grid">
+    <div class="span-3 start-2">
+      <div class="grid-block"></div>
+    </div>
+    <div class="span-7">
+      <div class="grid-block"></div>
+    </div>
+    <div class="span-12 span-4:l start-2:l">
+      <div class="grid-block"></div>
+    </div>
+  </div>
+
+  <div class="grid demo">
+    <div class="span-content flow">
+      <h1>Heading</h1>
+      <div class="breakout">
+        <blockquote class="has-p-l" style="background: var(--color-neutral-100);">
+          <p class="has-size-5">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.
+          </p>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
