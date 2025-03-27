@@ -9,26 +9,20 @@
 	"author": "Justus Kraft <hallo@justuskraft.de> (https://justuskraft.com)",
 	"license": "MIT",
 	"private": false,
-	"browserslist": [
-		"last 2 versions",
-		">= 0.4%",
-		"not dead",
-		"Firefox ESR",
-		"not op_mini all",
-		"not and_uc > 0"
-	],
+	"browserslist": ["last 3 versions", ">= 0.4%", "not dead", "Firefox ESR"],
 	"exports": {
 		".": {
 			"import": "./dist/cleacss.css",
 			"require": "./dist/cleacss.css"
 		},
+		"./untranspiled": "./dist/cleacss.untranspiled.css",
 		"./scss": "./src/cleacss.scss"
 	},
 	"scripts": {
-		"dev": "sass src/cleacss.scss:dist/cleacss.css --watch",
-		"sass": "sass src/cleacss.scss:dist/cleacss.css",
+		"dev": "sass src/cleacss.scss:dist/cleacss.untranspiled.css --watch",
+		"sass": "sass src/cleacss.scss:dist/cleacss.untranspiled.css",
 		"build": "pnpm clean && pnpm sass && pnpm minify",
-		"minify": "lightningcss --minify --bundle --browserslist --custom-media ./dist/cleacss.css -o ./dist/cleacss.css",
+		"minify": "lightningcss --minify --bundle --browserslist --custom-media ./dist/cleacss.untranspiled.css -o ./dist/cleacss.css",
 		"clean": "rimraf dist",
 		"lint": "stylelint '**/*.scss' --customSyntax postcss-scss",
 		"release": "release-it --preRelease",
