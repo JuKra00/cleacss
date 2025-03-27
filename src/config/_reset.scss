@@ -24,7 +24,6 @@
     height: 100%;
     line-height: var(--line-height);
     scroll-behavior: smooth;
-    scrollbar-gutter: stable;
     text-rendering: optimizeLegibility;
   }
 
@@ -94,6 +93,11 @@
   textarea {
     font-size: inherit;
     touch-action: manipulation;
+  }
+
+  a {
+    color: currentColor;
+    text-decoration: none;
   }
 
   ::selection {
