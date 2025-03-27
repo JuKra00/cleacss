@@ -25,15 +25,15 @@
     width: 100%;
   }
 
-  .flow.gap-0,
-  .flow-row.gap-0 {
+  .flow.has-gap-0,
+  .flow-row.has-gap-0 {
     --flow-gap: 0;
   }
 
   @each $name, $space in space.$space-scales {
 
-    .flow.gap-#{$name},
-    .flow-row.gap-#{$name} {
+    .flow.has-gap-#{$name},
+    .flow-row.has-gap-#{$name} {
       --flow-gap: var(--space-#{$name});
     }
   }

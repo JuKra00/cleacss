@@ -7,17 +7,17 @@
   <title>Streamlined Grid Framework</title>
 </head>
 
-<body class="grid gap-y-xl-3xl">
+<body class="grid has-gap-y-xl-3xl">
 
   <grid-visualizer></grid-visualizer>
 
   <!-- Header with subgrid -->
-  <header class="span-content subgrid has-pt-xl">
-    <div class="start-1 span-3">
+  <header class="span-full subgrid has-pt-xl">
+    <div class="start-1 span-2">
       <div class="grid-block"></div>
     </div>
     <div class="start-4 span-7">
-      <div class="flow-row gap-2xs">
+      <div class="flow-row has-gap-2xs">
         <div class="flow-block"></div>
         <div class="flow-block"></div>
         <div class="flow-block"></div>
@@ -26,7 +26,7 @@
   </header>
 
   <!-- Flow layout example -->
-  <div class="span-content flow demo gap-collapse has-pt-xl text">
+  <div class="span-content flow demo has-gap-collapse has-pt-xl text">
     <h1 class="subtitle has-size-3">Aptene egestas</h1>
     <h2 class="title has-size-1">Non <u>finibus</u> nascetur</h2>
     <p class="has-size-5">
@@ -268,7 +268,7 @@
         <span class="message">This is a helpful message.</span>
         <span class="message message--error">Input is required.</span>
       </div>
-      <div class="flow gap-xs">
+      <div class="flow has-gap-xs">
         <div class="radio">
           <label for="radio1">
             <input type="radio" id="radio1" name="radio" />
@@ -302,7 +302,7 @@
         <div class="grid-block"></div>
       </div>
     </div>
-    <div class="span-3 flow gap-2xs">
+    <div class="span-3 flow has-gap-2xs">
       <div class="flow-block"></div>
       <div class="flow-block"></div>
       <div class="flow-block"></div>
@@ -333,7 +333,7 @@
       </div>
     </div>
   </footer>
-  <script type="module" src="./src/main.ts"></script>
+  <script type="module" src="/src/main.ts"></script>
 </body>
 
 </html>

@@ -38,8 +38,8 @@ class GridVisualizer extends HTMLElement {
          display: grid;
           grid-template-columns:
             [full-start] minmax(var(--grid-margin-min), var(--grid-margin-max)) [content-start] repeat(10, minmax(0, 1fr)) [content-end] minmax(var(--grid-margin-min), var(--grid-margin-max)) [full-end];
-          row-gap: var(--grid-y-gap);
-          column-gap: var(--grid-x-gap);
+          row-gap: var(--grid-gap-y);
+          column-gap: var(--grid-gap-x);
           height: 100vh;
           background: rgba(255, 255, 255, 0.2);
         }

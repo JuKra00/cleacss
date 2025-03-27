@@ -2,36 +2,24 @@
 @use "../config/space" as space;
 
 @layer layout {
-  .grid {
-    column-gap: var(--grid-x-gap);
+
+  // Subgrid
+  .subgrid,
+  .grid .grid {
+    display: grid;
+    gap: inherit;
+    grid-template-columns: subgrid;
+    place-content: start;
+  }
+
+  .grid:not(.grid .grid) {
+    column-gap: var(--grid-gap-x);
     display: grid;
     grid-template-columns:
       [full-start] minmax(var(--grid-margin-min), var(--grid-margin-max)) [content-start] repeat(10, minmax(0, 1fr)) [content-end] minmax(var(--grid-margin-min), var(--grid-margin-max)) [full-end];
     place-content: start;
-    row-gap: var(--grid-y-gap);
+    row-gap: var(--grid-gap-y);
     width: 100%;
-  }
-
-  .gap-collapse {
-    margin-top: calc(var(--grid-y-gap) * -1);
-  }
-
-  .gap-x-0 {
-    --grid-x-gap: 0;
-  }
-
-  .gap-y-0 {
-    --grid-y-gap: 0;
-  }
-
-  @each $name, $space in space.$space-scales {
-    .gap-x-#{$name} {
-      --grid-x-gap: var(--space-#{$name});
-    }
-
-    .gap-y-#{$name} {
-      --grid-y-gap: var(--space-#{$name});
-    }
   }
 
   // Full width column
@@ -105,13 +93,13 @@
           grid-column-start: $num + 1;
         }
 
-        .subgrid .start-#{$num}\:#{$name} {
+        .subgrid .start-#{$num}\:#{$name},
+        .grid .grid .start-#{$num}\:#{$name} {
           grid-column-start: $num;
         }
       }
     }
   }
-
 
   // Generate .col-start-x classes to be used in .col-content
   @for $i from 1 through 10 {
@@ -121,7 +109,6 @@
       grid-column-start: $num;
     }
   }
-
 
   @for $i from 1 through 10 {
     $num: $i;
@@ -134,12 +121,28 @@
       }
     }
   }
+}
 
-  // Subgrid
-  .subgrid {
-    display: grid;
-    gap: inherit;
-    grid-template-columns: subgrid;
-    place-content: start;
+@layer has {
+  .has-gap-collapse {
+    margin-top: calc(var(--grid-gap-y) * -1);
+  }
+
+  .has-gap-x-0 {
+    --grid-gap-x: 0;
+  }
+
+  .has-gap-y-0 {
+    --grid-gap-y: 0;
+  }
+
+  @each $name, $space in space.$space-scales {
+    .has-gap-x-#{$name} {
+      --grid-gap-x: var(--space-#{$name});
+    }
+
+    .has-gap-y-#{$name} {
+      --grid-gap-y: var(--space-#{$name});
+    }
   }
 }
