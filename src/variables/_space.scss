@@ -1,10 +1,11 @@
 @use "sass:map";
 @use "../config/space" as space;
 
-:root {
-  --space-default: var(--space-s-l);
+:root,
+:host {
+	--space-default: var(--space-s-l);
 
-  @each $name, $space in space.$space-scales {
-    --space-#{$name}: #{map.get($space, "value")};
-  }
+	@each $name, $space in space.$space-scales {
+		--space-#{$name}: #{map.get($space, "value")};
+	}
 }

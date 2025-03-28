@@ -1,3 +1,4 @@
-:root {
-  --flow-gap: var(--space-s);
+:root,
+:host {
+	--flow-gap: var(--space-s);
 }

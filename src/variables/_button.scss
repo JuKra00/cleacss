@@ -1,9 +1,10 @@
-:root {
-  --button-padding-y: 0.5em;
-  --button-padding-x: 1.5em;
-  --button-border-width: 2px;
-  --button-border-radius: var(--border-radius-rounded);
-  --button-background-color: var(--color-accent);
-  --button-border-color: var(--color-accent);
-  --button-color: var(--color-accent-dark);
+:root,
+:host {
+	--button-padding-y: 0.5em;
+	--button-padding-x: 1.5em;
+	--button-border-width: 2px;
+	--button-border-radius: var(--border-radius-rounded);
+	--button-background-color: var(--color-accent);
+	--button-border-color: var(--color-accent);
+	--button-color: var(--color-accent-dark);
 }

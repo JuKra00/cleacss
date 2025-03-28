@@ -1,26 +1,27 @@
-:root {
-  --font-family: system-ui;
-  --font-family-title: var(--font-family);
-  --font-family-mono: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-  --line-height: 1.4;
-  --line-height-title: 1;
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-bold: 700;
-  --font-size-1: clamp(3.0518rem, 1.7138rem + 4.46vw, 7.0657rem);
-  --font-size-2: clamp(2.4414rem, 1.5895rem + 2.8395vw, 4.997rem);
-  --font-size-3: clamp(1.9531rem, 1.4262rem + 1.7565vw, 3.5339rem);
-  --font-size-4: clamp(1.5625rem, 1.2503rem + 1.0408vw, 2.4992rem);
-  --font-size-5: clamp(1.25rem, 1.0775rem + 0.575vw, 1.7675rem);
-  --font-size-6: clamp(1rem, 0.9167rem + 0.2778vw, 1.25rem);
-  --font-size-7: clamp(0.8rem, 0.772rem + 0.0934vw, 0.884rem);
-  --font-size-8: clamp(0.6252rem, 0.6449rem + -0.0165vw, 0.64rem);
-  --max-width-size-1: 15ch;
-  --max-width-size-2: 18ch;
-  --max-width-size-3: 20ch;
-  --max-width-size-4: 25ch;
-  --max-width-size-5: 45ch;
-  --max-width-size-6: 65ch;
-  --max-width-size-7: 70ch;
-  --max-width-size-8: 75ch;
+:root,
+:host {
+	--font-family: system-ui;
+	--font-family-title: var(--font-family);
+	--font-family-mono: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+	--line-height: 1.4;
+	--line-height-title: 1;
+	--font-weight-light: 300;
+	--font-weight-normal: 400;
+	--font-weight-bold: 700;
+	--font-size-1: clamp(3.0518rem, 1.7138rem + 4.46vw, 7.0657rem);
+	--font-size-2: clamp(2.4414rem, 1.5895rem + 2.8395vw, 4.997rem);
+	--font-size-3: clamp(1.9531rem, 1.4262rem + 1.7565vw, 3.5339rem);
+	--font-size-4: clamp(1.5625rem, 1.2503rem + 1.0408vw, 2.4992rem);
+	--font-size-5: clamp(1.25rem, 1.0775rem + 0.575vw, 1.7675rem);
+	--font-size-6: clamp(1rem, 0.9167rem + 0.2778vw, 1.25rem);
+	--font-size-7: clamp(0.8rem, 0.772rem + 0.0934vw, 0.884rem);
+	--font-size-8: clamp(0.6252rem, 0.6449rem + -0.0165vw, 0.64rem);
+	--max-width-size-1: 15ch;
+	--max-width-size-2: 18ch;
+	--max-width-size-3: 20ch;
+	--max-width-size-4: 25ch;
+	--max-width-size-5: 45ch;
+	--max-width-size-6: 65ch;
+	--max-width-size-7: 70ch;
+	--max-width-size-8: 75ch;
 }

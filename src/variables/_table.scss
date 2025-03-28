@@ -1,8 +1,9 @@
-:root {
-  --table-border-color: var(--color-neutral-800);
-  --table-border-width: 1px;
-  --table-padding-x: var(--space-xs);
-  --table-padding-y: var(--space-xs);
-  --table-accent-background: var(--color-neutral-800);
-  --table-accent-color: var(--color-neutral-50);
+:root,
+:host {
+	--table-border-color: var(--color-neutral-800);
+	--table-border-width: 1px;
+	--table-padding-x: var(--space-xs);
+	--table-padding-y: var(--space-xs);
+	--table-accent-background: var(--color-neutral-800);
+	--table-accent-color: var(--color-neutral-50);
 }

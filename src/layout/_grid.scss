@@ -12,7 +12,8 @@
     place-content: start;
   }
 
-  .grid:not(.grid .grid) {
+  .grid:not(.grid .grid),
+  .grid-reset {
     column-gap: var(--grid-gap-x);
     display: grid;
     grid-template-columns:
