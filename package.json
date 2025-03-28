@@ -25,7 +25,7 @@
 		"minify": "lightningcss --minify --bundle --browserslist --custom-media ./dist/cleacss.untranspiled.css -o ./dist/cleacss.css",
 		"clean": "rimraf dist",
 		"lint": "stylelint '**/*.scss' --customSyntax postcss-scss",
-		"release": "release-it --preRelease",
+		"release": "release-it",
 		"playground": "concurrently \"pnpm dev\" \"pnpm --filter cleacss-playground dev\"",
 		"playground:build": "pnpm --filter cleacss-playground build; pnpm --filter cleacss-playground build:lib"
 	},
