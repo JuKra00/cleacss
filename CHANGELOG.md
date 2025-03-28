@@ -1,5 +1,12 @@
 
 
+## [1.0.0](https://github.com/JuKra00/cleacss/compare/v1.0.0-beta.4...v1.0.0) (2025-03-28)
+
+
+### Features
+
+* build ([4835e0a](https://github.com/JuKra00/cleacss/commit/4835e0aec8c9a28d3e20d16cf3d150b1719137b2))
+
 ## [1.0.0-beta.4](https://github.com/JuKra00/cleacss/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2024-06-11)
 
 
