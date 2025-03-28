@@ -1,9 +1,19 @@
 @use "../config/breakpoints" as bp;
 
 @layer is {
+  .is-hidden {
+    display: none !important;
+  }
+
   @each $name, $value in bp.$breakpoints {
     @media (--#{$name}) {
       .is-hidden-#{$name} {
+        display: none !important;
+      }
+    }
+
+    @media (--#{$name}-max) {
+      .is-hidden-#{$name}-max {
         display: none !important;
       }
     }
