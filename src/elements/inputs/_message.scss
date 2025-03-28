@@ -1,0 +1,23 @@
+@layer elements {
+
+  .input,
+  .radio,
+  .checkbox,
+  .select {
+    .message {
+      color: var(--input-message-color);
+      font-size: var(--font-size-7);
+      grid-column: 1 /-1;
+    }
+
+    .message.message--error {
+      color: var(--input-color-error);
+    }
+
+    input+.message,
+    textarea+.message,
+    select+.message {
+      margin-top: var(--space-2xs);
+    }
+  }
+}

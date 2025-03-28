@@ -1,0 +1,12 @@
+@layer elements {
+  .input {
+
+    input[type="date"],
+    input[type="datetime-local"],
+    input[type="time"],
+    input[type="month"],
+    input[type="week"] {
+      font-size: var(--font-size-7);
+    }
+  }
+}

@@ -1,7 +1,48 @@
-@include cssvars(
-  (
-    base-color: #000,
-    base-color-invert: #fff,
-    link-color: #000,
-  )
-);
+:root,
+:host {
+	--color-base: var(--color-neutral-900);
+	--color-base-background: var(--color-neutral-50);
+
+	--color-accent-h: 300;
+	--color-accent-c: 0.18;
+	--color-accent-l: 0.75;
+
+	// 0: Red, 60: Yellow, 120: Green, 180: Cyan, 240: Blue, 300: Magenta, 360: Red (Loop)
+	--color-neutral-h: 300;
+	// 0.03 is the minimum contrast ratio, 0.4 is the maximum
+	--color-neutral-c: 0.01;
+
+	--color-accent-light: oklch(calc(var(--color-accent-l) * 1.2) var(--color-accent-c) var(--color-accent-h));
+	--color-accent: oklch(var(--color-accent-l) var(--color-accent-c) var(--color-accent-h));
+	--color-accent-dark: oklch(calc(var(--color-accent-l) * 0.5) var(--color-accent-c) var(--color-accent-h));
+
+	--color-neutral-50: oklch(0.95 var(--color-neutral-c) var(--color-neutral-h));
+	--color-neutral-100: oklch(0.9 var(--color-neutral-c) var(--color-neutral-h));
+	--color-neutral-200: oklch(0.8 var(--color-neutral-c) var(--color-neutral-h));
+	--color-neutral-300: oklch(0.7 var(--color-neutral-c) var(--color-neutral-h));
+	--color-neutral-500: oklch(0.5 var(--color-neutral-c) var(--color-neutral-h));
+	--color-neutral-700: oklch(0.3 var(--color-neutral-c) var(--color-neutral-h));
+	--color-neutral-800: oklch(0.2 var(--color-neutral-c) var(--color-neutral-h));
+	--color-neutral-900: oklch(0.1 var(--color-neutral-c) var(--color-neutral-h));
+
+	--color-success: oklch(0.65 0.15 150);
+	--color-warning: oklch(0.75 0.15 80);
+	--color-error: oklch(0.65 0.18 25);
+	--color-info: oklch(0.65 0.15 220);
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+	:root,
+	:host {
+		--color-neutral-50: oklch(0.15 var(--color-neutral-c) var(--color-neutral-h));
+		--color-neutral-100: oklch(0.1 var(--color-neutral-c) var(--color-neutral-h));
+		--color-neutral-200: oklch(0.2 var(--color-neutral-c) var(--color-neutral-h));
+		--color-neutral-300: oklch(0.3 var(--color-neutral-c) var(--color-neutral-h));
+		--color-neutral-500: oklch(0.5 var(--color-neutral-c) var(--color-neutral-h));
+		--color-neutral-700: oklch(0.7 var(--color-neutral-c) var(--color-neutral-h));
+		--color-neutral-800: oklch(0.8 var(--color-neutral-c) var(--color-neutral-h));
+		--color-neutral-900: oklch(0.85 var(--color-neutral-c) var(--color-neutral-h));
+	}
+}

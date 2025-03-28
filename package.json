@@ -1,59 +1,47 @@
 {
 	"name": "cleacss",
-	"version": "1.0.0",
+	"version": "1.0.0-beta.4",
 	"description": "A minimal framework for css enthusiasts",
-	"keywords": [
-		"css",
-		"cssframework"
-	],
-	"main": "src/cleacss.scss",
+	"keywords": ["css", "cssframework"],
+	"main": "dist/cleacss.css",
 	"repository": "git@github.com:JuKra00/cleacss.git",
 	"homepage": "https://cleacss.dev",
 	"author": "Justus Kraft <hallo@justuskraft.de> (https://justuskraft.com)",
 	"license": "MIT",
 	"private": false,
-	"browserslist": [
-		"last 2 versions",
-		">= 0.4%",
-		"not dead",
-		"Firefox ESR",
-		"not op_mini all",
-		"not and_uc > 0"
-	],
+	"browserslist": ["last 3 versions", ">= 0.4%", "not dead", "Firefox ESR"],
 	"exports": {
 		".": {
-			"import": "./src/cleacss.scss",
-			"require": "./src/cleacss.scss"
+			"import": "./dist/cleacss.css",
+			"require": "./dist/cleacss.css"
 		},
-		"./global": "./src/global.scss",
-		"./css/variables": "./dist/variables.css",
-		"./css": "./dist/cleacss.css"
+		"./untranspiled": "./dist/cleacss.untranspiled.css",
+		"./scss": "./src/cleacss.scss"
 	},
 	"scripts": {
-		"dev": "sass src/cleacss.scss:dist/cleacss.css src/variables.scss:dist/variables.css --watch",
-		"sass": "sass src/cleacss.scss:dist/cleacss.css src/variables.scss:dist/variables.css",
-		"build": "pnpm clean && pnpm sass && pnpm minify",
-		"minify": "lightningcss --minify --bundle --browserslist dist/cleacss.css -o dist/cleacss.css & lightningcss --minify --bundle --browserslist dist/variables.css -o dist/variables.css",
-		"help": "lightningcss --help",
+		"dev": "sass src/cleacss.scss:dist/cleacss.untranspiled.css --watch",
+		"sass": "sass src/cleacss.scss:dist/cleacss.untranspiled.css",
+		"build": "pnpm clean && pnpm sass && pnpm minify && pnpm playground:build",
+		"minify": "lightningcss --minify --bundle --browserslist --custom-media ./dist/cleacss.untranspiled.css -o ./dist/cleacss.css",
 		"clean": "rimraf dist",
-		"docs:dev": "vitepress dev docs",
-		"docs:build": "vitepress build docs",
-		"docs:serve": "vitepress serve docs --port 2000",
 		"lint": "stylelint '**/*.scss' --customSyntax postcss-scss",
-		"release": "release-it"
+		"release": "release-it",
+		"playground": "concurrently \"pnpm dev\" \"pnpm --filter cleacss-playground dev\"",
+		"playground:build": "pnpm --filter cleacss-playground build; pnpm --filter cleacss-playground build:lib"
 	},
 	"devDependencies": {
-		"@release-it/conventional-changelog": "^7.0.2",
-		"@vueuse/core": "^10.5.0",
-		"clean-css-cli": "^5.6.2",
-		"lightningcss-cli": "^1.22.0",
-		"release-it": "^16.2.1",
-		"rimraf": "^5.0.5",
-		"sass": "^1.69.5",
-		"stylelint": "^15.11.0",
-		"stylelint-config-recommended-scss": "^13.0.0",
-		"stylelint-order": "^6.0.3",
-		"vitepress": "^0.22.4"
+		"@release-it/conventional-changelog": "^10.0.0",
+		"concurrently": "^9.1.2",
+		"lightningcss-cli": "^1.29.3",
+		"release-it": "^18.1.2",
+		"rimraf": "^5.0.10",
+		"sass": "^1.85.1",
+		"stylelint": "^16.16.0",
+		"stylelint-config-recommended-scss": "^14.1.0",
+		"stylelint-order": "^6.0.4"
 	},
-	"packageManager": "pnpm@10.6.3+sha512.bb45e34d50a9a76e858a95837301bfb6bd6d35aea2c5d52094fa497a467c43f5c440103ce2511e9e0a2f89c3d6071baac3358fc68ac6fb75e2ceb3d2736065e6"
+	"packageManager": "pnpm@10.6.3",
+	"pnpm": {
+		"onlyBuiltDependencies": ["esbuild", "lightningcss-cli"]
+	}
 }

@@ -1,55 +1,107 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+@layer reset {
 
-* {
-  margin: 0;
-  padding: 0;
-}
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
-html {
-  height: 100%;
-}
+  * {
+    margin: 0;
+    padding: 0;
+  }
 
-body {
-  -webkit-font-smoothing: antialiased;
-  line-height: 1.5;
-}
+  html {
+    background-color: var(--color-base-background);
+    color: var(--color-base);
+    color-scheme: light dark;
+    font-family: var(--font-family);
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-synthesis: none;
+    font-weight: var(--font-weight-normal);
+    height: 100%;
+    line-height: var(--line-height);
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+  }
 
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
+  body {
+    font-size: var(--font-size-6);
+  }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-li,
-dl,
-dt,
-blockquote {
-  overflow-wrap: break-word;
-}
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
 
-a,
-area,
-button,
-[role="button"],
-input,
-label,
-select,
-summary,
-textarea {
-  font-size: 1rem;
-  touch-action: manipulation;
+  figure {
+    figcaption {
+      font-family: inherit;
+      font-size: var(--font-size-7);
+      margin-top: var(--space-s);
+    }
+  }
+
+  ul,
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  strong {
+    font-weight: var(--font-weight-bold);
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  li,
+  dl,
+  dt,
+  blockquote {
+    overflow-wrap: break-word;
+  }
+
+  p {
+    max-width: var(--max-width-size-6);
+  }
+
+  a,
+  area,
+  button,
+  [role="button"],
+  input,
+  label,
+  select,
+  summary,
+  textarea {
+    font-size: inherit;
+    touch-action: manipulation;
+  }
+
+  a {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  ::selection {
+    background-color: var(--color-base);
+    color: var(--color-accent);
+  }
 }

@@ -1,0 +1,144 @@
+@use "sass:map";
+@use "../config/space" as space;
+
+@layer has {
+  .has-p {
+    padding: var(--space-default);
+  }
+
+  .has-px {
+    padding-inline: var(--space-default);
+  }
+
+  .has-pl {
+    padding-left: var(--space-default);
+  }
+
+  .has-pr {
+    padding-right: var(--space-default);
+  }
+
+  .has-pb {
+    padding-bottom: var(--space-default);
+  }
+
+  .has-pt {
+    padding-top: var(--space-default);
+  }
+
+  .has-py {
+    padding-block: var(--space-default);
+  }
+
+  .has-m {
+    margin: var(--space-default);
+  }
+
+  .has-mx {
+    margin-inline: var(--space-default);
+  }
+
+  .has-my {
+    margin-block: var(--space-default);
+  }
+
+  .has-ml {
+    margin-left: var(--space-default);
+  }
+
+  .has-mr {
+    margin-right: var(--space-default);
+  }
+
+  .has-mb {
+    margin-bottom: var(--space-default);
+  }
+
+  .has-mt {
+    margin-top: var(--space-default);
+  }
+
+  @each $name, $space in space.$space-scales {
+
+    .has-p-#{$name} {
+      padding:var(--space-#{$name});
+    }
+
+    .has-px-#{$name} {
+      padding-inline:var(--space-#{$name});
+    }
+
+    .has-pl-#{$name} {
+      padding-left:var(--space-#{$name});
+    }
+
+    .has-pr-#{$name} {
+      padding-right:var(--space-#{$name});
+    }
+
+    .has-pb-#{$name} {
+      padding-bottom:var(--space-#{$name});
+    }
+
+    .has-pt-#{$name} {
+      padding-top:var(--space-#{$name});
+    }
+
+    .has-py-#{$name} {
+      padding-block:var(--space-#{$name});
+    }
+
+    .has-m-#{$name} {
+      margin:var(--space-#{$name});
+    }
+
+    .has-mx-#{$name} {
+      margin-inline:var(--space-#{$name});
+    }
+
+    .has-my-#{$name} {
+      margin-block:var(--space-#{$name});
+    }
+
+    .has-ml-#{$name} {
+      margin-left:var(--space-#{$name});
+    }
+
+    .has-mr-#{$name} {
+      margin-right:var(--space-#{$name});
+    }
+
+    .has-mb-#{$name} {
+      margin-bottom:var(--space-#{$name});
+    }
+
+    .has-mt-#{$name} {
+      margin-top:var(--space-#{$name});
+    }
+  }
+
+
+  .has-mx-a {
+    margin-inline: auto;
+  }
+
+  .has-my-a {
+    margin-block: auto;
+  }
+
+  .has-ml-a {
+    margin-left: auto;
+  }
+
+  .has-mr-a {
+    margin-right: auto;
+  }
+
+  .has-mt-a {
+    margin-top: auto;
+  }
+
+  .has-mb-a {
+    margin-bottom: auto;
+  }
+}

@@ -1,88 +1,27 @@
-/*--------------------------------------------------------------
-# Layers
---------------------------------------------------------------*/
-@layer reset;
-@layer variables;
-@layer base;
-@layer layout;
-@layer elements;
-@layer is;
-@layer has;
-/* --------------------------------------------------------------
-# Global
--------------------------------------------------------------- */
-@import "./global";
+@use "./config/layers";
+@use "./config/reset";
 
-/* --------------------------------------------------------------
-# Variables
--------------------------------------------------------------- */
-@layer variables {
-  @import "./variables/colors";
-  @import "./variables/sizes";
-  @import "./variables/typography";
-  @import "./variables/gap";
-  @import "./variables/radius";
-  @import "./variables/border";
-  @import "./variables/input";
-  @import "./variables/section";
-  @import "./variables/content";
-  @import "./variables/grid";
-  @import "./variables/columns";
-  @import "./variables/spacing";
-  @import "./variables/button";
-  @import "./variables/title";
-  @import "./variables/breakpoints";
-}
+@use "./variables/breakpoints";
+@use "./variables/colors";
+@use "./variables/typography";
+@use "./variables/grid";
+@use "./variables/flow";
+@use "./variables/radius";
+@use "./variables/space";
+@use "./variables/button";
+@use "./variables/input";
+@use "./variables/table";
 
-/* --------------------------------------------------------------
-# Reset
--------------------------------------------------------------- */
-@layer reset {
-  @import "./config/reset";
-}
+@use "./layout/grid" as layoutGrid;
+@use "./layout/flow" as layoutFlow;
 
-/* --------------------------------------------------------------
-# Base
--------------------------------------------------------------- */
-@layer base {
-  @import "./base/typography";
-  @import "./base/media";
-}
+@use "./utilities/typography" as utilitiesTypography;
+@use "./utilities/alignment" as utilitiesAlignment;
+@use "./utilities/space" as utilitiesSpace;
+@use "./utilities/visibility" as utilitiesVisibility;
 
-/* --------------------------------------------------------------
-# Layout
--------------------------------------------------------------- */
-@layer layout {
-  @import "./layout/container";
-  @import "./layout/columns";
-  @import "./layout/grid";
-  @import "./layout/section";
-}
-
-/* --------------------------------------------------------------
-# Elements
--------------------------------------------------------------- */
-@layer elements {
-  @import "./elements/button";
-  @import "./elements/title";
-  @import "./elements/text";
-  @import "./elements/table";
-  @import "./elements/input";
-}
-
-/* --------------------------------------------------------------
-# Utilities
--------------------------------------------------------------- */
-@layer is {
-  @import "./utilities/loading";
-  @import "./utilities/visibility";
-}
-
-@layer has {
-  @import "./utilities/zindex";
-  @import "./utilities/background";
-  @import "./utilities/aspect-ratio";
-  @import "./utilities/alignments";
-  @import "./utilities/font-sizes";
-  @import "./utilities/spacing";
-}
+@use "./elements/button" as elementsButton;
+@use "./elements/title" as elementsTitle;
+@use "./elements/input" as elementsInput;
+@use "./elements/text" as elementsText;
+@use "./elements/table" as elementsTable;

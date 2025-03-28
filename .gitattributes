@@ -8,6 +8,6 @@
 pnpm-lock.yaml export-ignore
 .editorconfig export-ignore
 docs export-ignore
+dist/playground export-ignore
 node_modules export-ignore
 .stylelintrc.json export-ignore
-postcss.config.json export-ignore

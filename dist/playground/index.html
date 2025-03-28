@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Streamlined Grid Framework</title>
+  <script type="module" crossorigin src="/assets/main-Brv4M6im.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-KtZocuBA.css">
+</head>
+
+<body class="grid has-gap-y-xl-3xl">
+
+  <grid-visualizer></grid-visualizer>
+
+  <!-- Header with subgrid -->
+  <header class="span-full subgrid has-pt-xl">
+    <div class="start-1 span-2">
+      <div class="grid-block"></div>
+    </div>
+    <div class="start-4 span-7">
+      <div class="flow-row has-gap-2xs">
+        <div class="flow-block"></div>
+        <div class="flow-block"></div>
+        <div class="flow-block"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Flow layout example -->
+  <div class="span-content flow demo has-gap-collapse has-pt-xl text">
+    <h1 class="subtitle has-size-3">Aptene egestas</h1>
+    <h2 class="title has-size-1">Non <u>finibus</u> nascetur</h2>
+    <p class="has-size-5">
+      Blandit <strong>lorem ipsum</strong> senectus velit dictum viverra mi lectus ornare pharetra laoreet gravida
+      semper vel accumsan bibendum conubia est netus proin ipsum massa et commodo molestie convallis praesent non fusce
+      nascetur dignissim
+    </p>
+    <hr />
+    <p>
+      Mattis senectus finibus ligula integer sem duis efficitur nulla conubia mus dolor odio pellentesque massa ornare
+      porttitor ullamcorper class hendrerit <em>Lorem Ipsum</em> Mollis pulvinar hac non mus ultrices ullamcorper morbi
+      egestas at sociosqu aptent justo congue ipsum lacus, sagittis praesent nostra posuere vivamus feugiat tincidunt ac
+      ex sem quisque vel nunc nascetur. <a href="#">My Website</a> Hendrerit finibus ex vivamus quisque a et platea
+      molestie sapien vitae id egestas ligula magna dis, nunc porttitor posuere dui sagittis nascetur auctor vulputate
+      non duis risus cubilia nulla dictum.
+    </p>
+    <p>
+      Porta himenaeos habitant maximus <code>Lorem Upsum</code>.
+    </p>
+    <pre><code>const foo = bar;</code></pre>
+    <ul>
+      <li>Lorem Ipsum</li>
+      <li>Varius urna</li>
+      <li>Facilisi natoque</li>
+    </ul>
+    <ol>
+      <li>Lorem Ipsum</li>
+      <li>Varius urna</li>
+      <li>Facilisi natoque</li>
+    </ol>
+    <button>Lorem Ipsum</button>
+  </div>
+
+  <div class="span-content demo">
+    <table>
+      <thead>
+        <tr>
+          <th>Lorem Ipsum</th>
+          <th>Varius urna</th>
+          <th>Facilisi natoque</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lorem Ipsum</td>
+          <td>Varius urna</td>
+          <td>Facilisi natoque</td>
+        </tr>
+        <tr>
+          <td>Lorem Ipsum</td>
+          <td>Varius urna</td>
+          <td>Facilisi natoque</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Lorem Ipsum</td>
+          <td>Varius urna</td>
+          <td>Facilisi natoque</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <div class="span-content flow demo text">
+    <h1>Aptene egestas</h1>
+    <h2>Non <u>finibus</u> nascetur</h2>
+    <p>
+      Blandit <strong>lorem ipsum</strong> senectus velit dictum viverra mi lectus ornare pharetra laoreet gravida
+      semper vel accumsan bibendum conubia est netus proin ipsum massa et commodo molestie convallis praesent non fusce
+      nascetur dignissim
+    </p>
+    <hr />
+    <p>
+      Mattis senectus finibus ligula integer sem duis efficitur nulla conubia mus dolor odio pellentesque massa ornare
+      porttitor ullamcorper class hendrerit <em>Lorem Ipsum</em> Mollis pulvinar hac non mus ultrices ullamcorper morbi
+      egestas at sociosqu aptent justo congue ipsum lacus, sagittis praesent nostra posuere vivamus feugiat tincidunt ac
+      ex sem quisque vel nunc nascetur. <a href="#">My Website</a> Hendrerit finibus ex vivamus quisque a et platea
+      molestie sapien vitae id egestas ligula magna dis, nunc porttitor posuere dui sagittis nascetur auctor vulputate
+      non duis risus cubilia nulla dictum.
+    </p>
+    <p>
+      Porta himenaeos habitant maximus <code>Lorem Upsum</code>.
+    </p>
+    <pre><code>const foo = bar;</code></pre>
+    <ul>
+      <li>Lorem Ipsum</li>
+      <li>Varius urna</li>
+      <li>Facilisi natoque</li>
+    </ul>
+    <ol>
+      <li>Lorem Ipsum</li>
+      <li>Varius urna</li>
+      <li>Facilisi natoque</li>
+    </ol>
+    <button>Lorem Ipsum</button>
+  </div>
+
+  <div class="span-content has-pt-xl demo subgrid">
+    <div class="span-5 flow">
+      <div class="input">
+        <label for="text">Text</label>
+        <input type="text" id="text" placeholder="Text">
+        <span class="message">This is a helpful message.</span>
+        <span class="message message--error">Input is required.</span>
+      </div>
+      <div class="input">
+        <label for="color">Color</label>
+        <input type="color" id="color">
+        <span class="message">This is a helpful message.</span>
+        <span class="message message--error">Input is required.</span>
+      </div>
+      <div class="input">
+        <label for="date">Date</label>
+        <input type="date" id="date">
+        <span class="message">This is a helpful message.</span>
+        <span class="message message--error">Input is required.</span>
+      </div>
+      <div class="input">
+        <label for="datetime-local">Datetime local</label>
+        <input type="datetime-local" id="datetime-local">
+        <span class="message">This is a helpful message.</span>
+        <span class="message message--error">Input is required.</span>
+      </div>
+      <div class="input">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="max@mustermann.de">
+        <span class="message">This is a helpful message.</span>
+        <span class="message message--error">Input is required.</span>
+      </div>
+      <div class="input">
+        <label for="file">File</label>
+        <input type="file" id="file">
+        <span class="message">This is a helpful message.</span>
+        <span class="message message--error">Input is required.</span>
+      </div>
+      <div class="input">
+        <label for="month">Month</label>
+        <input type="month" id="month" placeholder="01">
+        <span class="message">This is a helpful message.</span>
+        <span class="message message--error">Input is required.</span>
+      </div>
+      <div class="input">
+        <label for="textarea">Textarea</label>
+        <textarea id="textarea" placeholder="Lorem Ipsum..."></textarea>
+        <span class="message">This is a helpful message.</span>
+        <span class="message message--error">Input is required.</span>
+      </div>
+      <div class="select">
+        <label for="select">Select</label>
+        <select type="select" id="select">
+          <option disabled>Lorem Ipsum</option>
+          <option>Varius urna</option>
+          <option>Facilisi natoque</option>
+        </select>
+        <span class="message">This is a helpful message.</span>
+        <span class="message message--error">Input is required.</span>
+      </div>
+      <div class="input">
+        <label for="hidden">Hidden</label>
+        <input type="hidden" id="hidden">
+        <span class="message">This is a helpful message.</span>
+        <span class="message message--error">Input is required.</span>
+      </div>
+      <div class="input">
+        <label for="textr">Readonly</label>
+        <input type="text" readonly id="textr" value="Lorem Ipsum">
+      </div>
+      <div class="input">
+        <label for="textr">Disabled</label>
+        <input type="text" disabled id="textr" value="Lorem Ipsum">
+      </div>
+    </div>
+    <div class="span-5 flow">
+      <div class="input">
+        <label for="number">Number</label>
+        <input type="number" id="number" placeholder="0">
+        <span class="message">This is a helpful message.</span>
+        <span class="message message--error">Input is required.</span>
+      </div>
+      <div class="input">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="********">
+        <span class="message">This is a helpful message.</span>
+        <span class="message message--error">Input is required.</span>
+      </div>
+      <div class="input">
+        <label for="range">Range</label>
+        <input type="range" id="range" min="0" max="100">
+        <span class="message">This is a helpful message.</span>
+        <span class="message message--error">Input is required.</span>
+      </div>
+      <div class="input">
+        <label for="search">Search</label>
+        <input type="search" id="search" placeholder="search">
+        <span class="message">This is a helpful message.</span>
+        <span class="message message--error">Input is required.</span>
+      </div>
+      <div class="input">
+        <label for="tel">Tel</label>
+        <input type="tel" id="tel" placeholder="+49 1234 56 78">
+        <span class="message">This is a helpful message.</span>
+        <span class="message message--error">Input is required.</span>
+      </div>
+      <div class="input">
+        <label for="time">Time</label>
+        <input type="time" id="time" placeholder="Time">
+        <span class="message">This is a helpful message.</span>
+        <span class="message message--error">Input is required.</span>
+      </div>
+      <div class="input">
+        <label for="url">Url</label>
+        <input type="url" id="url" placeholder="https://cleacss.dev">
+        <span class="message">This is a helpful message.</span>
+        <span class="message message--error">Input is required.</span>
+      </div>
+      <div class="input">
+        <label for="week">Week</label>
+        <input type="week" id="week" placeholder="1">
+        <span class="message">This is a helpful message.</span>
+        <span class="message message--error">Input is required.</span>
+      </div>
+      <div class="checkbox">
+        <label for="checkbox1">
+          <input type="checkbox" id="checkbox1" />
+          Vivamus hendrerit tortor sagittis hac nec bibendum potenti dictumst nascetur proin torquent quisque praesent
+          non
+        </label>
+        <span class="message">This is a helpful message.</span>
+        <span class="message message--error">Input is required.</span>
+      </div>
+      <div class="checkbox">
+        <label for="checkbox2">
+          <input type="checkbox" id="checkbox2" />
+          Lorem Ipsum
+        </label>
+        <span class="message">This is a helpful message.</span>
+        <span class="message message--error">Input is required.</span>
+      </div>
+      <div class="flow has-gap-xs">
+        <div class="radio">
+          <label for="radio1">
+            <input type="radio" id="radio1" name="radio" />
+            Lorem Ipsum
+          </label>
+          <span class="message">This is a helpful message.</span>
+          <span class="message message--error">Input is required.</span>
+        </div>
+        <div class="radio">
+          <label for="radio2">
+            <input type="radio" id="radio2" name="radio" />
+            Lorem Ipsum
+          </label>
+          <span class="message">This is a helpful message.</span>
+          <span class="message message--error">Input is required.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main content area with subgrid -->
+  <main class="span-content subgrid">
+    <div class="span-10">
+      <div class="grid-block"></div>
+    </div>
+    <div class="span-7 subgrid">
+      <div class="span-3">
+        <div class="grid-block"></div>
+      </div>
+      <div class="span-4">
+        <div class="grid-block"></div>
+      </div>
+    </div>
+    <div class="span-3 flow has-gap-2xs">
+      <div class="flow-block"></div>
+      <div class="flow-block"></div>
+      <div class="flow-block"></div>
+    </div>
+  </main>
+
+  <!-- Flow layout example -->
+  <div class="span-content flow">
+    <div class="flow-block"></div>
+    <div class="flow-block breakout"></div>
+    <div class="flow-row has-justify-center">
+      <div class="flow-block"></div>
+      <div class="flow-block"></div>
+    </div>
+  </div>
+
+  <!-- Footer with subgrid -->
+  <footer class="span-full subgrid has-py-xl">
+    <div class="span-content subgrid">
+      <div class="span-12 span-4:m">
+        <div class="grid-block"></div>
+      </div>
+      <div class="span-6 span-3:m">
+        <div class="grid-block"></div>
+      </div>
+      <div class="span-4 span-3:m">
+        <div class="grid-block"></div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

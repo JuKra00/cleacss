@@ -1,5 +1,45 @@
-@include cssvars(
-  (
-    grid-gap: 1.5rem,
-  )
-);
+:root,
+:host {
+	--grid-width-s: 40rem; // 640px
+	--grid-width-m: 45rem; // 720px
+	--grid-width-l: 60rem; // 960px
+	--grid-width-xl: 71.25rem; // 1140px
+	--grid-width-2xl: 90rem; // 1440px
+	--grid-width: var(--grid-width-s);
+	--grid-margin-min: 0;
+	--grid-margin-max: calc(((100vw - var(--grid-gap-x) * 2) - var(--grid-width)) / 2);
+	--grid-gap-y: var(--space-default);
+	--grid-gap-x: var(--space-default);
+}
+
+@media (--m) {
+
+	:root,
+	:host {
+		--grid-width: var(--grid-width-m);
+	}
+}
+
+@media (--l) {
+
+	:root,
+	:host {
+		--grid-width: var(--grid-width-l);
+	}
+}
+
+@media (--xl) {
+
+	:root,
+	:host {
+		--grid-width: var(--grid-width-xl);
+	}
+}
+
+@media (--2xl) {
+
+	:root,
+	:host {
+		--grid-width: var(--grid-width-2xl);
+	}
+}

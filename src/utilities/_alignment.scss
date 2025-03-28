@@ -1,0 +1,98 @@
+@use "../config/breakpoints" as bp;
+
+$textAlignments: (
+  "text-center" : "center",
+  "text-justify" : "justify",
+  "text-left" : "left",
+  "text-right" : "right",
+);
+
+$itemAlignments: (
+  "items-center" : "center",
+  "items-end" : "end",
+  "items-start" : "start",
+  "items-stretch" : "stretch",
+);
+
+$justifyAlignments: (
+  "justify-center" : "center",
+  "justify-end" : "end",
+  "justify-start" : "start",
+  "justify-stretch" : "stretch",
+);
+
+$flexDirections: (
+  "flex-row" : "row",
+  "flex-column" : "column",
+);
+
+
+@layer has {
+  @each $alignment, $value in $textAlignments {
+
+    .has-#{$alignment} {
+      text-align: #{$value};
+    }
+
+    @each $name, $value in bp.$breakpoints {
+      @media (--#{$name}) {
+        .has-#{$alignment}\:#{$name} {
+          text-align: #{$value};
+        }
+      }
+    }
+  }
+
+  @each $alignment, $value in $itemAlignments {
+
+    .has-#{$alignment} {
+      align-items: #{$value};
+    }
+
+    @each $name, $value in bp.$breakpoints {
+      @media (--#{$name}) {
+        .has-#{$alignment}\:#{$name} {
+          align-items: #{$value};
+        }
+      }
+    }
+  }
+
+  @each $alignment, $value in $justifyAlignments {
+
+    .has-#{$alignment} {
+      justify-content: #{$value};
+    }
+
+    @each $name, $value in bp.$breakpoints {
+      @media (--#{$name}) {
+        .has-#{$alignment}\:#{$name} {
+          justify-content: #{$value};
+        }
+      }
+    }
+  }
+
+  @each $alignment, $value in $flexDirections {
+
+    .has-#{$alignment} {
+      flex-direction: #{$value};
+    }
+
+    @each $name, $value in bp.$breakpoints {
+      @media (--#{$name}) {
+        .has-#{$alignment}\:#{$name} {
+          flex-direction: #{$value};
+        }
+      }
+    }
+  }
+
+  .has-flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  .has-flex-nowrap {
+    flex-wrap: nowrap;
+  }
+}

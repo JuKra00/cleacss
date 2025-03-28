@@ -1,0 +1,7 @@
+@layer elements {
+  .input {
+    input[type="file"] {
+      font-size: var(--font-size-7);
+    }
+  }
+}

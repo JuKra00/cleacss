@@ -1,0 +1,69 @@
+@layer has {
+  .has-text-italic {
+    font-style: italic;
+  }
+
+  .has-text-wrap {
+    text-wrap: wrap;
+  }
+
+  .has-text-balance {
+    text-wrap: balance;
+  }
+
+  .has-text-uppercase {
+    text-transform: uppercase;
+  }
+
+  .has-text-light {
+    font-weight: var(--font-weight-light);
+  }
+
+  .has-text-normal {
+    font-weight: var(--font-weight-normal);
+  }
+
+  .has-text-bold {
+    font-weight: var(--font-weight-bold);
+  }
+
+  .has-size-1 {
+    font-size: var(--font-size-1);
+    max-width: var(--max-width-size-1);
+  }
+
+  .has-size-2 {
+    font-size: var(--font-size-2);
+    max-width: var(--max-width-size-2);
+  }
+
+  .has-size-3 {
+    font-size: var(--font-size-3);
+    max-width: var(--max-width-size-3);
+  }
+
+  .has-size-4 {
+    font-size: var(--font-size-4);
+    max-width: var(--max-width-size-4);
+  }
+
+  .has-size-5 {
+    font-size: var(--font-size-5);
+    max-width: var(--max-width-size-5);
+  }
+
+  .has-size-6 {
+    font-size: var(--font-size-6);
+    max-width: var(--max-width-size-6);
+  }
+
+  .has-size-7 {
+    font-size: var(--font-size-7);
+    max-width: var(--max-width-size-7);
+  }
+
+  .has-size-8 {
+    font-size: var(--font-size-8);
+    max-width: var(--max-width-size-8);
+  }
+}

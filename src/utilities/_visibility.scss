@@ -1,47 +1,21 @@
-@mixin visibility($target: "") {
-  .is-hidden#{if($target == "", "", "-" + $target)} {
+@use "../config/breakpoints" as bp;
+
+@layer is {
+  .is-hidden {
     display: none !important;
   }
-}
 
-@include visibility();
+  @each $name, $value in bp.$breakpoints {
+    @media (--#{$name}) {
+      .is-hidden-#{$name} {
+        display: none !important;
+      }
+    }
 
-@include phone {
-  @include visibility("phone");
-}
-
-@include mobile {
-  @include visibility("mobile");
-}
-
-@include mobile-only {
-  @include visibility("mobile-only");
-}
-
-@include tablet {
-  @include visibility("tablet");
-}
-
-@include tablet-only {
-  @include visibility("tablet-only");
-}
-
-@include desktop {
-  @include visibility("desktop");
-}
-
-@include desktop-only {
-  @include visibility("desktop-only");
-}
-
-@include widescreen {
-  @include visibility("widescreen");
-}
-
-@include widescreen-only {
-  @include visibility("widescreen-only");
-}
-
-@include fullhd {
-  @include visibility("fullhd");
+    @media (--#{$name}-max) {
+      .is-hidden-#{$name}-max {
+        display: none !important;
+      }
+    }
+  }
 }

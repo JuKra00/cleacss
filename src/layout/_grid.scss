@@ -1,92 +1,149 @@
-/* --------------------------------------------------------------
-# Grid
--------------------------------------------------------------- */
+@use "../config/breakpoints" as bp;
+@use "../config/space" as space;
 
-.grid {
-  @extend %grid;
+@layer layout {
 
-  .container:not(.is-fullwidth) & {
-    grid-template-columns: repeat(12, 1fr);
+  // Subgrid
+  .subgrid,
+  .grid .grid {
+    display: grid;
+    gap: inherit;
+    grid-template-columns: subgrid;
+    place-content: start;
   }
 
-  >.column {
-    grid-column-end: span 1;
-    grid-row: span 1;
+  .grid:not(.grid .grid),
+  .grid-reset {
+    column-gap: var(--grid-gap-x);
+    display: grid;
+    grid-template-columns:
+      [full-start] minmax(var(--grid-margin-min), var(--grid-margin-max)) [content-start] repeat(10, minmax(0, 1fr)) [content-end] minmax(var(--grid-margin-min), var(--grid-margin-max)) [full-end];
+    place-content: start;
+    row-gap: var(--grid-gap-y);
+    width: 100%;
   }
 
-  &.is-vcentered {
-    align-items: center;
-  }
-}
+  // Full width column
+  .span-full {
+    grid-column-end: -1;
+    grid-column-start: 1;
 
-@mixin generateGridColumns($suffix: "") {
-  .grid.is-oneline#{if($suffix == "", "", "-" + $suffix)} {
-    >.column {
-      grid-row: 1/-1;
+    @each $name, $value in bp.$breakpoints {
+      @media (--#{$name}) {
+        .span-full\:#{$name} {
+          grid-column-end: -1;
+          grid-column-start: 1;
+        }
+      }
     }
   }
 
-  .grid.is-gapless#{if($suffix == "", "", "-" + $suffix)} {
-    gap: 0;
+  // Content width
+  .span-content {
+    grid-column-end: -2;
+    grid-column-start: 2;
+
+    @each $name, $value in bp.$breakpoints {
+      @media (--#{$name}) {
+        .span-content\:#{$name} {
+          grid-column-end: -2;
+          grid-column-start: 2;
+        }
+      }
+    }
+  }
+
+  // Generate .col-x classes
+  @for $i from 1 through 12 {
+    $num: $i;
+
+    .span-#{$num} {
+      grid-column-end: span $num;
+      grid-column-start: auto;
+    }
   }
 
   @for $i from 1 through 11 {
     $num: $i;
 
-    .grid>.column.column-#{$num}#{if($suffix == "", "", "-" + $suffix)} {
-      grid-column-end: span $num;
+    @each $name, $value in bp.$breakpoints {
+      @media (--#{$name}) {
+        .span-#{$num}\:#{$name} {
+          grid-column-end: span $num;
+          grid-column-start: auto;
+        }
+      }
     }
   }
 
-  @for $num from 0 through 10 {
-    .grid>.column.column-offset-#{$num}#{if($suffix == "", "", "-" + $suffix)} {
+  // Generate .col-start-x classes
+  @for $i from 0 through 11 {
+    $num: $i;
+
+    .start-#{$num} {
       grid-column-start: $num + 1;
     }
   }
 
-  .grid>.column.column-12#{if($suffix == "", "", "-" + $suffix)} {
-    grid-column-end: span 12;
+  @for $i from 0 through 11 {
+    $num: $i;
+
+    @each $name, $value in bp.$breakpoints {
+      @media (--#{$name}) {
+        .start-#{$num}\:#{$name} {
+          grid-column-start: $num + 1;
+        }
+
+        .subgrid .start-#{$num}\:#{$name},
+        .grid .grid .start-#{$num}\:#{$name} {
+          grid-column-start: $num;
+        }
+      }
+    }
+  }
+
+  // Generate .col-start-x classes to be used in .col-content
+  @for $i from 1 through 10 {
+    $num: $i;
+
+    .span-content .start-#{$num} {
+      grid-column-start: $num;
+    }
+  }
+
+  @for $i from 1 through 10 {
+    $num: $i;
+
+    @each $name, $value in bp.$breakpoints {
+      @media (--#{$name}) {
+        .span-content .start-#{$num}\:#{$name} {
+          grid-column-start: $num;
+        }
+      }
+    }
   }
 }
 
-@include generateGridColumns();
+@layer has {
+  .has-gap-collapse {
+    margin-top: calc(var(--grid-gap-y) * -1);
+  }
 
-@include phone {
-  @include generateGridColumns("phone");
-}
+  .has-gap-x-0 {
+    --grid-gap-x: 0;
+  }
 
-@include mobile {
-  @include generateGridColumns("mobile");
-}
+  .has-gap-y-0 {
+    --grid-gap-y: 0;
+  }
 
-@include tablet {
-  @include generateGridColumns("tablet");
-}
+  @each $name, $space in space.$space-scales {
+    .has-gap-x-#{$name} {
+      --grid-gap-x: var(--space-#{$name});
+    }
 
-@include desktop {
-  @include generateGridColumns("desktop");
-}
-
-@include widescreen {
-  @include generateGridColumns("widescreen");
-}
-
-@include fullhd {
-  @include generateGridColumns("fullhd");
-}
-
-@include mobile-only {
-  @include generateGridColumns("mobile-only");
-}
-
-@include tablet-only {
-  @include generateGridColumns("tablet-only");
-}
-
-@include desktop-only {
-  @include generateGridColumns("desktop-only");
-}
-
-@include widescreen-only {
-  @include generateGridColumns("widescreen-only");
+    .has-gap-y-#{$name} {
+      --grid-gap-y: var(--space-#{$name});
+    }
+  }
 }

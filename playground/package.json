@@ -1,0 +1,22 @@
+{
+	"name": "cleacss-playground",
+	"private": false,
+	"author": "Justus Kraft <hallo@justuskraft.de> (https://justuskraft.de)",
+	"type": "module",
+	"license": "MIT",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"build:lib": "tsc && vite build --config vite-lib.config.ts",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"browserslist": "^4.24.4",
+		"cheerio": "^1.0.0",
+		"lightningcss": "^1.29.2",
+		"postcss": "^8.5.3",
+		"sass": "^1.85.1",
+		"typescript": "~5.7.2",
+		"vite": "^6.2.0"
+	}
+}

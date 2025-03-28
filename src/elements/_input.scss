@@ -1,302 +1,64 @@
-/*--------------------------------------------------------------
-# Special Labels
---------------------------------------------------------------*/
+@use "./inputs/label";
+@use "./inputs/message";
+@use "./inputs/color";
+@use "./inputs/date";
+@use "./inputs/file";
+@use "./inputs/radio";
+@use "./inputs/checkbox";
+@use "./inputs/range";
+@use "./inputs/select";
+@use "./inputs/textarea";
 
-.input {
-  label {
-    font-size: cssvar(size-7);
-    font-weight: cssvar(font-weight-bold);
-    line-height: 1;
-  }
-}
+@layer elements {
 
-.checkbox,
-.radio {
-  label {
-    align-items: center;
-    display: flex;
-    gap: 1em;
-    line-height: 1.2;
-
-    &[for] {
-      cursor: pointer;
-    }
-  }
-}
-
-/*--------------------------------------------------------------
-# Inputs
---------------------------------------------------------------*/
-
-.input,
-.checkbox,
-.radio,
-.select {
-  color: inherit;
-  display: grid;
-  gap: 0.4em;
-  grid-template-columns: 1em auto;
-  grid-template-rows: auto 1fr auto;
-
-  input,
-  textarea,
-  select {
-    appearance: none;
-    background-color: cssvar(input-background-color);
-    border: cssvar(input-border-width) solid cssvar(input-border-color);
-    border-radius: cssvar(border-radius-small);
-    color: inherit;
-    font-family: inherit;
-    font-size: 1rem;
-    grid-column: 1 / -1;
-    grid-row: 2 / 3;
-    max-width: 100%;
-    padding: cssvar(input-padding-y) cssvar(input-padding-x);
-    width: 100%;
-
-    &::placeholder {
-      color: cssvar(input-placeholder-color);
-      opacity: 1;
-    }
-  }
-
-  input:not([type="checkbox"], [type="radio"], textarea) {
-    line-height: 1;
-  }
-
-  /* --------------------------------------------------------------
-  # Messages
-  -------------------------------------------------------------- */
-
-  .message {
-    font-size: cssvar(size-7);
-    grid-column: 1 /-1;
-  }
-
-  .message.message--error {
-    color: cssvar(input-error-color);
-  }
-
-  /* --------------------------------------------------------------
-  # Labels
-  -------------------------------------------------------------- */
-  label {
-    font-size: inherit;
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
-  }
-
-  /* --------------------------------------------------------------
-  # Color
-  -------------------------------------------------------------- */
-
-  input[type="color"] {
-    padding: 0;
-  }
-
-  /* --------------------------------------------------------------
-  # Range
-  -------------------------------------------------------------- */
-
-  @mixin track {
-    appearance: none;
-    background-color: cssvar(input-border-color);
-    border-radius: cssvar(border-radius-small);
-    cursor: pointer;
-    height: cssvar(input-border-width);
-    width: 100%;
-  }
-
-  @mixin handle {
-    appearance: none;
-    background: cssvar(base-color);
-    border: none;
-    border-radius: cssvar(border-radius-rounded);
-    cursor: pointer;
-    height: 1.25em;
-    width: 1.25em;
-  }
-
-  input[type="range"] {
-    appearance: none;
-    border: 0;
-    grid-column: 1 / -1;
-    grid-row: 2 / 3;
-    padding: 0;
-
-    // Track
-    &::-moz-range-track {
-      @include track;
-    }
-
-    &::-ms-track {
-      @include track;
-    }
-
-    &::-webkit-slider-runnable-track {
-      @include track;
-    }
-
-    // Handle
-    &::-moz-range-thumb {
-      @include handle;
-    }
-
-    &::-webkit-slider-thumb {
-      @include handle;
-      margin-top: -0.55em;
-    }
-
-    &::-ms-thumb {
-      @include handle;
-    }
-  }
-
-  /* --------------------------------------------------------------
-  # File
-  -------------------------------------------------------------- */
-
-  input[type="file"] {
-    font-size: cssvar(size-7);
-  }
-
-  /* --------------------------------------------------------------
-  # Radio
-  -------------------------------------------------------------- */
-
-  input[type="radio"] {
-    border: cssvar(input-border-width) solid cssvar(input-border-color);
-    border-radius: cssvar(border-radius-rounded);
+  .input,
+  .checkbox,
+  .radio,
+  .select {
     display: grid;
-    height: 1em;
-    padding: 0;
-    place-content: center;
-    width: 1em;
+    font-size: var(--input-font-size);
+    grid-template-columns: 1em auto;
+    grid-template-rows: auto 1fr auto;
 
-    &::before {
-      border-radius: cssvar(border-radius-rounded);
-      box-shadow: inset 1em 1em cssvar(base-color);
-      content: "";
-      height: 0.5em;
-      transform: scale(0);
-      transition: 120ms transform ease-in-out;
-      width: 0.5em;
-    }
+    input,
+    textarea,
+    select {
+      appearance: none;
+      background-color: var(--input-background-color);
+      border: var(--input-border-width) solid var(--input-border-color);
+      border-radius: var(--input-border-radius);
+      color: var(--input-color);
+      font-family: inherit;
+      font-size: inherit;
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+      max-width: 100%;
+      min-height: var(--input-min-height);
+      padding: var(--input-padding-y) var(--input-padding-x);
+      width: 100%;
 
-    &:checked::before {
-      transform: scale(1);
-    }
+      &::placeholder {
+        color: var(--input-placeholder-color);
+        opacity: 1;
+      }
 
-    &[readonly] {
-      border-style: dotted;
-      cursor: not-allowed;
-    }
-
-    &[disabled] {
-      cursor: not-allowed;
-      opacity: 0.7;
-    }
-  }
-
-  /* --------------------------------------------------------------
-  # Checkbox
-  -------------------------------------------------------------- */
-
-  input[type="checkbox"] {
-    border: cssvar(input-border-width) solid cssvar(input-border-color);
-    border-radius: cssvar(border-radius-small);
-    display: grid;
-    height: 1em;
-    padding: 0;
-    place-content: center;
-    width: 1em;
-
-    &::before {
-      box-shadow: inset 1em 1em cssvar(base-color);
-      clip-path: polygon(80% 0, 100% 13%, 43% 100%, 0 73%, 11% 54%, 39% 72%);
-      content: "";
-      height: 0.65em;
-      transform: scale(0);
-      transform-origin: center;
-      transition: 120ms transform ease-in-out;
-      width: 0.65em;
-    }
-
-    &:checked::before {
-      transform: scale(1) rotate(5deg);
-    }
-
-    &[readonly] {
-      border-style: dotted;
-      cursor: not-allowed;
-    }
-
-    &[disabled] {
-      cursor: not-allowed;
-      opacity: 0.7;
-    }
-  }
-
-  /* --------------------------------------------------------------
-  # Textarea
-  -------------------------------------------------------------- */
-
-  textarea {
-    min-height: 8rem;
-    resize: vertical;
-  }
-
-  /* --------------------------------------------------------------
-  # States
-  -------------------------------------------------------------- */
-
-  &.is-disabled {
-    label {
-      opacity: 0.7;
-
-      &[for] {
-        cursor: not-allowed;
+      &:focus-visible {
+        outline: var(--input-outline-width) solid var(--input-outline-color);
       }
     }
-  }
 
-  &.is-readonly {
-    label {
-      &[for] {
-        cursor: not-allowed;
-      }
+    input:not([type="checkbox"], [type="radio"], textarea) {
+      line-height: 1;
     }
-  }
 
-  input[readonly] {
-    cursor: not-allowed;
-  }
+    input[readonly] {
+      cursor: not-allowed;
+    }
 
-  input[disabled] {
-    cursor: not-allowed;
-    opacity: 0.7;
-  }
+    input[disabled] {
+      color: var(--input-color-disabled);
+      cursor: not-allowed;
+    }
 
-  input:focus,
-  textarea:focus,
-  select:focus {
-    box-shadow: 0 0 0 cssvar(input-border-width) cssvar(input-outline-color);
-    outline: cssvar(input-border-width) solid transparent;
-  }
-}
-
-.select {
-  &::after {
-    content: "";
-    height: 0.65em;
-    width: 0.65em;
-    display: block;
-    box-shadow: inset 1em 1em cssvar(base-color);
-    clip-path: polygon(50% 100%, 0% 25%, 100% 25%);
-    grid-row: 2/3;
-    grid-column: 1/-1;
-    align-self: center;
-    justify-self: end;
-    margin-right: cssvar(input-padding-x);
   }
 }

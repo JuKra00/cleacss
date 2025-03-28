@@ -1,0 +1,43 @@
+@layer elements {
+
+  .input,
+  .checkbox,
+  .radio,
+  .select {
+    label {
+      color: var(--input-label-color);
+      font-weight: var(--input-label-weight);
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+      padding: var(--input-label-padding);
+    }
+  }
+
+
+  .input,
+  .select {
+    label {
+      font-size: var(--input-label-font-size);
+      line-height: 1;
+    }
+  }
+
+  .checkbox,
+  .radio {
+    label {
+      align-items: flex-start;
+      display: flex;
+      font-size: var(--input-font-size);
+      gap: 0.5em;
+      padding: 0;
+
+      >input {
+        margin-top: 0.21em
+      }
+
+      &[for] {
+        cursor: pointer;
+      }
+    }
+  }
+}

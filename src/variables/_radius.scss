@@ -1,7 +1,6 @@
-@include cssvars(
-  (
-    border-radius: 4px,
-    border-radius-small: 2px,
-    border-radius-rounded: 999px,
-  )
-);
+:root,
+:host {
+	--border-radius: 4px;
+	--border-radius-s: 2px;
+	--border-radius-rounded: 4096px;
+}
