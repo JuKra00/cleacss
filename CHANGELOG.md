@@ -1,4 +1,18 @@
+# Changelog
 
+## [2.0.0-beta.0](https://github.com/JuKra00/cleacss/compare/v1.0.0...v2.0.0-beta.0) (2025-03-28)
+
+### Features
+
+* add more visibility helper ([b73a262](https://github.com/JuKra00/cleacss/commit/b73a262e615409ec6a5116113e297594f473b7ac))
+* huge refactor for next ([f6c012d](https://github.com/JuKra00/cleacss/commit/f6c012d239ad8c3e7c0079b059e1a97039fc5242))
+
+### Bug Fixes
+
+* add :host for use in custom web components ([ae3482a](https://github.com/JuKra00/cleacss/commit/ae3482ad73e3935d43d0332ea55c8769eeb81321))
+* add link reset ([80e4189](https://github.com/JuKra00/cleacss/commit/80e41890566274beb21df091c7270b11bc7a6395))
+* use name untranspiled ([25b58a8](https://github.com/JuKra00/cleacss/commit/25b58a83bc52b2437867a5d21d2ea329305d1c7d))
+* use system-ui font ([b39bc89](https://github.com/JuKra00/cleacss/commit/b39bc893762009c9f8726828b94465e913d73c53))
 
 ## [1.0.0](https://github.com/JuKra00/cleacss/compare/v1.0.0-beta.4...v1.0.0) (2025-03-28)
 
