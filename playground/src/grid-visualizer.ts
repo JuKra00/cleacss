@@ -37,7 +37,7 @@ class GridVisualizer extends HTMLElement {
         .grid-columns-debug {
          display: grid;
           grid-template-columns:
-            [full-start] minmax(var(--grid-margin-min), var(--grid-margin-max)) [content-start] repeat(10, minmax(0, 1fr)) [content-end] minmax(var(--grid-margin-min), var(--grid-margin-max)) [full-end];
+            [full-start] minmax(var(--grid-margin-min), var(--grid-margin-max)) [content-start] repeat(12, minmax(0, 1fr)) [content-end] minmax(var(--grid-margin-min), var(--grid-margin-max)) [full-end];
           row-gap: var(--grid-gap-y);
           column-gap: var(--grid-gap-x);
           height: 100vh;
@@ -100,8 +100,8 @@ class GridVisualizer extends HTMLElement {
   }
 
   private generateColumnSpans() {
-    return Array.from({ length: 12 }, (_, i) => {
-      return `<span data-col="${i > 0 && i < 11 ? i : ''}"></span>`;
+    return Array.from({ length: 14 }, (_, i) => {
+      return `<span data-col="${i > 0 && i < 13 ? i : ''}"></span>`;
     }).join('');
   }
 

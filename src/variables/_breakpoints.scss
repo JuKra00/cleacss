@@ -2,13 +2,13 @@
 
 @each $name, $value in bp.$breakpoints {
 
-	:root,
-	:host {
-		--breakpoint-#{$name}: #{$value};
-	}
+  :root,
+  :host {
+    --breakpoint-#{$name}: #{$value};
+  }
 }
 
 @each $name, $value in bp.$breakpoints {
-	@custom-media --#{$name} (min-width: #{$value});
-	@custom-media --#{$name}-max (max-width: #{$value});
+  @custom-media --#{$name} (min-width: #{$value});
+  @custom-media --#{$name}-max (max-width: #{$value});
 }

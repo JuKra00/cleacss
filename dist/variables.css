@@ -1,0 +1,230 @@
+:root,
+:host {
+  --breakpoint-s: 30rem;
+}
+
+:root,
+:host {
+  --breakpoint-m: 48rem;
+}
+
+:root,
+:host {
+  --breakpoint-l: 64rem;
+}
+
+:root,
+:host {
+  --breakpoint-xl: 80rem;
+}
+
+:root,
+:host {
+  --breakpoint-2xl: 120rem;
+}
+
+@custom-media --s (min-width: 30rem);
+@custom-media --s-max (max-width: 30rem);
+@custom-media --m (min-width: 48rem);
+@custom-media --m-max (max-width: 48rem);
+@custom-media --l (min-width: 64rem);
+@custom-media --l-max (max-width: 64rem);
+@custom-media --xl (min-width: 80rem);
+@custom-media --xl-max (max-width: 80rem);
+@custom-media --2xl (min-width: 120rem);
+@custom-media --2xl-max (max-width: 120rem);
+:root,
+:host {
+  --color-base: var(--color-neutral-900);
+  --color-base-background: var(--color-neutral-50);
+  --color-accent-h: 300;
+  --color-accent-c: 0.18;
+  --color-accent-l: 0.75;
+  --color-neutral-h: 300;
+  --color-neutral-c: 0.01;
+  --color-accent-light: oklch(calc(var(--color-accent-l) * 1.2) var(--color-accent-c) var(--color-accent-h));
+  --color-accent: oklch(var(--color-accent-l) var(--color-accent-c) var(--color-accent-h));
+  --color-accent-dark: oklch(calc(var(--color-accent-l) * 0.5) var(--color-accent-c) var(--color-accent-h));
+  --color-neutral-50: oklch(0.95 var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-100: oklch(0.9 var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-200: oklch(0.8 var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-300: oklch(0.7 var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-500: oklch(0.5 var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-700: oklch(0.3 var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-800: oklch(0.2 var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-900: oklch(0.1 var(--color-neutral-c) var(--color-neutral-h));
+  --color-success: oklch(0.65 0.15 150);
+  --color-warning: oklch(0.75 0.15 80);
+  --color-error: oklch(0.65 0.18 25);
+  --color-info: oklch(0.65 0.15 220);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root,
+  :host {
+    --color-neutral-50: oklch(0.15 var(--color-neutral-c) var(--color-neutral-h));
+    --color-neutral-100: oklch(0.1 var(--color-neutral-c) var(--color-neutral-h));
+    --color-neutral-200: oklch(0.2 var(--color-neutral-c) var(--color-neutral-h));
+    --color-neutral-300: oklch(0.3 var(--color-neutral-c) var(--color-neutral-h));
+    --color-neutral-500: oklch(0.5 var(--color-neutral-c) var(--color-neutral-h));
+    --color-neutral-700: oklch(0.7 var(--color-neutral-c) var(--color-neutral-h));
+    --color-neutral-800: oklch(0.8 var(--color-neutral-c) var(--color-neutral-h));
+    --color-neutral-900: oklch(0.85 var(--color-neutral-c) var(--color-neutral-h));
+  }
+}
+:root,
+:host {
+  --font-family: system-ui;
+  --font-family-title: var(--font-family);
+  --font-family-mono: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  --line-height: 1.4;
+  --line-height-title: 1;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-size-1: clamp(3.0518rem, 1.7138rem + 4.46vw, 7.0657rem);
+  --font-size-2: clamp(2.4414rem, 1.5895rem + 2.8395vw, 4.997rem);
+  --font-size-3: clamp(1.9531rem, 1.4262rem + 1.7565vw, 3.5339rem);
+  --font-size-4: clamp(1.5625rem, 1.2503rem + 1.0408vw, 2.4992rem);
+  --font-size-5: clamp(1.25rem, 1.0775rem + 0.575vw, 1.7675rem);
+  --font-size-6: clamp(1rem, 0.9167rem + 0.2778vw, 1.25rem);
+  --font-size-7: clamp(0.8rem, 0.772rem + 0.0934vw, 0.884rem);
+  --font-size-8: clamp(0.6252rem, 0.6449rem + -0.0165vw, 0.64rem);
+  --max-width-size-1: 15ch;
+  --max-width-size-2: 18ch;
+  --max-width-size-3: 20ch;
+  --max-width-size-4: 25ch;
+  --max-width-size-5: 45ch;
+  --max-width-size-6: 65ch;
+  --max-width-size-7: 70ch;
+  --max-width-size-8: 75ch;
+}
+
+:root,
+:host {
+  --grid-width-s: 40rem;
+  --grid-width-m: 45rem;
+  --grid-width-l: 60rem;
+  --grid-width-xl: 71.25rem;
+  --grid-width-2xl: 90rem;
+  --grid-width: var(--grid-width-s);
+  --grid-margin-min: 0;
+  --grid-margin-max: calc(((100vw - var(--grid-gap-x) * 2) - var(--grid-width)) / 2);
+  --grid-gap-y: var(--space-default);
+  --grid-gap-x: var(--space-default);
+}
+
+@media (--m) {
+  :root,
+  :host {
+    --grid-width: var(--grid-width-m);
+  }
+}
+@media (--l) {
+  :root,
+  :host {
+    --grid-width: var(--grid-width-l);
+  }
+}
+@media (--xl) {
+  :root,
+  :host {
+    --grid-width: var(--grid-width-xl);
+  }
+}
+@media (--2xl) {
+  :root,
+  :host {
+    --grid-width: var(--grid-width-2xl);
+  }
+}
+:root,
+:host {
+  --flow-gap: var(--space-s);
+}
+
+:root,
+:host {
+  --border-radius: 4px;
+  --border-radius-s: 2px;
+  --border-radius-rounded: 4096px;
+}
+
+:root,
+:host {
+  --space-default: var(--space-s-l);
+  --space-2xs: clamp(0.25rem, 0.2292rem + 0.0694vw, 0.3125rem);
+  --space-xs: clamp(0.5rem, 0.4583rem + 0.1389vw, 0.625rem);
+  --space-s: clamp(1rem, 0.9167rem + 0.2778vw, 1.25rem);
+  --space-m: clamp(1.5rem, 1.375rem + 0.4167vw, 1.875rem);
+  --space-l: clamp(2rem, 1.8333rem + 0.5556vw, 2.5rem);
+  --space-xl: clamp(3rem, 2.75rem + 0.8333vw, 3.75rem);
+  --space-2xl: clamp(4rem, 3.6667rem + 1.1111vw, 5rem);
+  --space-3xl: clamp(6rem, 5.5rem + 1.6667vw, 7.5rem);
+  --space-4xl: clamp(8rem, 7.3333rem + 2.2222vw, 10rem);
+  --space-2xs-xs: clamp(0.25rem, 0.125rem + 0.4167vw, 0.625rem);
+  --space-xs-s: clamp(0.5rem, 0.25rem + 0.8333vw, 1.25rem);
+  --space-s-m: clamp(1rem, 0.7083rem + 0.9722vw, 1.875rem);
+  --space-m-l: clamp(1.5rem, 1.1667rem + 1.1111vw, 2.5rem);
+  --space-l-xl: clamp(2rem, 1.4167rem + 1.9444vw, 3.75rem);
+  --space-xl-2xl: clamp(3rem, 2.3333rem + 2.2222vw, 5rem);
+  --space-2xl-3xl: clamp(4rem, 2.8333rem + 3.8889vw, 7.5rem);
+  --space-3xl-4xl: clamp(6rem, 4.6667rem + 4.4444vw, 10rem);
+  --space-s-l: clamp(1rem, 0.5rem + 1.6667vw, 2.5rem);
+  --space-m-xl: clamp(1.5rem, 0.75rem + 2.5vw, 3.75rem);
+  --space-xl-3xl: clamp(3rem, 1.5rem + 5vw, 7.5rem);
+  --space-xl-4xl: clamp(3rem, 0.6667rem + 7.7778vw, 10rem);
+}
+
+:root,
+:host {
+  --button-padding-y: 0.5em;
+  --button-padding-x: 1.5em;
+  --button-border-width: 2px;
+  --button-border-radius: var(--border-radius-rounded);
+  --button-background-color: var(--color-accent);
+  --button-border-color: var(--color-accent);
+  --button-color: var(--color-accent-dark);
+}
+
+:root,
+:host {
+  --input-color: var(--color-neutral-900);
+  --input-color-error: var(--color-error);
+  --input-color-disabled: var(--color-neutral-300);
+  --input-font-size: var(--font-size-7);
+  --input-min-height: calc(var(--input-padding-y) * 2 + 1.5rem);
+  --input-message-color: var(--color-neutral-500);
+  --input-label-color: var(--color-neutral-700);
+  --input-label-weight: var(--font-weight-normal);
+  --input-label-padding: 0 0 var(--space-xs) 0;
+  --input-label-font-size: var(--font-size-7);
+  --input-padding-y: 0.5rem;
+  --input-padding-x: 0.75rem;
+  --input-border-width: 1px;
+  --input-border-radius: var(--border-radius-s);
+  --input-border-color: var(--color-neutral-300);
+  --input-background-color: var(--color-neutral-50);
+  --input-outline-color: var(--color-accent);
+  --input-outline-width: 2px;
+  --input-placeholder-color: var(--color-neutral-500);
+  --input-radio-border-radius: var(--border-radius-rounded);
+  --input-radio-accent: var(--color-accent);
+  --input-checkbox-border-radius: var(--border-radius-s);
+  --input-checkbox-accent: var(--color-accent);
+  --input-select-accent: var(--color-accent);
+  --input-range-accent: var(--color-accent);
+  --input-range-handle-border-radius: var(--border-radius-rounded);
+}
+
+:root,
+:host {
+  --table-border-color: var(--color-neutral-800);
+  --table-border-width: 1px;
+  --table-padding-x: var(--space-xs);
+  --table-padding-y: var(--space-xs);
+  --table-accent-background: var(--color-neutral-800);
+  --table-accent-color: var(--color-neutral-50);
+}
+
+/*# sourceMappingURL=variables.css.map */

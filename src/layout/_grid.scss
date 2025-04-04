@@ -1,5 +1,6 @@
 @use "../config/breakpoints" as bp;
 @use "../config/space" as space;
+$numberOfColumns: 14;
 
 @layer layout {
 
@@ -16,8 +17,7 @@
   .grid-reset {
     column-gap: var(--grid-gap-x);
     display: grid;
-    grid-template-columns:
-      [full-start] minmax(var(--grid-margin-min), var(--grid-margin-max)) [content-start] repeat(10, minmax(0, 1fr)) [content-end] minmax(var(--grid-margin-min), var(--grid-margin-max)) [full-end];
+    grid-template-columns: [full-start] minmax(var(--grid-margin-min), var(--grid-margin-max)) [content-start] repeat(#{$numberOfColumns - 2}, minmax(0, 1fr)) [content-end] minmax(var(--grid-margin-min), var(--grid-margin-max)) [full-end];
     place-content: start;
     row-gap: var(--grid-gap-y);
     width: 100%;
@@ -53,8 +53,8 @@
     }
   }
 
-  // Generate .col-x classes
-  @for $i from 1 through 12 {
+  // Generate .span-x classes
+  @for $i from 1 through $numberOfColumns {
     $num: $i;
 
     .span-#{$num} {
@@ -63,7 +63,7 @@
     }
   }
 
-  @for $i from 1 through 11 {
+  @for $i from 1 through ($numberOfColumns - 1) {
     $num: $i;
 
     @each $name, $value in bp.$breakpoints {
@@ -76,8 +76,8 @@
     }
   }
 
-  // Generate .col-start-x classes
-  @for $i from 0 through 11 {
+  // Generate .start-x classes
+  @for $i from 0 through ($numberOfColumns - 1) {
     $num: $i;
 
     .start-#{$num} {
@@ -85,7 +85,7 @@
     }
   }
 
-  @for $i from 0 through 11 {
+  @for $i from 0 through ($numberOfColumns - 1) {
     $num: $i;
 
     @each $name, $value in bp.$breakpoints {
@@ -102,8 +102,8 @@
     }
   }
 
-  // Generate .col-start-x classes to be used in .col-content
-  @for $i from 1 through 10 {
+  // Generate .start-x classes to be used in .col-content
+  @for $i from 1 through ($numberOfColumns - 2) {
     $num: $i;
 
     .span-content .start-#{$num} {
@@ -111,7 +111,7 @@
     }
   }
 
-  @for $i from 1 through 10 {
+  @for $i from 1 through ($numberOfColumns - 2) {
     $num: $i;
 
     @each $name, $value in bp.$breakpoints {

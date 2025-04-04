@@ -2,11 +2,11 @@
 title: Grid
 ---
 
-Cleacss comes with a 12 column grid system, which is meant to be the most outer layer of your layout. Inside you can use subgrids to create individual components that are consistent with the rest of the layout.
+Cleacss comes with a 14 column grid system, which is meant to be the most outer layer of your layout. Inside you can use subgrids to create individual components that are consistent with the rest of the layout.
 
-Using the `grid` class, you create a grid where the most outer columns are spaced dynamically, while the inner 10 columns are spaced evenly. This can be compared to a container approach in other frameworks.
+Using the `grid` class, you create a grid where the most outer columns are spaced dynamically, while the inner 12 columns are spaced evenly. This can be compared to a container approach in other frameworks.
 
-Inside the `grid` you can use `span-x` classes to define the width of elments, by default, all elements will span 1 of 12 columns.
+Inside the `grid` you can use `span-x` classes to define the width of elments, by default, all elements will span 1 of 14 columns.
 
 To get more complex layouts, you can nest `grid` or use `subgrid` to create subgrids. Both classes will work the same way, it's just a matter of preference.
 
@@ -127,7 +127,7 @@ A good usecase is the usage inside a full width flow element.
 
 You can change the grid width, gap and margins using the following custom properties.
 
-The `--grid-width` is the width of the **content area**, the margins are the space between the content and the edges of the screen, and the gap is the space between the columns. Each grid width corresponds to a breakpoint, e.g. `--grid-width-s` is the maximum width of the columns 1/10 (`span-content`) on small screens. There are media queries in place that change the `--grid-width` property based on the breakpoint.
+The `--grid-width` is the width of the **content area**, the margins are the space between the content and the edges of the screen, and the gap is the space between the columns. Each grid width corresponds to a breakpoint, e.g. `--grid-width-s` is the maximum width of the columns 2 to 12 (`span-content`) on small screens. There are media queries in place that change the `--grid-width` property based on the breakpoint.
 
 ```css
 :root {

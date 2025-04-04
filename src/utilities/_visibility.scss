@@ -7,13 +7,13 @@
 
   @each $name, $value in bp.$breakpoints {
     @media (--#{$name}) {
-      .is-hidden-#{$name} {
+      .is-hidden\:#{$name} {
         display: none !important;
       }
     }
 
     @media (--#{$name}-max) {
-      .is-hidden-#{$name}-max {
+      .is-hidden\:#{$name}-max {
         display: none !important;
       }
     }

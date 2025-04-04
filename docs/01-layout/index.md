@@ -2,11 +2,11 @@
 title: Layout
 ---
 
-The cleass layout system consists of two main ideas, `grid` and `flow`. The `grid` is a 12 column grid, while the `flow` is a flex layout with a consistent gap between elements.
+The cleass layout system consists of two main ideas, `grid` and `flow`. The `grid` is a 14 column grid, while the `flow` is a flex layout with a consistent gap between elements.
 
 The layout system is however a bit different from other frameworks. It is meant to reduce the amount of markup you need to write, while providing even more layout capabilities than a typical section > container > columns layout.
 
-When using grid, the most outer columns 1 and 12 are fluid in their widths. With this approach, we have a centered content column that can be limited in width on larger viewports, while allowing content to span to the edges of the screen without work arounds.
+When using grid, the most outer columns 1 and 14 are fluid in their widths. With this approach, we have a centered content column that can be limited in width on larger viewports, while allowing content to span to the edges of the screen without work arounds.
 
 Using this layout basically looks like this:
 

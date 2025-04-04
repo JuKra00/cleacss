@@ -32,7 +32,7 @@ class l extends HTMLElement {
         .grid-columns-debug {
          display: grid;
           grid-template-columns:
-            [full-start] minmax(var(--grid-margin-min), var(--grid-margin-max)) [content-start] repeat(10, minmax(0, 1fr)) [content-end] minmax(var(--grid-margin-min), var(--grid-margin-max)) [full-end];
+            [full-start] minmax(var(--grid-margin-min), var(--grid-margin-max)) [content-start] repeat(12, minmax(0, 1fr)) [content-end] minmax(var(--grid-margin-min), var(--grid-margin-max)) [full-end];
           row-gap: var(--grid-gap-y);
           column-gap: var(--grid-gap-x);
           height: 100vh;
@@ -90,7 +90,7 @@ class l extends HTMLElement {
     `, this.toggleButton = this.createButton(), this.shadowRoot.appendChild(this.toggleButton), this.debugColumns = this.shadowRoot.querySelector(".grid-columns-debug"));
   }
   generateColumnSpans() {
-    return Array.from({ length: 12 }, (t, i) => `<span data-col="${i > 0 && i < 11 ? i : ""}"></span>`).join("");
+    return Array.from({ length: 14 }, (t, i) => `<span data-col="${i > 0 && i < 13 ? i : ""}"></span>`).join("");
   }
   createButton() {
     const t = document.createElement("button");

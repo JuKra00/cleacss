@@ -1,0 +1,37 @@
+:root,
+:host {
+  --breakpoint-s: 30rem;
+}
+
+:root,
+:host {
+  --breakpoint-m: 48rem;
+}
+
+:root,
+:host {
+  --breakpoint-l: 64rem;
+}
+
+:root,
+:host {
+  --breakpoint-xl: 80rem;
+}
+
+:root,
+:host {
+  --breakpoint-2xl: 120rem;
+}
+
+@custom-media --s (min-width: 30rem);
+@custom-media --s-max (max-width: 30rem);
+@custom-media --m (min-width: 48rem);
+@custom-media --m-max (max-width: 48rem);
+@custom-media --l (min-width: 64rem);
+@custom-media --l-max (max-width: 64rem);
+@custom-media --xl (min-width: 80rem);
+@custom-media --xl-max (max-width: 80rem);
+@custom-media --2xl (min-width: 120rem);
+@custom-media --2xl-max (max-width: 120rem);
+
+/*# sourceMappingURL=media-queries.css.map */
