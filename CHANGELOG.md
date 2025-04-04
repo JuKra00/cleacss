@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.0-beta.1](https://github.com/JuKra00/cleacss/compare/v2.0.0-beta.0...v2.0.0-beta.1) (2025-04-04)
+
+### Features
+
+* move to 14 column grid ([484e022](https://github.com/JuKra00/cleacss/commit/484e022f5f978c6845d354e9035e6a7ebefcc904))
+
 ## [2.0.0-beta.0](https://github.com/JuKra00/cleacss/compare/v1.0.0...v2.0.0-beta.0) (2025-03-28)
 
 ### Features
