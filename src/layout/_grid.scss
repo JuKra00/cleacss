@@ -63,7 +63,7 @@ $numberOfColumns: 14;
     }
   }
 
-  @for $i from 1 through ($numberOfColumns - 1) {
+  @for $i from 1 through $numberOfColumns {
     $num: $i;
 
     @each $name, $value in bp.$breakpoints {
@@ -82,6 +82,11 @@ $numberOfColumns: 14;
 
     .start-#{$num} {
       grid-column-start: $num + 1;
+    }
+
+    .subgrid .start-#{$num},
+    .grid .grid .start-#{$num} {
+      grid-column-start: $num;
     }
   }
 

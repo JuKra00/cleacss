@@ -854,47 +854,133 @@
       grid-column-start: auto;
     }
   }
+  @media (--s) {
+    .span-14\:s {
+      grid-column-end: span 14;
+      grid-column-start: auto;
+    }
+  }
+  @media (--m) {
+    .span-14\:m {
+      grid-column-end: span 14;
+      grid-column-start: auto;
+    }
+  }
+  @media (--l) {
+    .span-14\:l {
+      grid-column-end: span 14;
+      grid-column-start: auto;
+    }
+  }
+  @media (--xl) {
+    .span-14\:xl {
+      grid-column-end: span 14;
+      grid-column-start: auto;
+    }
+  }
+  @media (--2xl) {
+    .span-14\:2xl {
+      grid-column-end: span 14;
+      grid-column-start: auto;
+    }
+  }
   .start-0 {
     grid-column-start: 1;
+  }
+  .subgrid .start-0,
+  .grid .grid .start-0 {
+    grid-column-start: 0;
   }
   .start-1 {
     grid-column-start: 2;
   }
+  .subgrid .start-1,
+  .grid .grid .start-1 {
+    grid-column-start: 1;
+  }
   .start-2 {
     grid-column-start: 3;
+  }
+  .subgrid .start-2,
+  .grid .grid .start-2 {
+    grid-column-start: 2;
   }
   .start-3 {
     grid-column-start: 4;
   }
+  .subgrid .start-3,
+  .grid .grid .start-3 {
+    grid-column-start: 3;
+  }
   .start-4 {
     grid-column-start: 5;
+  }
+  .subgrid .start-4,
+  .grid .grid .start-4 {
+    grid-column-start: 4;
   }
   .start-5 {
     grid-column-start: 6;
   }
+  .subgrid .start-5,
+  .grid .grid .start-5 {
+    grid-column-start: 5;
+  }
   .start-6 {
     grid-column-start: 7;
+  }
+  .subgrid .start-6,
+  .grid .grid .start-6 {
+    grid-column-start: 6;
   }
   .start-7 {
     grid-column-start: 8;
   }
+  .subgrid .start-7,
+  .grid .grid .start-7 {
+    grid-column-start: 7;
+  }
   .start-8 {
     grid-column-start: 9;
+  }
+  .subgrid .start-8,
+  .grid .grid .start-8 {
+    grid-column-start: 8;
   }
   .start-9 {
     grid-column-start: 10;
   }
+  .subgrid .start-9,
+  .grid .grid .start-9 {
+    grid-column-start: 9;
+  }
   .start-10 {
     grid-column-start: 11;
+  }
+  .subgrid .start-10,
+  .grid .grid .start-10 {
+    grid-column-start: 10;
   }
   .start-11 {
     grid-column-start: 12;
   }
+  .subgrid .start-11,
+  .grid .grid .start-11 {
+    grid-column-start: 11;
+  }
   .start-12 {
     grid-column-start: 13;
   }
+  .subgrid .start-12,
+  .grid .grid .start-12 {
+    grid-column-start: 12;
+  }
   .start-13 {
     grid-column-start: 14;
+  }
+  .subgrid .start-13,
+  .grid .grid .start-13 {
+    grid-column-start: 13;
   }
   @media (--s) {
     .start-0\:s {
