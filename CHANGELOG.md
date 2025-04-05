@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.0-beta.3](https://github.com/JuKra00/cleacss/compare/v2.0.0-beta.1...v2.0.0-beta.3) (2025-04-05)
+
+### Bug Fixes
+
+* start in grid and subgrid ([48d5587](https://github.com/JuKra00/cleacss/commit/48d558734ec06d761d3000e1a5c5cb844d6e4271))
+
 ## [2.0.0-beta.1](https://github.com/JuKra00/cleacss/compare/v2.0.0-beta.0...v2.0.0-beta.1) (2025-04-04)
 
 ### Features
