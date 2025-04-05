@@ -1,5 +1,8 @@
 @layer elements {
   .text {
+    *+* {
+      margin-top: var(--space-default);
+    }
 
     a {
       color: inherit;
