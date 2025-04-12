@@ -178,6 +178,7 @@
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
+  --font-weight-title: var(--font-weight-bold);
   --font-size-1: clamp(3.0518rem, 1.7138rem + 4.46vw, 7.0657rem);
   --font-size-2: clamp(2.4414rem, 1.5895rem + 2.8395vw, 4.997rem);
   --font-size-3: clamp(1.9531rem, 1.4262rem + 1.7565vw, 3.5339rem);
@@ -3700,6 +3701,7 @@
 .subtitle, .title, h6, h5, h4, h3, h2, h1 {
   display: block;
   font-family: var(--font-family-title);
+  font-weight: var(--font-weight-title);
   font-feature-settings: "liga", "kern", "calt";
   hyphens: auto;
   line-height: var(--line-height-title);
@@ -4066,6 +4068,9 @@
   }
 }
 @layer elements {
+  .text * + * {
+    margin-top: var(--space-default);
+  }
   .text a {
     color: inherit;
     font-size: inherit;
