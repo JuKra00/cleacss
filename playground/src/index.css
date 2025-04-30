@@ -1,4 +1,4 @@
-@import "../../dist/cleacss.css";
+@import "../../dist/cleacss.untranspiled.css";
 
 body>*:not(grid-visualizer):not(.demo) {
   background-color: var(--color-neutral-100);

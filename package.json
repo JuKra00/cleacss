@@ -2,22 +2,14 @@
 	"name": "cleacss",
 	"version": "2.0.0-beta.3",
 	"description": "A minimal framework for css enthusiasts",
-	"keywords": [
-		"css",
-		"cssframework"
-	],
+	"keywords": ["css", "cssframework"],
 	"main": "dist/cleacss.css",
 	"repository": "git@github.com:JuKra00/cleacss.git",
 	"homepage": "https://cleacss.dev",
 	"author": "Justus Kraft <hallo@justuskraft.de> (https://justuskraft.com)",
 	"license": "MIT",
 	"private": false,
-	"browserslist": [
-		"last 3 versions",
-		">= 0.4%",
-		"not dead",
-		"Firefox ESR"
-	],
+	"browserslist": ["last 3 versions", ">= 0.4%", "not dead", "Firefox ESR"],
 	"exports": {
 		".": {
 			"import": "./dist/cleacss.css",
@@ -54,9 +46,6 @@
 	},
 	"packageManager": "pnpm@10.6.3",
 	"pnpm": {
-		"onlyBuiltDependencies": [
-			"esbuild",
-			"lightningcss-cli"
-		]
+		"onlyBuiltDependencies": ["esbuild", "lightningcss-cli"]
 	}
 }

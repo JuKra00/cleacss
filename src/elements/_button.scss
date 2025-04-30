@@ -7,7 +7,7 @@
   button {
     align-items: center;
     appearance: none;
-    background: var(--button-background-color);
+    background: var(--button-background);
     border: var(--button-border-width) solid var(--button-border-color);
     border-radius: var(--button-border-radius);
     color: var(--button-color);
@@ -22,6 +22,18 @@
     text-decoration: none;
     user-select: none;
     white-space: nowrap;
+    transition: all var(--animation-duration) var(--animation-easing);
+
+    &:hover {
+      color: var(--button-hover-color);
+      background: var(--button-hover-background);
+      border-color: var(--button-hover-border-color);
+    }
+
+    &:focus-visible {
+      outline: var(--outline-width) solid var(--outline-color);
+      outline-offset: var(--outline-offset);
+    }
 
     @layer is {
 

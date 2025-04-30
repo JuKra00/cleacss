@@ -279,9 +279,12 @@
   --button-padding-x: 1.5em;
   --button-border-width: 2px;
   --button-border-radius: var(--border-radius-rounded);
-  --button-background-color: var(--color-accent);
+  --button-background: var(--color-accent);
   --button-border-color: var(--color-accent);
   --button-color: var(--color-accent-dark);
+  --button-hover-color: var(--color-accent);
+  --button-hover-background: var(--color-accent-dark);
+  --button-hover-border-color: var(--color-accent-dark);
 }
 
 :root,
@@ -302,8 +305,9 @@
   --input-border-radius: var(--border-radius-s);
   --input-border-color: var(--color-neutral-300);
   --input-background-color: var(--color-neutral-50);
-  --input-outline-color: var(--color-accent);
-  --input-outline-width: 2px;
+  --input-outline-color: var(--outline-color);
+  --input-outline-width: var(--outline-width);
+  --input-outline-offset: var(--outline-offset);
   --input-placeholder-color: var(--color-neutral-500);
   --input-radio-border-radius: var(--border-radius-rounded);
   --input-radio-accent: var(--color-accent);
@@ -322,6 +326,23 @@
   --table-padding-y: var(--space-xs);
   --table-accent-background: var(--color-neutral-800);
   --table-accent-color: var(--color-neutral-50);
+}
+
+:root {
+  --animation-duration: 0.3s;
+  --animation-easing: var(--ease-out);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out-emphasized: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  --ease-in-out-emphasized: cubic-bezier(0.87, 0, 0.13, 1);
+  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-jump: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+:root {
+  --outline-color: var(--color-accent);
+  --outline-width: 2px;
+  --outline-offset: 0.15em;
 }
 
 @layer layout {
@@ -3666,7 +3687,7 @@
   button {
     align-items: center;
     appearance: none;
-    background: var(--button-background-color);
+    background: var(--button-background);
     border: var(--button-border-width) solid var(--button-border-color);
     border-radius: var(--button-border-radius);
     color: var(--button-color);
@@ -3681,6 +3702,24 @@
     text-decoration: none;
     user-select: none;
     white-space: nowrap;
+    transition: all var(--animation-duration) var(--animation-easing);
+  }
+  .button:hover,
+  input[type=submit]:hover,
+  input[type=button]:hover,
+  input[type=reset]:hover,
+  button:hover {
+    color: var(--button-hover-color);
+    background: var(--button-hover-background);
+    border-color: var(--button-hover-border-color);
+  }
+  .button:focus-visible,
+  input[type=submit]:focus-visible,
+  input[type=button]:focus-visible,
+  input[type=reset]:focus-visible,
+  button:focus-visible {
+    outline: var(--outline-width) solid var(--outline-color);
+    outline-offset: var(--outline-offset);
   }
   @layer is {
     .button[disabled], .button.is-disabled,
@@ -4046,6 +4085,7 @@
   .select textarea:focus-visible,
   .select select:focus-visible {
     outline: var(--input-outline-width) solid var(--input-outline-color);
+    outline-offset: var(--input-outline-offset);
   }
   .input input:not([type=checkbox], [type=radio], textarea),
   .checkbox input:not([type=checkbox], [type=radio], textarea),
