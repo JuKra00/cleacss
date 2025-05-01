@@ -13,7 +13,8 @@
       text-underline-offset: 0.15em;
 
       &:focus-visible {
-        outline: 2px solid var(--color-accent);
+        outline: var(--outline-width) solid var(--outline-color);
+        outline-offset: var(--outline-offset);
       }
 
       &:hover {
