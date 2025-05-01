@@ -8,13 +8,15 @@
 @use "./inputs/range";
 @use "./inputs/select";
 @use "./inputs/textarea";
+@use "./inputs/switch";
 
 @layer elements {
 
   .input,
   .checkbox,
   .radio,
-  .select {
+  .select,
+  .switch {
     display: grid;
     font-size: var(--input-font-size);
     grid-template-columns: 1em auto;

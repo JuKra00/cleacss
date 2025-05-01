@@ -3,7 +3,8 @@
   .input,
   .checkbox,
   .radio,
-  .select {
+  .select,
+  .switch {
     label {
       color: var(--input-label-color);
       font-weight: var(--input-label-weight);
@@ -23,6 +24,7 @@
   }
 
   .checkbox,
+  .switch,
   .radio {
     label {
       align-items: flex-start;

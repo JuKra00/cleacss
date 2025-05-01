@@ -27,12 +27,10 @@
 
       &[readonly] {
         border-style: dotted;
-        cursor: not-allowed;
       }
 
       &[disabled] {
-        color: var(--input-color-disabled);
-        cursor: not-allowed;
+        opacity: 0.5;
       }
     }
   }
