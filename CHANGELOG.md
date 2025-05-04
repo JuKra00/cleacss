@@ -1,5 +1,20 @@
 # Changelog
 
+## [2.0.0-beta.4](https://github.com/JuKra00/cleacss/compare/v2.0.0-beta.3...v2.0.0-beta.4) (2025-05-04)
+
+### Features
+
+* add basic animation + accessibility styles ([efaaea1](https://github.com/JuKra00/cleacss/commit/efaaea103338d44591a6b2aa58582170491a4f87))
+* add input size to sizing classes ([48bd10b](https://github.com/JuKra00/cleacss/commit/48bd10b2b0debb723eec52c2b76c09af4539a9b2))
+* add switch, update inputs ([eaa23f5](https://github.com/JuKra00/cleacss/commit/eaa23f5cceb573334add1647acb463125b4e9010))
+* add title weight ([d74f4b9](https://github.com/JuKra00/cleacss/commit/d74f4b909a64c2208028c25db82c68beef84c5ef))
+
+### Bug Fixes
+
+* add text margin ([fd1052d](https://github.com/JuKra00/cleacss/commit/fd1052d85108c57154a806fdbe020c68e0fc6bba))
+* margin in text class ([018e3ba](https://github.com/JuKra00/cleacss/commit/018e3ba2c37bcc8516bd872234748372d34073d4))
+* use var for outline on link ([e0bd528](https://github.com/JuKra00/cleacss/commit/e0bd5282be19bc64c144a18d4e97d4c8e53f7752))
+
 ## [2.0.0-beta.3](https://github.com/JuKra00/cleacss/compare/v2.0.0-beta.1...v2.0.0-beta.3) (2025-04-05)
 
 ### Bug Fixes
