@@ -2250,41 +2250,57 @@
   .has-size-1 {
     --input-font-size: var(--font-size-1);
     font-size: var(--font-size-1);
-    max-width: var(--max-width-size-1);
   }
   .has-size-2 {
     --input-font-size: var(--font-size-2);
     font-size: var(--font-size-2);
-    max-width: var(--max-width-size-2);
   }
   .has-size-3 {
     --input-font-size: var(--font-size-3);
     font-size: var(--font-size-3);
-    max-width: var(--max-width-size-3);
   }
   .has-size-4 {
     --input-font-size: var(--font-size-4);
     font-size: var(--font-size-4);
-    max-width: var(--max-width-size-4);
   }
   .has-size-5 {
     --input-font-size: var(--font-size-5);
     font-size: var(--font-size-5);
-    max-width: var(--max-width-size-5);
   }
   .has-size-6 {
     --input-font-size: var(--font-size-6);
     font-size: var(--font-size-6);
-    max-width: var(--max-width-size-6);
   }
   .has-size-7 {
     --input-font-size: var(--font-size-7);
     font-size: var(--font-size-7);
-    max-width: var(--max-width-size-7);
   }
   .has-size-8 {
     --input-font-size: var(--font-size-8);
     font-size: var(--font-size-8);
+  }
+  .has-max-width-1 {
+    max-width: var(--max-width-size-1);
+  }
+  .has-max-width-2 {
+    max-width: var(--max-width-size-2);
+  }
+  .has-max-width-3 {
+    max-width: var(--max-width-size-3);
+  }
+  .has-max-width-4 {
+    max-width: var(--max-width-size-4);
+  }
+  .has-max-width-5 {
+    max-width: var(--max-width-size-5);
+  }
+  .has-max-width-6 {
+    max-width: var(--max-width-size-6);
+  }
+  .has-max-width-7 {
+    max-width: var(--max-width-size-7);
+  }
+  .has-max-width-8 {
     max-width: var(--max-width-size-8);
   }
 }
