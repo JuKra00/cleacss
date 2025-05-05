@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.0-beta.5](https://github.com/JuKra00/cleacss/compare/v2.0.0-beta.4...v2.0.0-beta.5) (2025-05-05)
+
+### Bug Fixes
+
+* move max-width to own class ([82a4451](https://github.com/JuKra00/cleacss/commit/82a445126d6eaf0e07848b260d693a8641c50157))
+
 ## [2.0.0-beta.4](https://github.com/JuKra00/cleacss/compare/v2.0.0-beta.3...v2.0.0-beta.4) (2025-05-04)
 
 ### Features
