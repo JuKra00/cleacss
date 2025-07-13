@@ -1,5 +1,6 @@
 ---
 title: cleacss
+description: A lightweight and powerful framework thoughtfully designed for developers who love writing CSS.
 ---
 
 # Overview
