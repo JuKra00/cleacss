@@ -45,14 +45,18 @@
   --color-accent-light: oklch(calc(var(--color-accent-l) * 1.2) var(--color-accent-c) var(--color-accent-h));
   --color-accent: oklch(var(--color-accent-l) var(--color-accent-c) var(--color-accent-h));
   --color-accent-dark: oklch(calc(var(--color-accent-l) * 0.5) var(--color-accent-c) var(--color-accent-h));
+  --color-neutral-0: oklch(1 var(--color-neutral-c) var(--color-neutral-h));
   --color-neutral-50: oklch(0.95 var(--color-neutral-c) var(--color-neutral-h));
   --color-neutral-100: oklch(0.9 var(--color-neutral-c) var(--color-neutral-h));
   --color-neutral-200: oklch(0.8 var(--color-neutral-c) var(--color-neutral-h));
   --color-neutral-300: oklch(0.7 var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-400: oklch(0.6 var(--color-neutral-c) var(--color-neutral-h));
   --color-neutral-500: oklch(0.5 var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-600: oklch(0.4 var(--color-neutral-c) var(--color-neutral-h));
   --color-neutral-700: oklch(0.3 var(--color-neutral-c) var(--color-neutral-h));
   --color-neutral-800: oklch(0.2 var(--color-neutral-c) var(--color-neutral-h));
   --color-neutral-900: oklch(0.1 var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-1000: oklch(0 var(--color-neutral-c) var(--color-neutral-h));
   --color-success: oklch(0.65 0.15 150);
   --color-warning: oklch(0.75 0.15 80);
   --color-error: oklch(0.65 0.18 25);
@@ -62,14 +66,18 @@
 @media (prefers-color-scheme: dark) {
   :root,
   :host {
+    --color-neutral-0: oklch(0 var(--color-neutral-c) var(--color-neutral-h));
     --color-neutral-50: oklch(0.15 var(--color-neutral-c) var(--color-neutral-h));
     --color-neutral-100: oklch(0.1 var(--color-neutral-c) var(--color-neutral-h));
     --color-neutral-200: oklch(0.2 var(--color-neutral-c) var(--color-neutral-h));
     --color-neutral-300: oklch(0.3 var(--color-neutral-c) var(--color-neutral-h));
+    --color-neutral-400: oklch(0.4 var(--color-neutral-c) var(--color-neutral-h));
     --color-neutral-500: oklch(0.5 var(--color-neutral-c) var(--color-neutral-h));
+    --color-neutral-600: oklch(0.6 var(--color-neutral-c) var(--color-neutral-h));
     --color-neutral-700: oklch(0.7 var(--color-neutral-c) var(--color-neutral-h));
     --color-neutral-800: oklch(0.8 var(--color-neutral-c) var(--color-neutral-h));
     --color-neutral-900: oklch(0.85 var(--color-neutral-c) var(--color-neutral-h));
+    --color-neutral-1000: oklch(0.95 var(--color-neutral-c) var(--color-neutral-h));
   }
 }
 :root,

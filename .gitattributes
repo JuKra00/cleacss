@@ -11,3 +11,5 @@ docs export-ignore
 dist/playground export-ignore
 node_modules export-ignore
 .stylelintrc.json export-ignore
+.paradocs.json export-ignore
+assets/logo-cleacss.svg export-ignore

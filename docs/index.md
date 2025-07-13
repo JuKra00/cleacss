@@ -10,8 +10,12 @@ cleacss is a thoughtfully designed CSS framework for developers who love writing
 
 Use your prefered package manager to install the cleacss package, or just download the latest release from the [releases page](https://github.com/jukra00/cleacss/releases).
 
+> [!WARNING]
+> Version 2 is currently in beta.
+
+
 ```bash
-  npm install cleacss
+  npm install cleacss@2.0.0-beta.5
 ```
 
 ## Usage
