@@ -27,7 +27,7 @@
 
     ol {
       list-style: decimal;
-      margin-left: 1.1em;
+      margin-left: 1.35em;
     }
 
     hr {
@@ -68,7 +68,7 @@
       }
     }
 
-    *+* {
+    >*+* {
       margin-top: var(--space-default);
     }
 
