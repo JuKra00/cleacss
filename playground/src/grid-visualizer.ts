@@ -1,6 +1,7 @@
 class GridVisualizer extends HTMLElement {
   private debugColumns: HTMLElement | null = null;
   private toggleButton: HTMLButtonElement | null = null;
+  private readonly STORAGE_KEY = 'cleacss-grid-visibility';
 
   constructor() {
     super();
@@ -10,8 +11,9 @@ class GridVisualizer extends HTMLElement {
   connectedCallback() {
     this.render();
     this.setupEventListeners();
-    // Initialize the grid as hidden
-    this.toggleGridVisibility(false);
+    // Initialize the grid based on saved state or default to hidden
+    const savedState = this.getStoredVisibility();
+    this.toggleGridVisibility(savedState);
   }
 
   disconnectedCallback() {
@@ -113,7 +115,6 @@ class GridVisualizer extends HTMLElement {
   }
 
   private setupEventListeners() {
-    // Use bound method to handle event properly
     this.handleToggleClick = this.handleToggleClick.bind(this);
     this.toggleButton?.addEventListener('click', this.handleToggleClick);
   }
@@ -129,11 +130,31 @@ class GridVisualizer extends HTMLElement {
     this.debugColumns.style.display = visible ? 'grid' : 'none';
     this.toggleButton.textContent = visible ? 'Hide Grid' : 'Show Grid';
 
-    // Optionally toggle a class on body if needed for other styling
+    // Save state to sessionStorage
+    this.saveVisibilityState(visible);
+
     if (visible) {
       document.body.classList.add('grid-overlay');
     } else {
       document.body.classList.remove('grid-overlay');
+    }
+  }
+
+  private getStoredVisibility(): boolean {
+    try {
+      const stored = sessionStorage.getItem(this.STORAGE_KEY);
+      return stored === 'true';
+    } catch (error) {
+      // Fallback if sessionStorage is not available
+      return false;
+    }
+  }
+
+  private saveVisibilityState(visible: boolean) {
+    try {
+      sessionStorage.setItem(this.STORAGE_KEY, visible.toString());
+    } catch (error) {
+      // Fail silently if sessionStorage is not available
     }
   }
 }
