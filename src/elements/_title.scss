@@ -24,14 +24,4 @@
       max-width: var(--max-width-size-#{$num});
     }
   }
-
-  .title {
-    @extend %title;
-    font-weight: var(--font-weight-bold);
-  }
-
-  .subtitle {
-    @extend %title;
-    font-weight: var(--font-weight-light);
-  }
 }
