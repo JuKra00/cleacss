@@ -3,18 +3,18 @@
   --color-base: var(--color-neutral-900);
   --color-base-background: var(--color-neutral-50);
 
-  --color-accent-h: 300;
-  --color-accent-c: 0.18;
-  --color-accent-l: 0.75;
+  --color-accent-h: 280;
+  --color-accent-c: 0.4;
+  --color-accent-l: 0.65;
 
   // 0: Red, 60: Yellow, 120: Green, 180: Cyan, 240: Blue, 300: Magenta, 360: Red (Loop)
   --color-neutral-h: 300;
   // 0.03 is the minimum contrast ratio, 0.4 is the maximum
   --color-neutral-c: 0.01;
 
-  --color-accent-light: oklch(calc(var(--color-accent-l) * 1.2) var(--color-accent-c) var(--color-accent-h));
+  --color-accent-light: oklch(calc(var(--color-accent-l) * 1.5) var(--color-accent-c) var(--color-accent-h));
   --color-accent: oklch(var(--color-accent-l) var(--color-accent-c) var(--color-accent-h));
-  --color-accent-dark: oklch(calc(var(--color-accent-l) * 0.5) var(--color-accent-c) var(--color-accent-h));
+  --color-accent-dark: oklch(calc(var(--color-accent-l) * 0.1) var(--color-accent-c) var(--color-accent-h));
 
   --color-neutral-0: oklch(1 var(--color-neutral-c) var(--color-neutral-h));
   --color-neutral-50: oklch(0.95 var(--color-neutral-c) var(--color-neutral-h));
