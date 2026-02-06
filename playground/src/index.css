@@ -1,57 +1,53 @@
+@layer reset;
+@layer demo;
+@layer layout;
+@layer elements;
+@layer is;
+@layer has;
+
 @import "../../dist/cleacss.untranspiled.css";
 
-body>*:not(grid-visualizer):not(.demo) {
-  background-color: var(--color-neutral-100);
-  position: relative;
-
-  &::before {
-    content: attr(class);
-    white-space: nowrap;
-    position: absolute;
-    top: var(--space-2xs);
-    left: var(--space-2xs);
-    background-color: var(--color-neutral-200);
-    font-size: var(--font-size-8);
-    padding: var(--space-2xs) var(--space-xs);
-    z-index: 99;
-    border-radius: var(--border-radius);
+@layer demo {
+  :root {
+    --logo-color: var(--color-neutral-900);
   }
-}
 
-.grid-block {
-  background-color: var(--color-neutral-300);
-  border: 1px solid var(--color-neutral-900);
-  border-radius: var(--border-radius);
-  padding: var(--space-s-m);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-family-mono);
-  font-size: var(--font-size-7);
-  position: relative;
-}
+  .grid-block {
+    color: var(--color-accent-light);
+    border: 2px solid var(--color-neutral-300);
+    border-radius: var(--border-radius);
+    padding: var(--space-s-m) var(--space-s) var(--space-xs) var(--space-xs);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-8);
+    position: relative;
+    gap: var(--space-xs);
+  }
 
-.grid-block::after {
-  content: attr(class);
-  opacity: 0.7;
-}
+  .grid-block::after {
+    content: attr(class);
+  }
 
-.flow-block {
-  background-color: var(--color-neutral-300);
-  border: 1px solid var(--color-neutral-900);
-  border-radius: var(--border-radius);
-  padding: var(--space-s-m);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-family-mono);
-  font-size: var(--font-size-7);
-  position: relative;
-  flex: 1 1 100%;
-  width: 100%;
-}
+  .flow-block {
+    color: var(--color-accent-light);
+    border: 2px solid var(--color-accent);
+    border-radius: var(--border-radius);
+    padding: var(--space-s-m) var(--space-s) var(--space-xs) var(--space-xs);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-8);
+    position: relative;
+    flex: 1 1 100%;
+    width: 100%;
+    gap: var(--space-xs);
+  }
 
-.flow-block::after {
-  content: attr(class);
-  opacity: 0.7;
+  .flow-block::after {
+    content: attr(class);
+  }
+
 }

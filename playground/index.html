@@ -7,58 +7,68 @@
   <title>Streamlined Grid Framework</title>
 </head>
 
-<body class="grid has-gap-y-xl-3xl">
+<body class="grid">
 
   <grid-visualizer></grid-visualizer>
 
   <!-- Header with subgrid -->
-  <header class="span-full subgrid has-pt-xl">
+  <div class="span-full subgrid has-pt-l">
     <div class="start-1 span-2">
       <div class="grid-block"></div>
     </div>
-    <div class="start-4 span-7">
+    <div class="start-4 span-8">
       <div class="flow-row has-gap-2xs">
-        <div class="flow-block"></div>
-        <div class="flow-block"></div>
-        <div class="flow-block"></div>
+
+      </div>
+    </div>
+    <div class="span-2 start-13">
+      <div class="grid-block"></div>
+    </div>
+  </div>
+
+  <header class="span-content flow demo has-gap-collapse has-pt-xl has-pb-xl-4xl text has-items-center">
+    <h1 class="subtitle has-size-4 has-text-neutral-500">Grid & Flow</h1>
+    <h2 class="title has-size-1">cleacss</h2>
+    <p class="has-size-5">
+      This page is written in <em>cleacss</em> and is intended as a little guideline to explore how the framework is
+      intended to
+      be used. You can <b>toggle the grid overlay</b> in the bottom right corner to see the grid and flow layout in
+      action.</p>
+    <hr />
+    <div class="flow-row has-gap-l-xl">
+      <div class="flow-block"></div>
+      <div class="flow-block"></div>
+      <div class="flow-block"></div>
+    </div>
+    <hr />
+    <div class="flow-row has-gap-l-xl">
+      <div class="has-flex-1">
+        <p>
+          The framework comes with sensible defaults for html elements and helper classes to make development fast and
+          easy.
+          At base level, cleacss provides a set of css variables with opinionated default values. There variables are
+          the
+          basis for all base styling, components and utilities.
+        </p>
+      </div>
+      <div class="has-flex-1">
+        <ul>
+          <li>Lorem Ipsum</li>
+          <li>Varius urna</li>
+          <li>Facilisi natoque</li>
+        </ul>
+      </div>
+      <div class="has-flex-1">
+        <p>
+          The framework comes with sensible defaults for html elements and helper classes to make development fast and
+          easy.
+          At base level, cleacss provides a set of css variables with opinionated default values. There variables are
+          the
+          basis for all base styling, components and utilities.
+        </p>
       </div>
     </div>
   </header>
-
-  <!-- Flow layout example -->
-  <div class="span-content flow demo has-gap-collapse has-pt-xl text">
-    <h1 class="subtitle has-size-3">Aptene egestas</h1>
-    <h2 class="title has-size-1">Non <u>finibus</u> nascetur</h2>
-    <p class="has-size-5">
-      Blandit <strong>lorem ipsum</strong> senectus velit dictum viverra mi lectus ornare pharetra laoreet gravida
-      semper vel accumsan bibendum conubia est netus proin ipsum massa et commodo molestie convallis praesent non fusce
-      nascetur dignissim
-    </p>
-    <hr />
-    <p>
-      Mattis senectus finibus ligula integer sem duis efficitur nulla conubia mus dolor odio pellentesque massa ornare
-      porttitor ullamcorper class hendrerit <em>Lorem Ipsum</em> Mollis pulvinar hac non mus ultrices ullamcorper morbi
-      egestas at sociosqu aptent justo congue ipsum lacus, sagittis praesent nostra posuere vivamus feugiat tincidunt ac
-      ex sem quisque vel nunc nascetur. <a href="#">My Website</a> Hendrerit finibus ex vivamus quisque a et platea
-      molestie sapien vitae id egestas ligula magna dis, nunc porttitor posuere dui sagittis nascetur auctor vulputate
-      non duis risus cubilia nulla dictum.
-    </p>
-    <p>
-      Porta himenaeos habitant maximus <code>Lorem Upsum</code>.
-    </p>
-    <pre><code>const foo = bar;</code></pre>
-    <ul>
-      <li>Lorem Ipsum</li>
-      <li>Varius urna</li>
-      <li>Facilisi natoque</li>
-    </ul>
-    <ol>
-      <li>Lorem Ipsum</li>
-      <li>Varius urna</li>
-      <li>Facilisi natoque</li>
-    </ol>
-    <button>Lorem Ipsum</button>
-  </div>
 
   <div class="span-content demo">
     <table>
@@ -308,17 +318,20 @@
 
   <!-- Main content area with subgrid -->
   <main class="span-content subgrid">
-    <div class="span-10">
+
+    <div class="span-11">
       <div class="grid-block"></div>
     </div>
-    <div class="span-7 subgrid">
+
+    <div class="span-10 subgrid">
       <div class="span-3">
         <div class="grid-block"></div>
       </div>
-      <div class="span-4">
+      <div class="span-7">
         <div class="grid-block"></div>
       </div>
     </div>
+
     <div class="span-3 flow has-gap-2xs">
       <div class="flow-block"></div>
       <div class="flow-block"></div>
