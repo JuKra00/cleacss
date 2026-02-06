@@ -1,15 +1,18 @@
 var r = Object.defineProperty;
 var s = (o, e, t) => e in o ? r(o, e, { enumerable: !0, configurable: !0, writable: !0, value: t }) : o[e] = t;
 var n = (o, e, t) => s(o, typeof e != "symbol" ? e + "" : e, t);
-class l extends HTMLElement {
+class a extends HTMLElement {
   constructor() {
     super();
     n(this, "debugColumns", null);
     n(this, "toggleButton", null);
+    n(this, "STORAGE_KEY", "cleacss-grid-visibility");
     this.attachShadow({ mode: "open" });
   }
   connectedCallback() {
-    this.render(), this.setupEventListeners(), this.toggleGridVisibility(!1);
+    this.render(), this.setupEventListeners();
+    const t = this.getStoredVisibility();
+    this.toggleGridVisibility(t);
   }
   disconnectedCallback() {
     var t;
@@ -106,7 +109,20 @@ class l extends HTMLElement {
     this.toggleGridVisibility(!t);
   }
   toggleGridVisibility(t) {
-    !this.debugColumns || !this.toggleButton || (this.debugColumns.style.display = t ? "grid" : "none", this.toggleButton.textContent = t ? "Hide Grid" : "Show Grid", t ? document.body.classList.add("grid-overlay") : document.body.classList.remove("grid-overlay"));
+    !this.debugColumns || !this.toggleButton || (this.debugColumns.style.display = t ? "grid" : "none", this.toggleButton.textContent = t ? "Hide Grid" : "Show Grid", this.saveVisibilityState(t), t ? document.body.classList.add("grid-overlay") : document.body.classList.remove("grid-overlay"));
+  }
+  getStoredVisibility() {
+    try {
+      return sessionStorage.getItem(this.STORAGE_KEY) === "true";
+    } catch {
+      return !1;
+    }
+  }
+  saveVisibilityState(t) {
+    try {
+      sessionStorage.setItem(this.STORAGE_KEY, t.toString());
+    } catch {
+    }
   }
 }
-customElements.define("grid-visualizer", l);
+customElements.define("grid-visualizer", a);

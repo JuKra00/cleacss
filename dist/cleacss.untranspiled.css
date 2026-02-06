@@ -133,14 +133,14 @@
 :host {
   --color-base: var(--color-neutral-900);
   --color-base-background: var(--color-neutral-50);
-  --color-accent-h: 300;
-  --color-accent-c: 0.18;
-  --color-accent-l: 0.75;
+  --color-accent-h: 280;
+  --color-accent-c: 0.4;
+  --color-accent-l: 0.65;
   --color-neutral-h: 300;
   --color-neutral-c: 0.01;
-  --color-accent-light: oklch(calc(var(--color-accent-l) * 1.2) var(--color-accent-c) var(--color-accent-h));
+  --color-accent-light: oklch(calc(var(--color-accent-l) * 1.5) var(--color-accent-c) var(--color-accent-h));
   --color-accent: oklch(var(--color-accent-l) var(--color-accent-c) var(--color-accent-h));
-  --color-accent-dark: oklch(calc(var(--color-accent-l) * 0.5) var(--color-accent-c) var(--color-accent-h));
+  --color-accent-dark: oklch(calc(var(--color-accent-l) * 0.1) var(--color-accent-c) var(--color-accent-h));
   --color-neutral-0: oklch(1 var(--color-neutral-c) var(--color-neutral-h));
   --color-neutral-50: oklch(0.95 var(--color-neutral-c) var(--color-neutral-h));
   --color-neutral-100: oklch(0.9 var(--color-neutral-c) var(--color-neutral-h));
@@ -187,14 +187,14 @@
   --font-weight-normal: 400;
   --font-weight-bold: 700;
   --font-weight-title: var(--font-weight-bold);
-  --font-size-1: clamp(3.0518rem, 1.7138rem + 4.46vw, 7.0657rem);
-  --font-size-2: clamp(2.4414rem, 1.5895rem + 2.8395vw, 4.997rem);
-  --font-size-3: clamp(1.9531rem, 1.4262rem + 1.7565vw, 3.5339rem);
-  --font-size-4: clamp(1.5625rem, 1.2503rem + 1.0408vw, 2.4992rem);
-  --font-size-5: clamp(1.25rem, 1.0775rem + 0.575vw, 1.7675rem);
-  --font-size-6: clamp(1rem, 0.9167rem + 0.2778vw, 1.25rem);
-  --font-size-7: clamp(0.8rem, 0.772rem + 0.0934vw, 0.884rem);
-  --font-size-8: clamp(0.6252rem, 0.6449rem + -0.0165vw, 0.64rem);
+  --font-size-1: clamp(3rem, 1.6666rem + 4.44vw, 7rem);
+  --font-size-2: clamp(2.5rem, 1.6666rem + 2.77vw, 5rem);
+  --font-size-3: clamp(2rem, 1.5rem + 1.66vw, 3.5rem);
+  --font-size-4: clamp(1.5rem, 1.1666rem + 1.11vw, 2.5rem);
+  --font-size-5: clamp(1.25rem, 1.0833rem + .55vw, 1.75rem);
+  --font-size-6: clamp(1rem, .9166rem + .27vw, 1.25rem);
+  --font-size-7: clamp(.85rem, .8rem + .16vw, 1rem);
+  --font-size-8: clamp(.75rem, .7166rem + .11vw, .85rem);
   --max-width-size-1: 15ch;
   --max-width-size-2: 18ch;
   --max-width-size-3: 20ch;
@@ -210,7 +210,7 @@
   --grid-width-s: 40rem;
   --grid-width-m: 45rem;
   --grid-width-l: 60rem;
-  --grid-width-xl: 71.25rem;
+  --grid-width-xl: 82rem;
   --grid-width-2xl: 90rem;
   --grid-width: var(--grid-width-s);
   --grid-margin-min: 0;
@@ -2713,6 +2713,11 @@
   }
 }
 @layer has {
+  .has-flex-1 {
+    flex: 1 1 100%;
+  }
+}
+@layer has {
   .has-p {
     padding: var(--space-default);
   }
@@ -3711,6 +3716,56 @@
     }
   }
 }
+@layer has {
+  .has-text-neutral-0 {
+    color: var(--color-neutral-0);
+  }
+  .has-text-neutral-50 {
+    color: var(--color-neutral-50);
+  }
+  .has-text-neutral-100 {
+    color: var(--color-neutral-100);
+  }
+  .has-text-neutral-200 {
+    color: var(--color-neutral-200);
+  }
+  .has-text-neutral-300 {
+    color: var(--color-neutral-300);
+  }
+  .has-text-neutral-400 {
+    color: var(--color-neutral-400);
+  }
+  .has-text-neutral-500 {
+    color: var(--color-neutral-500);
+  }
+  .has-text-neutral-600 {
+    color: var(--color-neutral-600);
+  }
+  .has-text-neutral-700 {
+    color: var(--color-neutral-700);
+  }
+  .has-text-neutral-800 {
+    color: var(--color-neutral-800);
+  }
+  .has-text-neutral-900 {
+    color: var(--color-neutral-900);
+  }
+  .has-text-neutral-1000 {
+    color: var(--color-neutral-1000);
+  }
+  .has-text-success {
+    color: var(--color-success);
+  }
+  .has-text-warning {
+    color: var(--color-warning);
+  }
+  .has-text-error {
+    color: var(--color-error);
+  }
+  .has-text-info {
+    color: var(--color-info);
+  }
+}
 @layer elements {
   .button,
   input[type=submit],
@@ -3769,7 +3824,7 @@
     }
   }
 }
-.subtitle, .title, h6, h5, h4, h3, h2, h1 {
+h6, h5, h4, h3, h2, h1 {
   display: block;
   font-family: var(--font-family-title);
   font-weight: var(--font-weight-title);
@@ -3780,7 +3835,7 @@
   text-underline-offset: 0.125em;
   text-wrap: balance;
 }
-.subtitle u, .title u, h6 u, h5 u, h4 u, h3 u, h2 u, h1 u {
+h6 u, h5 u, h4 u, h3 u, h2 u, h1 u {
   text-decoration-thickness: 0.1em;
 }
 
@@ -3814,12 +3869,6 @@
     font-size: var(--font-size-6);
     font-weight: var(--font-weight-bold);
     max-width: var(--max-width-size-6);
-  }
-  .title {
-    font-weight: var(--font-weight-bold);
-  }
-  .subtitle {
-    font-weight: var(--font-weight-light);
   }
 }
 @layer elements {
@@ -4225,7 +4274,7 @@
   }
   .text ol {
     list-style: decimal;
-    margin-left: 1.1em;
+    margin-left: 1.35em;
   }
   .text hr {
     background-color: var(--color-neutral-200);
@@ -4261,7 +4310,7 @@
     background-color: transparent;
     padding: 0;
   }
-  .text * + * {
+  .text > * + * {
     margin-top: var(--space-default);
   }
   .text :is(h1, h2, h3, h4, h5, h6) + :is(h1, h2, h3, h4, h5, h6) {
