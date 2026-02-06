@@ -134,7 +134,7 @@ The `--grid-width` is the width of the **content area**, the margins are the spa
   --grid-width-s: 40rem; // 640px
   --grid-width-m: 45rem; // 720px
   --grid-width-l: 60rem; // 960px
-  --grid-width-xl: 71.25rem; // 1140px
+  --grid-width-xl: 82rem; // 1312px
   --grid-width-2xl: 90rem; // 1440px
   --grid-width: var(--grid-width-s);
   --grid-margin-min: 0;
