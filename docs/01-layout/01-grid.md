@@ -47,11 +47,11 @@ You can attach the name of the breakpoint prefixed by a `:` to a `span-x` class 
 
 ```html
 <div class="grid">
-  <div class="subgrid span-12 span-6:md">
+  <div class="subgrid span-12 span-6:m">
     <div class="span-3">Only 6 columns max</div>
     <div class="span-3">Only 6 columns max</div>
   </div>
-  <div class="subgrid span-12 span-4:md">
+  <div class="subgrid span-12 span-4:m">
     <div class="span-1">Only 4 columns max</div>
     <div class="span-3">Only 4 columns max</div>
   </div>

@@ -1,4 +1,15 @@
-All input elements come with a base styling and simplified markup.
+---
+title: Input
+---
+
+Form inputs use a wrapper pattern for consistent styling across all input types. The wrapper provides layout structure while the input itself handles user interaction.
+
+## Structure
+
+Each input type uses a container class (`.input`, `.select`, `.checkbox`, `.radio`) that wraps the label, input element, and optional messages. This structure enables:
+- Consistent vertical spacing between label and input
+- Proper error message positioning
+- Unified styling across browsers
 
 ## Basic input
 
@@ -52,174 +63,49 @@ All input elements come with a base styling and simplified markup.
 </div>
 ```
 
+## Configuration
 
-## Playground
+```css
+:root {
+  /* Colors */
+  --input-color: var(--color-neutral-900);
+  --input-color-error: var(--color-error);
+  --input-color-disabled: var(--color-neutral-300);
+  --input-background-color: var(--color-neutral-50);
+  --input-placeholder-color: var(--color-neutral-500);
+  --input-message-color: var(--color-neutral-500);
 
-<script src="https://vite.test/lib/playground.js" type="module"></script>
-<cleacss-playground src="https://vite.test/cleacss.css">
+  /* Label */
+  --input-label-color: var(--color-neutral-700);
+  --input-label-weight: var(--font-weight-normal);
+  --input-label-padding: 0 0 var(--space-xs) 0;
+  --input-label-font-size: var(--font-size-7);
 
-  <div class="grid">
-    <div class="span-full subgrid">
-      <div class="span-6 flow">
-        <div class="input">
-          <label for="text">Text</label>
-          <input type="text" id="text" placeholder="Text">
-          <span class="message">This is a helpful message.</span>
-          <span class="message message--error">Input is required.</span>
-        </div>
-        <div class="input">
-          <label for="color">Color</label>
-          <input type="color" id="color">
-          <span class="message">This is a helpful message.</span>
-          <span class="message message--error">Input is required.</span>
-        </div>
-        <div class="input">
-          <label for="date">Date</label>
-          <input type="date" id="date">
-          <span class="message">This is a helpful message.</span>
-          <span class="message message--error">Input is required.</span>
-        </div>
-        <div class="input">
-          <label for="datetime-local">Datetime local</label>
-          <input type="datetime-local" id="datetime-local">
-          <span class="message">This is a helpful message.</span>
-          <span class="message message--error">Input is required.</span>
-        </div>
-        <div class="input">
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="max@mustermann.de">
-          <span class="message">This is a helpful message.</span>
-          <span class="message message--error">Input is required.</span>
-        </div>
-        <div class="input">
-          <label for="file">File</label>
-          <input type="file" id="file">
-          <span class="message">This is a helpful message.</span>
-          <span class="message message--error">Input is required.</span>
-        </div>
-        <div class="input">
-          <label for="month">Month</label>
-          <input type="month" id="month" placeholder="01">
-          <span class="message">This is a helpful message.</span>
-          <span class="message message--error">Input is required.</span>
-        </div>
-        <div class="input">
-          <label for="textarea">Textarea</label>
-          <textarea id="textarea" placeholder="Lorem Ipsum..."></textarea>
-          <span class="message">This is a helpful message.</span>
-          <span class="message message--error">Input is required.</span>
-        </div>
-        <div class="select">
-          <label for="select">Select</label>
-          <select type="select" id="select">
-            <option disabled>Lorem Ipsum</option>
-            <option>Varius urna</option>
-            <option>Facilisi natoque</option>
-          </select>
-          <span class="message">This is a helpful message.</span>
-          <span class="message message--error">Input is required.</span>
-        </div>
-        <div class="input">
-          <label for="hidden">Hidden</label>
-          <input type="hidden" id="hidden">
-          <span class="message">This is a helpful message.</span>
-          <span class="message message--error">Input is required.</span>
-        </div>
-        <div class="input">
-          <label for="textr">Readonly</label>
-          <input type="text" readonly id="textr" value="Lorem Ipsum">
-        </div>
-        <div class="input">
-          <label for="textr">Disabled</label>
-          <input type="text" disabled id="textr" value="Lorem Ipsum">
-        </div>
-      </div>
-      <div class="span-6 flow">
-        <div class="input">
-          <label for="number">Number</label>
-          <input type="number" id="number" placeholder="0">
-          <span class="message">This is a helpful message.</span>
-          <span class="message message--error">Input is required.</span>
-        </div>
-        <div class="input">
-          <label for="password">Password</label>
-          <input type="password" id="password" placeholder="********">
-          <span class="message">This is a helpful message.</span>
-          <span class="message message--error">Input is required.</span>
-        </div>
-        <div class="input">
-          <label for="range">Range</label>
-          <input type="range" id="range" min="0" max="100">
-          <span class="message">This is a helpful message.</span>
-          <span class="message message--error">Input is required.</span>
-        </div>
-        <div class="input">
-          <label for="search">Search</label>
-          <input type="search" id="search" placeholder="search">
-          <span class="message">This is a helpful message.</span>
-          <span class="message message--error">Input is required.</span>
-        </div>
-        <div class="input">
-          <label for="tel">Tel</label>
-          <input type="tel" id="tel" placeholder="+49 1234 56 78">
-          <span class="message">This is a helpful message.</span>
-          <span class="message message--error">Input is required.</span>
-        </div>
-        <div class="input">
-          <label for="time">Time</label>
-          <input type="time" id="time" placeholder="Time">
-          <span class="message">This is a helpful message.</span>
-          <span class="message message--error">Input is required.</span>
-        </div>
-        <div class="input">
-          <label for="url">Url</label>
-          <input type="url" id="url" placeholder="https://cleacss.dev">
-          <span class="message">This is a helpful message.</span>
-          <span class="message message--error">Input is required.</span>
-        </div>
-        <div class="input">
-          <label for="week">Week</label>
-          <input type="week" id="week" placeholder="1">
-          <span class="message">This is a helpful message.</span>
-          <span class="message message--error">Input is required.</span>
-        </div>
-        <div class="checkbox">
-          <label for="checkbox1">
-            <input type="checkbox" id="checkbox1" />
-            Vivamus hendrerit tortor sagittis hac nec bibendum potenti dictumst nascetur proin torquent quisque praesent
-            non
-          </label>
-          <span class="message">This is a helpful message.</span>
-          <span class="message message--error">Input is required.</span>
-        </div>
-        <div class="checkbox">
-          <label for="checkbox2">
-            <input type="checkbox" id="checkbox2" />
-            Lorem Ipsum
-          </label>
-          <span class="message">This is a helpful message.</span>
-          <span class="message message--error">Input is required.</span>
-        </div>
-        <div class="flow gap-xs">
-          <div class="radio">
-            <label for="radio1">
-              <input type="radio" id="radio1" name="radio" />
-              Lorem Ipsum
-            </label>
-            <span class="message">This is a helpful message.</span>
-            <span class="message message--error">Input is required.</span>
-          </div>
-          <div class="radio">
-            <label for="radio2">
-              <input type="radio" id="radio2" name="radio" />
-              Lorem Ipsum
-            </label>
-            <span class="message">This is a helpful message.</span>
-            <span class="message message--error">Input is required.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  /* Sizing */
+  --input-font-size: var(--font-size-7);
+  --input-min-height: calc(var(--input-padding-y) * 2 + 1.5rem);
+  --input-padding-y: 0.5rem;
+  --input-padding-x: 0.75rem;
 
-</cleacss-playground>
+  /* Border */
+  --input-border-width: 1px;
+  --input-border-radius: var(--border-radius-s);
+  --input-border-color: var(--color-neutral-300);
+
+  /* Focus outline */
+  --input-outline-color: var(--outline-color);
+  --input-outline-width: var(--outline-width);
+  --input-outline-offset: var(--outline-offset);
+
+  /* Checkbox & Radio */
+  --input-checkbox-border-radius: var(--border-radius-s);
+  --input-checkbox-accent: var(--color-accent);
+  --input-radio-border-radius: var(--border-radius-rounded);
+  --input-radio-accent: var(--color-accent);
+
+  /* Select & Range */
+  --input-select-accent: var(--color-accent);
+  --input-range-accent: var(--color-accent);
+  --input-range-handle-border-radius: var(--border-radius-rounded);
+}
+```

@@ -1,12 +1,5 @@
 There is a very simple button styling in place to get you started.
 
-<script src="https://vite.test/lib/playground.js" type="module"></script>
-<cleacss-playground src="https://vite.test/cleacss.css">
-  <button class="button">Hello world</button>
-  <a href="#" class="button">Click me</a>
-</cleacss-playground>
-
-
 ```html
 <a href="#" class="button">Click me</a>
 <button class="button">Hello world</button>

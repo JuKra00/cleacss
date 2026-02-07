@@ -16,7 +16,7 @@ Use your prefered package manager to install the cleacss package, or just downlo
 
 
 ```bash
-  npm install cleacss@2.0.0-beta.5
+  npm install cleacss
 ```
 
 ## Usage
@@ -40,7 +40,12 @@ import "cleacss";
 
 ### Custom properties
 
-cleass is built on top of custom properties. You can use them to customize almost every part of the framework. All variables are on the `:root` level so you can easily override them on an element basis.
+cleacss is built on top of custom properties. You can use them to customize almost every part of the framework. All variables are on the `:root` level so you can easily override them on an element basis.
+
+The framework provides variables for:
+- **Colors**: OKLCH-based color system with tintable neutrals and semantic colors
+- **Typography**: Fluid font sizes, weights, and max-widths
+- **Spacing**: 9 fixed sizes plus paired fluid sizes for responsive spacing
 
 ### Breakpoints
 
@@ -58,8 +63,6 @@ Cleacss has 5 breakpoints built-in. Internally, they are defined as custom media
 @custom-media --2xl (min-width: 120rem);
 @custom-media --2xl-max (max-width: 120rem);
 ```
-
-
 
 If you want to be able to modify the breakpoint values, or use custom media queries yourself, you need to import the untranspiled version and use [Lightning CSS](https://lightningcss.dev) or another css preprocessor that supports custom media queries to convert them to browser standard.
 

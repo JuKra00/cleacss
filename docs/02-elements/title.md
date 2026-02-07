@@ -1,11 +1,5 @@
 There are two types of heading classes that can be used for styling. `title` is the default heading style, while `subtitle` has a light font weight by default.
 
-<script src="https://vite.test/lib/playground.js" type="module"></script>
-<cleacss-playground src="https://vite.test/cleacss.css">
-  <h3 class="title">Lorem ipsum sit dolor amet.</h3>
-  <h3 class="subtitle">Lorem ipsum sit dolor amet.</h3>
-</cleacss-playground>
-
 ```html
 <h3 class="title">Lorem ipsum sit dolor amet.</h3>
 <h3 class="subtitle">Lorem ipsum sit dolor amet.</h3>
@@ -15,16 +9,10 @@ There are two types of heading classes that can be used for styling. `title` is 
 
 As with all text you can use `has-size-x` classes to change the font sizes.
 
-<cleacss-playground src="https://vite.test/cleacss.css">
-<h1 class="subtitle has-size-5">Lorem ipsum sit dolor amet.</h1>
-<h2 class="title has-size-4">Lorem ipsum sit dolor amet.</h2>
-</cleacss-playground>
-
 ```html
 <h1 class="subtitle has-size-6">Lorem ipsum sit dolor amet.</h1>
 <h2 class="title has-size-4">Lorem ipsum sit dolor amet.</h2>
 ```
-
 
 ## Configuration
 
