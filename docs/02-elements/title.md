@@ -19,7 +19,7 @@ As with all text you can use `has-size-x` classes to change the font sizes.
 ```css
 :root {
   --font-family-title: var(--font-family);
-  --line-height-title: 1;
+  --line-height-title: 1.1;
   --font-weight-title: var(--font-weight-bold);
 
   --font-size-1: clamp(3.0518rem, 1.7138rem + 4.46vw, 7.0657rem);
