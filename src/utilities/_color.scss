@@ -1,4 +1,5 @@
 @layer has {
+
   .has-text-neutral-0 {
     color: var(--color-neutral-0);
   }
@@ -45,6 +46,14 @@
 
   .has-text-neutral-1000 {
     color: var(--color-neutral-1000);
+  }
+
+  .has-text-white {
+    color: var(--color-white);
+  }
+
+  .has-text-black {
+    color: var(--color-black);
   }
 
   .has-text-accent {
@@ -113,6 +122,14 @@
 
   .has-bg-neutral-1000 {
     background-color: var(--color-neutral-1000);
+  }
+
+  .has-bg-white {
+    background-color: var(--color-white);
+  }
+
+  .has-bg-black {
+    background-color: var(--color-black);
   }
 
   .has-bg-accent {

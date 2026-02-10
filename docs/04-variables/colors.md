@@ -10,6 +10,8 @@ cleacss uses [OKLCH](https://oklch.com/) for all colors. This perceptually unifo
 :root {
   --color-base: var(--color-neutral-900);           /* Main text */
   --color-base-background: var(--color-neutral-50); /* Page background */
+  --color-white: #fff;                            /* Always White */
+  --color-black: #000;                            /* Always Black */
 }
 ```
 
