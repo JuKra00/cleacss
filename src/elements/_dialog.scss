@@ -1,0 +1,23 @@
+@layer elements {
+
+  dialog {
+    background: var(--dialog-background, var(--color-base-background));
+    border: var(--dialog-border, none);
+    border-radius: var(--dialog-border-radius, var(--border-radius));
+    color: var(--color-base);
+    max-height: var(--dialog-max-height, 85vh);
+    max-width: var(--dialog-max-width, 40rem);
+    padding: var(--dialog-padding, var(--space-m));
+    width: var(--dialog-width, 90vw);
+    margin: auto;
+
+    &::backdrop {
+      background: var(--dialog-backdrop, oklch(0 0 0 / 50%));
+    }
+
+    &:focus-visible {
+      outline: var(--outline-width) solid var(--outline-color);
+      outline-offset: var(--outline-offset);
+    }
+  }
+}

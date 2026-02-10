@@ -1,0 +1,51 @@
+@layer elements {
+
+  details {
+    border: 1px solid var(--color-neutral-200);
+    border-radius: var(--border-radius);
+    padding: var(--space-xs) var(--space-s);
+
+    summary {
+      cursor: pointer;
+      font-weight: var(--font-weight-bold);
+      list-style: none;
+      user-select: none;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &::after {
+        content: "+";
+        float: right;
+        margin-left: var(--space-xs);
+        font-weight: var(--font-weight-normal);
+        transition: transform var(--animation-duration) var(--animation-ease);
+      }
+
+      &:focus-visible {
+        outline: var(--outline-width) solid var(--outline-color);
+        outline-offset: var(--outline-offset);
+      }
+    }
+
+    &[open] summary::after {
+      content: "\2212";
+    }
+
+    > :not(summary) {
+      margin-top: var(--space-xs);
+    }
+  }
+
+  details+details {
+    border-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  details:has(+ details) {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
