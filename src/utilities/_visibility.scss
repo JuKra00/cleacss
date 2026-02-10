@@ -18,4 +18,69 @@
       }
     }
   }
+
+  .is-visible {
+    display: revert !important;
+  }
+
+  @each $name, $value in bp.$breakpoints {
+    .is-visible\:#{$name} {
+      display: none !important;
+    }
+
+    @media (--#{$name}) {
+      .is-visible\:#{$name} {
+        display: revert !important;
+      }
+    }
+
+    .is-visible\:#{$name}-max {
+      display: none !important;
+    }
+
+    @media (--#{$name}-max) {
+      .is-visible\:#{$name}-max {
+        display: revert !important;
+      }
+    }
+  }
+
+  .sr-only {
+    border: 0 !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    white-space: nowrap !important;
+    width: 1px !important;
+  }
+
+  .is-loading {
+    color: transparent !important;
+    overflow: hidden;
+    pointer-events: none;
+    position: relative;
+
+    &::after {
+      animation: loading-pulse 1.5s var(--ease-in-out) infinite;
+      background: linear-gradient(90deg, var(--color-neutral-200) 0%, var(--color-neutral-100) 50%, var(--color-neutral-200) 100%);
+      background-size: 200% 100%;
+      border-radius: inherit;
+      content: "";
+      inset: 0;
+      position: absolute;
+    }
+  }
+
+  @keyframes loading-pulse {
+    0% {
+      background-position: 200% 0;
+    }
+
+    100% {
+      background-position: -200% 0;
+    }
+  }
 }
