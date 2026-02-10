@@ -100,8 +100,46 @@
     text-decoration: none;
   }
 
+  :target {
+    scroll-margin-top: var(--space-xl);
+  }
+
   ::selection {
-    background-color: var(--color-base);
-    color: var(--color-accent);
+    background-color: var(--selection-background, var(--color-base));
+    color: var(--selection-color, var(--color-accent));
+  }
+
+  mark {
+    background-color: var(--color-neutral-200);
+    border-radius: var(--border-radius-s);
+    color: var(--color-base);
+    padding-inline: 0.2em;
+  }
+
+  kbd {
+    background-color: var(--color-neutral-100);
+    border: 1px solid var(--color-neutral-300);
+    border-bottom-width: 2px;
+    border-radius: var(--border-radius-s);
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-7);
+    padding: 0.1em 0.3em;
+  }
+
+  abbr[title] {
+    cursor: help;
+    text-decoration: underline dotted;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
