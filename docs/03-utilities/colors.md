@@ -88,6 +88,6 @@ Apply background colors to any element:
 
 All color utilities automatically adapt in dark mode via `light-dark()`. `has-text-neutral-900` is always the primary text color and `has-bg-neutral-100` is always a dim background, regardless of color scheme.
 
-## Pure colors
+## Static colors
 
-Use `has-text-white` and `has-bg-black` to set text and background colors to white and black, respectively. These won't adapt to dark mode.
+Use `has-text-white` and `has-bg-black` to set text and background colors to white and black, respectively. These won't adapt in dark mode.
