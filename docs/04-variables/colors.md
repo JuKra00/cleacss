@@ -15,24 +15,29 @@ cleacss uses [OKLCH](https://oklch.com/) for all colors. This perceptually unifo
 
 ## Accent color
 
-Define your accent using hue (h), chroma (c), and lightness (l):
+The accent color is used for links, buttons, and other interactive elements.
 
 ```css
 :root {
-  --color-accent-h: 280;  /* 0-360: Red→Yellow→Green→Cyan→Blue→Magenta→Red */
-  --color-accent-c: 0.4;  /* 0-0.4: Saturation */
-  --color-accent-l: 0.65; /* 0-1: Lightness */
+  --color-accent: oklch(0.65 0.4 280);
 }
 ```
 
-These generate three accent variants:
-- `--color-accent-light`: 1.5x lightness
-- `--color-accent`: Base accent
-- `--color-accent-dark`: 0.1x lightness
+## Link color
+
+Links inside `.text` use a dedicated variable that defaults to the accent color:
+
+```css
+:root {
+  --color-link: var(--color-accent);
+}
+```
+
+Override it to style links independently from other accent-colored elements like buttons.
 
 ## Neutral scale
 
-A 12-step neutral scale from white (0) to black (1000):
+A 12-step neutral scale from white (0) to black (1000), using `light-dark()` for automatic dark mode adaptation:
 
 | Variable               | Light mode | Dark mode  |
 | ---------------------- | ---------- | ---------- |
@@ -73,11 +78,14 @@ Pre-defined colors for common UI states:
 }
 ```
 
-## Dark mode
 
-The neutral scale automatically inverts when `prefers-color-scheme: dark`:
-- `--color-neutral-0` becomes black instead of white
-- `--color-neutral-1000` becomes white instead of black
-- All intermediate values adjust accordingly
+## Selection
 
-This means `--color-neutral-100` is always "light background" and `--color-neutral-900` is always "text color" regardless of mode.
+Selection colors are customizable:
+
+```css
+:root {
+  --selection-background: var(--color-base);
+  --selection-color: var(--color-accent);
+}
+```

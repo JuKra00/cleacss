@@ -47,6 +47,10 @@
     color: var(--color-neutral-1000);
   }
 
+  .has-text-accent {
+    color: var(--color-accent);
+  }
+
   .has-text-success {
     color: var(--color-success);
   }
@@ -61,5 +65,81 @@
 
   .has-text-info {
     color: var(--color-info);
+  }
+
+  .has-bg-neutral-0 {
+    background-color: var(--color-neutral-0);
+  }
+
+  .has-bg-neutral-50 {
+    background-color: var(--color-neutral-50);
+  }
+
+  .has-bg-neutral-100 {
+    background-color: var(--color-neutral-100);
+  }
+
+  .has-bg-neutral-200 {
+    background-color: var(--color-neutral-200);
+  }
+
+  .has-bg-neutral-300 {
+    background-color: var(--color-neutral-300);
+  }
+
+  .has-bg-neutral-400 {
+    background-color: var(--color-neutral-400);
+  }
+
+  .has-bg-neutral-500 {
+    background-color: var(--color-neutral-500);
+  }
+
+  .has-bg-neutral-600 {
+    background-color: var(--color-neutral-600);
+  }
+
+  .has-bg-neutral-700 {
+    background-color: var(--color-neutral-700);
+  }
+
+  .has-bg-neutral-800 {
+    background-color: var(--color-neutral-800);
+  }
+
+  .has-bg-neutral-900 {
+    background-color: var(--color-neutral-900);
+  }
+
+  .has-bg-neutral-1000 {
+    background-color: var(--color-neutral-1000);
+  }
+
+  .has-bg-accent {
+    background-color: var(--color-accent);
+  }
+
+  .has-bg-accent-light {
+    background-color: var(--color-accent-light);
+  }
+
+  .has-bg-accent-dark {
+    background-color: var(--color-accent-dark);
+  }
+
+  .has-bg-success {
+    background-color: var(--color-success);
+  }
+
+  .has-bg-warning {
+    background-color: var(--color-warning);
+  }
+
+  .has-bg-error {
+    background-color: var(--color-error);
+  }
+
+  .has-bg-info {
+    background-color: var(--color-info);
   }
 }
