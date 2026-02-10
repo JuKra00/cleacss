@@ -72,6 +72,8 @@ Responsive stacking pattern:
 ```html
 <div class="has-w-full">Full width (100%)</div>
 <div class="has-h-full">Full height (100%)</div>
+<div class="has-w-auto">Auto width</div>
+<div class="has-h-auto">Auto height</div>
 ```
 
 ## Border radius
