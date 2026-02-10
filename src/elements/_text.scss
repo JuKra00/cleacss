@@ -2,11 +2,11 @@
   .text {
     gap: 0;
 
-    a {
+    a:not(.button) {
       color: inherit;
       font-size: inherit;
       text-decoration: underline;
-      text-decoration-color: var(--color-accent);
+      text-decoration-color: var(--color-link);
       text-decoration-thickness: 0.1em;
       text-underline-offset: 0.15em;
 
@@ -16,18 +16,39 @@
       }
 
       &:hover {
-        color: var(--color-accent);
+        color: var(--color-link);
       }
     }
 
     ul {
       list-style: square;
       margin-left: 1em;
+
+      ul {
+        list-style: disc;
+      }
+
+      ul ul {
+        list-style: circle;
+      }
     }
 
     ol {
       list-style: decimal;
       margin-left: 1.35em;
+
+      ol {
+        list-style: lower-alpha;
+      }
+
+      ol ol {
+        list-style: lower-roman;
+      }
+    }
+
+    blockquote {
+      border-left: 3px solid var(--color-accent);
+      padding-left: var(--space-s);
     }
 
     hr {

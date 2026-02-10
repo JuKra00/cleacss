@@ -2,6 +2,8 @@ The `text` class is a wrapper for common typographic styles used with preformate
 
 ## Unordered list
 
+Nested lists automatically get differentiated markers (square, disc, circle):
+
 ```html
 <div class="text flow">
   <ul>
@@ -20,6 +22,8 @@ The `text` class is a wrapper for common typographic styles used with preformate
 ```
 
 ## Ordered list
+
+Nested ordered lists cycle through decimal, lower-alpha, and lower-roman:
 
 ```html
 <div class="text flow">
@@ -60,4 +64,36 @@ The `text` class is a wrapper for common typographic styles used with preformate
     amet.
   </p>
 </div>
+```
+
+## Blockquote
+
+Blockquotes get a left accent border:
+
+```html
+<div class="text flow">
+  <blockquote>
+    <p>This is a blockquote with an accent-colored left border.</p>
+  </blockquote>
+</div>
+```
+
+## Inline elements
+
+The following inline elements are styled globally (not limited to `.text`):
+
+```html
+<p>Use <mark>mark</mark> to highlight text.</p>
+<p>Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save.</p>
+<p>The <abbr title="World Wide Web">WWW</abbr> was invented in 1989.</p>
+```
+
+## Links
+
+Links inside `.text` use the `--color-link` variable for their underline and hover color. Override it to customize link appearance independently from accent-colored elements:
+
+```css
+:root {
+  --color-link: oklch(0.6 0.2 240); /* Custom blue links */
+}
 ```
