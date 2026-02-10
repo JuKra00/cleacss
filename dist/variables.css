@@ -37,49 +37,28 @@
 :host {
   --color-base: var(--color-neutral-900);
   --color-base-background: var(--color-neutral-50);
-  --color-accent-h: 280;
-  --color-accent-c: 0.4;
-  --color-accent-l: 0.65;
+  --color-accent: oklch(0.65 0.4 280);
   --color-neutral-h: 300;
   --color-neutral-c: 0.01;
-  --color-accent-light: oklch(calc(var(--color-accent-l) * 1.5) var(--color-accent-c) var(--color-accent-h));
-  --color-accent: oklch(var(--color-accent-l) var(--color-accent-c) var(--color-accent-h));
-  --color-accent-dark: oklch(calc(var(--color-accent-l) * 0.1) var(--color-accent-c) var(--color-accent-h));
-  --color-neutral-0: oklch(1 var(--color-neutral-c) var(--color-neutral-h));
-  --color-neutral-50: oklch(0.95 var(--color-neutral-c) var(--color-neutral-h));
-  --color-neutral-100: oklch(0.9 var(--color-neutral-c) var(--color-neutral-h));
-  --color-neutral-200: oklch(0.8 var(--color-neutral-c) var(--color-neutral-h));
-  --color-neutral-300: oklch(0.7 var(--color-neutral-c) var(--color-neutral-h));
-  --color-neutral-400: oklch(0.6 var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-0: light-dark(oklch(1 var(--color-neutral-c) var(--color-neutral-h)), oklch(0 var(--color-neutral-c) var(--color-neutral-h)));
+  --color-neutral-50: light-dark(oklch(0.95 var(--color-neutral-c) var(--color-neutral-h)), oklch(0.15 var(--color-neutral-c) var(--color-neutral-h)));
+  --color-neutral-100: light-dark(oklch(0.9 var(--color-neutral-c) var(--color-neutral-h)), oklch(0.1 var(--color-neutral-c) var(--color-neutral-h)));
+  --color-neutral-200: light-dark(oklch(0.8 var(--color-neutral-c) var(--color-neutral-h)), oklch(0.2 var(--color-neutral-c) var(--color-neutral-h)));
+  --color-neutral-300: light-dark(oklch(0.7 var(--color-neutral-c) var(--color-neutral-h)), oklch(0.3 var(--color-neutral-c) var(--color-neutral-h)));
+  --color-neutral-400: light-dark(oklch(0.6 var(--color-neutral-c) var(--color-neutral-h)), oklch(0.4 var(--color-neutral-c) var(--color-neutral-h)));
   --color-neutral-500: oklch(0.5 var(--color-neutral-c) var(--color-neutral-h));
-  --color-neutral-600: oklch(0.4 var(--color-neutral-c) var(--color-neutral-h));
-  --color-neutral-700: oklch(0.3 var(--color-neutral-c) var(--color-neutral-h));
-  --color-neutral-800: oklch(0.2 var(--color-neutral-c) var(--color-neutral-h));
-  --color-neutral-900: oklch(0.1 var(--color-neutral-c) var(--color-neutral-h));
-  --color-neutral-1000: oklch(0 var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-600: light-dark(oklch(0.4 var(--color-neutral-c) var(--color-neutral-h)), oklch(0.6 var(--color-neutral-c) var(--color-neutral-h)));
+  --color-neutral-700: light-dark(oklch(0.3 var(--color-neutral-c) var(--color-neutral-h)), oklch(0.7 var(--color-neutral-c) var(--color-neutral-h)));
+  --color-neutral-800: light-dark(oklch(0.2 var(--color-neutral-c) var(--color-neutral-h)), oklch(0.8 var(--color-neutral-c) var(--color-neutral-h)));
+  --color-neutral-900: light-dark(oklch(0.1 var(--color-neutral-c) var(--color-neutral-h)), oklch(0.85 var(--color-neutral-c) var(--color-neutral-h)));
+  --color-neutral-1000: light-dark(oklch(0 var(--color-neutral-c) var(--color-neutral-h)), oklch(0.95 var(--color-neutral-c) var(--color-neutral-h)));
   --color-success: oklch(0.65 0.15 150);
   --color-warning: oklch(0.75 0.15 80);
   --color-error: oklch(0.65 0.18 25);
   --color-info: oklch(0.65 0.15 220);
+  --color-link: var(--color-accent);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root,
-  :host {
-    --color-neutral-0: oklch(0 var(--color-neutral-c) var(--color-neutral-h));
-    --color-neutral-50: oklch(0.15 var(--color-neutral-c) var(--color-neutral-h));
-    --color-neutral-100: oklch(0.1 var(--color-neutral-c) var(--color-neutral-h));
-    --color-neutral-200: oklch(0.2 var(--color-neutral-c) var(--color-neutral-h));
-    --color-neutral-300: oklch(0.3 var(--color-neutral-c) var(--color-neutral-h));
-    --color-neutral-400: oklch(0.4 var(--color-neutral-c) var(--color-neutral-h));
-    --color-neutral-500: oklch(0.5 var(--color-neutral-c) var(--color-neutral-h));
-    --color-neutral-600: oklch(0.6 var(--color-neutral-c) var(--color-neutral-h));
-    --color-neutral-700: oklch(0.7 var(--color-neutral-c) var(--color-neutral-h));
-    --color-neutral-800: oklch(0.8 var(--color-neutral-c) var(--color-neutral-h));
-    --color-neutral-900: oklch(0.85 var(--color-neutral-c) var(--color-neutral-h));
-    --color-neutral-1000: oklch(0.95 var(--color-neutral-c) var(--color-neutral-h));
-  }
-}
 :root,
 :host {
   --font-family: system-ui;
@@ -187,16 +166,13 @@
 
 :root,
 :host {
-  --button-padding-y: 0.5em;
-  --button-padding-x: 1.5em;
-  --button-border-width: 2px;
-  --button-border-radius: var(--border-radius-rounded);
   --button-background: var(--color-accent);
-  --button-border-color: var(--color-accent);
-  --button-color: var(--color-accent-dark);
-  --button-hover-color: var(--color-accent);
-  --button-hover-background: var(--color-accent-dark);
-  --button-hover-border-color: var(--color-accent-dark);
+  --button-border-radius: var(--border-radius-rounded);
+  --button-border-width: 2px;
+  --button-color: var(--color-neutral-0);
+  --button-hover-color: var(--color-neutral-0);
+  --button-padding-block: 0.5em;
+  --button-padding-inline: 1.5em;
 }
 
 :root,
@@ -232,12 +208,12 @@
 
 :root,
 :host {
-  --table-border-color: var(--color-neutral-800);
+  --table-border-color: var(--color-neutral-200);
   --table-border-width: 1px;
   --table-padding-x: var(--space-xs);
   --table-padding-y: var(--space-xs);
-  --table-accent-background: var(--color-neutral-800);
-  --table-accent-color: var(--color-neutral-50);
+  --table-accent-background: var(--color-neutral-100);
+  --table-accent-color: var(--color-neutral-600);
 }
 
 :root {
