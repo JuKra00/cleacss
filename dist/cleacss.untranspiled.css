@@ -167,6 +167,8 @@
   --color-base: var(--color-neutral-900);
   --color-base-background: var(--color-neutral-50);
   --color-accent: oklch(0.65 0.4 280);
+  --color-white: #fff;
+  --color-black: #000;
   --color-neutral-h: 300;
   --color-neutral-c: 0.01;
   --color-neutral-0: light-dark(oklch(1 var(--color-neutral-c) var(--color-neutral-h)), oklch(0 var(--color-neutral-c) var(--color-neutral-h)));
@@ -194,7 +196,7 @@
   --font-family-title: var(--font-family);
   --font-family-mono: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
   --line-height: 1.4;
-  --line-height-title: 1;
+  --line-height-title: 1.1;
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
@@ -2601,6 +2603,12 @@
   .has-h-full {
     height: 100%;
   }
+  .has-w-auto {
+    width: auto;
+  }
+  .has-h-auto {
+    height: auto;
+  }
   .has-radius-0 {
     border-radius: 0;
   }
@@ -3770,6 +3778,12 @@
   .has-text-neutral-1000 {
     color: var(--color-neutral-1000);
   }
+  .has-text-white {
+    color: var(--color-white);
+  }
+  .has-text-black {
+    color: var(--color-black);
+  }
   .has-text-accent {
     color: var(--color-accent);
   }
@@ -3820,6 +3834,12 @@
   }
   .has-bg-neutral-1000 {
     background-color: var(--color-neutral-1000);
+  }
+  .has-bg-white {
+    background-color: var(--color-white);
+  }
+  .has-bg-black {
+    background-color: var(--color-black);
   }
   .has-bg-accent {
     background-color: var(--color-accent);
@@ -4414,9 +4434,9 @@ h6 u, h5 u, h4 u, h3 u, h2 u, h1 u {
     width: 100%;
   }
   .text code {
-    background-color: var(--color-neutral-800);
+    background-color: var(--color-neutral-400);
     border-radius: var(--border-radius-s);
-    color: var(--color-neutral-50);
+    color: var(--color-white);
     display: inline-block;
     font-family: var(--font-family-mono);
     font-size: var(--font-size-7);
@@ -4425,9 +4445,9 @@ h6 u, h5 u, h4 u, h3 u, h2 u, h1 u {
     padding: var(--space-2xs);
   }
   .text pre {
-    background-color: var(--color-neutral-800);
+    background-color: var(--color-neutral-400);
     border-radius: var(--border-radius);
-    color: var(--color-neutral-50);
+    color: var(--color-white);
     display: block;
     font-family: var(--font-family-mono);
     margin-bottom: 0;

@@ -38,6 +38,8 @@
   --color-base: var(--color-neutral-900);
   --color-base-background: var(--color-neutral-50);
   --color-accent: oklch(0.65 0.4 280);
+  --color-white: #fff;
+  --color-black: #000;
   --color-neutral-h: 300;
   --color-neutral-c: 0.01;
   --color-neutral-0: light-dark(oklch(1 var(--color-neutral-c) var(--color-neutral-h)), oklch(0 var(--color-neutral-c) var(--color-neutral-h)));
@@ -65,7 +67,7 @@
   --font-family-title: var(--font-family);
   --font-family-mono: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
   --line-height: 1.4;
-  --line-height-title: 1;
+  --line-height-title: 1.1;
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-bold: 700;

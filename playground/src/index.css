@@ -13,10 +13,10 @@
   }
 
   .grid-block {
-    color: var(--color-accent-light);
-    border: 2px solid var(--color-neutral-300);
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
     border-radius: var(--border-radius);
-    padding: var(--space-s-m) var(--space-s) var(--space-xs) var(--space-xs);
+    padding: var(--space-s) var(--space-s) var(--space-xs) var(--space-xs);
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -31,10 +31,10 @@
   }
 
   .flow-block {
-    color: var(--color-accent-light);
+    color: var(--color-accent);
     border: 2px solid var(--color-accent);
     border-radius: var(--border-radius);
-    padding: var(--space-s-m) var(--space-s) var(--space-xs) var(--space-xs);
+    padding: var(--space-s) var(--space-s) var(--space-xs) var(--space-xs);
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;

@@ -93,7 +93,7 @@ class a extends HTMLElement {
     `, this.toggleButton = this.createButton(), this.shadowRoot.appendChild(this.toggleButton), this.debugColumns = this.shadowRoot.querySelector(".grid-columns-debug"));
   }
   generateColumnSpans() {
-    return Array.from({ length: 14 }, (t, i) => `<span data-col="${i > 0 && i < 13 ? i : ""}"></span>`).join("");
+    return Array.from({ length: 14 }, (t, i) => `<span data-col="${i > 0 && i < 13 ? i : "—"}"></span>`).join("");
   }
   createButton() {
     const t = document.createElement("button");

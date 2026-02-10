@@ -4,365 +4,325 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Streamlined Grid Framework</title>
+  <title>cleacss — A CSS Framework for Enthusiasts</title>
 </head>
 
-<body class="grid">
+<body>
+  <main class="grid">
+    <grid-visualizer></grid-visualizer>
 
-  <grid-visualizer></grid-visualizer>
-
-  <!-- Header with subgrid -->
-  <div class="span-full subgrid has-pt-l">
-    <div class="start-1 span-2">
-      <div class="grid-block"></div>
-    </div>
-    <div class="start-4 span-8">
-      <div class="flow-row has-gap-2xs">
-
-      </div>
-    </div>
-    <div class="span-2 start-13">
-      <div class="grid-block"></div>
-    </div>
-  </div>
-
-  <header class="span-content flow demo has-gap-collapse has-pt-xl has-pb-xl-4xl text has-items-center">
-    <h1 class="subtitle has-size-4 has-text-neutral-500">Grid & Flow</h1>
-    <h2 class="title has-size-1">cleacss</h2>
-    <p class="has-size-5">
-      This page is written in <em>cleacss</em> and is intended as a little guideline to explore how the framework is
-      intended to
-      be used. You can <b>toggle the grid overlay</b> in the bottom right corner to see the grid and flow layout in
-      action.</p>
-    <hr />
-    <div class="flow-row has-gap-l-xl">
-      <div class="flow-block"></div>
-      <div class="flow-block"></div>
-      <div class="flow-block"></div>
-    </div>
-    <hr />
-    <div class="flow-row has-gap-l-xl">
-      <div class="has-flex-1">
-        <p>
-          The framework comes with sensible defaults for html elements and helper classes to make development fast and
-          easy.
-          At base level, cleacss provides a set of css variables with opinionated default values. There variables are
-          the
-          basis for all base styling, components and utilities.
-        </p>
-      </div>
-      <div class="has-flex-1">
-        <ul>
-          <li>Lorem Ipsum</li>
-          <li>Varius urna</li>
-          <li>Facilisi natoque</li>
-        </ul>
-      </div>
-      <div class="has-flex-1">
-        <p>
-          The framework comes with sensible defaults for html elements and helper classes to make development fast and
-          easy.
-          At base level, cleacss provides a set of css variables with opinionated default values. There variables are
-          the
-          basis for all base styling, components and utilities.
-        </p>
-      </div>
-    </div>
-  </header>
-
-  <div class="span-content demo">
-    <table>
-      <thead>
-        <tr>
-          <th>Lorem Ipsum</th>
-          <th>Varius urna</th>
-          <th>Facilisi natoque</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Lorem Ipsum</td>
-          <td>Varius urna</td>
-          <td>Facilisi natoque</td>
-        </tr>
-        <tr>
-          <td>Lorem Ipsum</td>
-          <td>Varius urna</td>
-          <td>Facilisi natoque</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td>Lorem Ipsum</td>
-          <td>Varius urna</td>
-          <td>Facilisi natoque</td>
-        </tr>
-      </tfoot>
-    </table>
-  </div>
-
-  <div class="span-content flow demo text">
-    <h1>Aptene egestas</h1>
-    <h2>Non <u>finibus</u> nascetur</h2>
-    <p>
-      Blandit <strong>lorem ipsum</strong> senectus velit dictum viverra mi lectus ornare pharetra laoreet gravida
-      semper vel accumsan bibendum conubia est netus proin ipsum massa et commodo molestie convallis praesent non fusce
-      nascetur dignissim
-    </p>
-    <hr />
-    <p>
-      Mattis senectus finibus ligula integer sem duis efficitur nulla conubia mus dolor odio pellentesque massa ornare
-      porttitor ullamcorper class hendrerit <em>Lorem Ipsum</em> Mollis pulvinar hac non mus ultrices ullamcorper morbi
-      egestas at sociosqu aptent justo congue ipsum lacus, sagittis praesent nostra posuere vivamus feugiat tincidunt ac
-      ex sem quisque vel nunc nascetur. <a href="#">My Website</a> Hendrerit finibus ex vivamus quisque a et platea
-      molestie sapien vitae id egestas ligula magna dis, nunc porttitor posuere dui sagittis nascetur auctor vulputate
-      non duis risus cubilia nulla dictum.
-    </p>
-    <p>
-      Porta himenaeos habitant maximus <code>Lorem Upsum</code>.
-    </p>
-    <pre><code>const foo = bar;</code></pre>
-    <ul>
-      <li>Lorem Ipsum</li>
-      <li>Varius urna</li>
-      <li>Facilisi natoque</li>
-    </ul>
-    <ol>
-      <li>Lorem Ipsum</li>
-      <li>Varius urna</li>
-      <li>Facilisi natoque</li>
-    </ol>
-    <button>Lorem Ipsum</button>
-  </div>
-
-  <div class="span-content has-pt-xl demo subgrid">
-    <div class="span-5 flow">
-      <div class="input">
-        <label for="text">Text</label>
-        <input type="text" id="text" placeholder="Text">
-        <span class="message">This is a helpful message.</span>
-        <span class="message message--error">Input is required.</span>
-      </div>
-      <div class="input">
-        <label for="color">Color</label>
-        <input type="color" id="color">
-        <span class="message">This is a helpful message.</span>
-        <span class="message message--error">Input is required.</span>
-      </div>
-      <div class="input">
-        <label for="date">Date</label>
-        <input type="date" id="date">
-        <span class="message">This is a helpful message.</span>
-        <span class="message message--error">Input is required.</span>
-      </div>
-      <div class="input">
-        <label for="datetime-local">Datetime local</label>
-        <input type="datetime-local" id="datetime-local">
-        <span class="message">This is a helpful message.</span>
-        <span class="message message--error">Input is required.</span>
-      </div>
-      <div class="input">
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="max@mustermann.de">
-        <span class="message">This is a helpful message.</span>
-        <span class="message message--error">Input is required.</span>
-      </div>
-      <div class="input">
-        <label for="file">File</label>
-        <input type="file" id="file">
-        <span class="message">This is a helpful message.</span>
-        <span class="message message--error">Input is required.</span>
-      </div>
-      <div class="input">
-        <label for="month">Month</label>
-        <input type="month" id="month" placeholder="01">
-        <span class="message">This is a helpful message.</span>
-        <span class="message message--error">Input is required.</span>
-      </div>
-      <div class="input">
-        <label for="textarea">Textarea</label>
-        <textarea id="textarea" placeholder="Lorem Ipsum..."></textarea>
-        <span class="message">This is a helpful message.</span>
-        <span class="message message--error">Input is required.</span>
-      </div>
-      <div class="select">
-        <label for="select">Select</label>
-        <select type="select" id="select">
-          <option disabled>Lorem Ipsum</option>
-          <option>Varius urna</option>
-          <option>Facilisi natoque</option>
-        </select>
-        <span class="message">This is a helpful message.</span>
-        <span class="message message--error">Input is required.</span>
-      </div>
-      <div class="input">
-        <label for="hidden">Hidden</label>
-        <input type="hidden" id="hidden">
-        <span class="message">This is a helpful message.</span>
-        <span class="message message--error">Input is required.</span>
-      </div>
-      <div class="input">
-        <label for="textr">Readonly</label>
-        <input type="text" readonly id="textr" value="Lorem Ipsum">
-      </div>
-      <div class="input">
-        <label for="textr">Disabled</label>
-        <input type="text" disabled id="textr" value="Lorem Ipsum">
-      </div>
-    </div>
-    <div class="span-5 flow">
-      <div class="input">
-        <label for="number">Number</label>
-        <input type="number" id="number" placeholder="0">
-        <span class="message">This is a helpful message.</span>
-        <span class="message message--error">Input is required.</span>
-      </div>
-      <div class="input">
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="********">
-        <span class="message">This is a helpful message.</span>
-        <span class="message message--error">Input is required.</span>
-      </div>
-      <div class="input">
-        <label for="range">Range</label>
-        <input type="range" id="range" min="0" max="100">
-        <span class="message">This is a helpful message.</span>
-        <span class="message message--error">Input is required.</span>
-      </div>
-      <div class="input">
-        <label for="search">Search</label>
-        <input type="search" id="search" placeholder="search">
-        <span class="message">This is a helpful message.</span>
-        <span class="message message--error">Input is required.</span>
-      </div>
-      <div class="input">
-        <label for="tel">Tel</label>
-        <input type="tel" id="tel" placeholder="+49 1234 56 78">
-        <span class="message">This is a helpful message.</span>
-        <span class="message message--error">Input is required.</span>
-      </div>
-      <div class="input">
-        <label for="time">Time</label>
-        <input type="time" id="time" placeholder="Time">
-        <span class="message">This is a helpful message.</span>
-        <span class="message message--error">Input is required.</span>
-      </div>
-      <div class="input">
-        <label for="url">Url</label>
-        <input type="url" id="url" placeholder="https://cleacss.dev">
-        <span class="message">This is a helpful message.</span>
-        <span class="message message--error">Input is required.</span>
-      </div>
-      <div class="input">
-        <label for="week">Week</label>
-        <input type="week" id="week" placeholder="1">
-        <span class="message">This is a helpful message.</span>
-        <span class="message message--error">Input is required.</span>
-      </div>
-
-      <div class="switch">
-        <label for="switch1">
-          <input type="checkbox" id="switch1" />
-          Purus sapien dignissim dolor sem tortor ullamcorper per eleifend elit
-        </label>
-        <span class="message">This is a helpful message.</span>
-        <span class="message message--error">Input is required.</span>
-      </div>
-
-      <div class="switch">
-        <label for="switch2">
-          <input type="checkbox" id="switch2" disabled />
-          Purus sapien dignissim dolor sem tortor ullamcorper per eleifend elit
-        </label>
-        <span class="message">This is a helpful message.</span>
-        <span class="message message--error">Input is required.</span>
-      </div>
-
-      <div class="checkbox">
-        <label for="checkbox1">
-          <input type="checkbox" id="checkbox1" />
-          Vivamus hendrerit tortor sagittis hac nec bibendum potenti dictumst nascetur proin torquent quisque praesent
-          non
-        </label>
-        <span class="message">This is a helpful message.</span>
-        <span class="message message--error">Input is required.</span>
-      </div>
-      <div class="checkbox">
-        <label for="checkbox2">
-          <input type="checkbox" id="checkbox2" />
-          Lorem Ipsum
-        </label>
-        <span class="message">This is a helpful message.</span>
-        <span class="message message--error">Input is required.</span>
-      </div>
-      <div class="flow has-gap-xs">
-        <div class="radio">
-          <label for="radio1">
-            <input type="radio" id="radio1" name="radio" />
-            Lorem Ipsum
-          </label>
-          <span class="message">This is a helpful message.</span>
-          <span class="message message--error">Input is required.</span>
-        </div>
-        <div class="radio">
-          <label for="radio2">
-            <input type="radio" id="radio2" name="radio" />
-            Lorem Ipsum
-          </label>
-          <span class="message">This is a helpful message.</span>
-          <span class="message message--error">Input is required.</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Main content area with subgrid -->
-  <main class="span-content subgrid">
-
-    <div class="span-11">
-      <div class="grid-block"></div>
-    </div>
-
-    <div class="span-10 subgrid">
-      <div class="span-3">
+    <header class="span-full subgrid has-pt-xl">
+      <div class="start-1 span-8">
         <div class="grid-block"></div>
       </div>
-      <div class="span-7">
+      <div class="start-7 span-8">
         <div class="grid-block"></div>
       </div>
-    </div>
+      <div class="span-content flow text has-items-center has-text-center">
+        <h1 class="has-size-1">cleacss</h1>
+        <p class="has-size-5">A CSS framework for enthusiasts.</p>
+        <p>Built on sensible defaults, CSS custom properties, and fluid everything.<br>
+          This page is written in <em>cleacss</em> and is intended as a little guideline to explore how the framework is
+          intended to be used.
+        </p>
+        <p class="has-text-neutral-300">
+          <em>Toggle the <b>grid overlay</b> in the bottom right to see the layout system in action.</em>
+        </p>
+      </div>
+    </header>
 
-    <div class="span-3 flow has-gap-2xs">
-      <div class="flow-block"></div>
-      <div class="flow-block"></div>
-      <div class="flow-block"></div>
-    </div>
-  </main>
+    <section class="span-content flow has-flex-row:m has-bg-neutral-0 has-text-neutral-1000 has-p-m-xl has-radius">
+      <div class="flow">
+        <h3 class="has-size-5">Fluid Spacing</h3>
+        <p class="has-mt-a text">Every spacing value uses <code>clamp()</code> to scale smoothly between viewport sizes.
+          No
+          jumping between fixed breakpoint values.</p>
+      </div>
+      <div class="flow">
+        <h3 class="has-size-5">Automatic Dark Mode</h3>
+        <p class="has-mt-a text">
+          Colors are defined with <a href="https://oklch.com/" target="_blank" rel="nofollow">OKLCH</a> and wrapped in
+          <code>light-dark()</code> so colors adapt to your
+          system theme automatically.
+        </p>
+      </div>
+      <div class="flow">
+        <h3 class="has-size-5">14-Column Grid</h3>
+        <p class="has-mt-a text">A subgrid-powered layout system with full-bleed and content-width zones. Nest grids,
+          break out
+          of
+          containers, span any number of columns.</p>
+      </div>
+    </section>
 
-  <!-- Flow layout example -->
-  <div class="span-content flow">
-    <div class="flow-block"></div>
-    <div class="flow-block breakout"></div>
-    <div class="flow-row has-justify-center">
-      <div class="flow-block"></div>
-      <div class="flow-block"></div>
-    </div>
-  </div>
+    <section class="span-content flow text has-mt-xl-2xl">
+      <h2 class="has-size-4">Typography that flows well</h2>
+      <p>
+        The type system is built on fluid sizing: headings and body text scale between a minimum and maximum
+        using <code>clamp()</code>. Text wrapping uses <code>pretty</code> for body copy and
+        <code>balance</code> for headings, giving every line a natural rhythm.
+      </p>
+      <p>Typographic styles are only applied to <code>.text</code> elements and their children, no need to overwrite
+        default styles when you
+        do not need them.
+      </p>
+      <p>
+        A paragraph with <strong>bold text</strong>, <em>italic text</em>, <code>inline code</code>, and a
+        <a href="https://cleacss.dev">hyperlink to the docs</a>. The framework styles all native HTML elements
+        with fluid typography that scales between viewport breakpoints.
+      </p>
+      <ol>
+        <li>Include the stylesheet</li>
+        <li>Override any CSS custom property on <code>:root</code></li>
+        <li>Build your layout with the grid and flow utilities</li>
+      </ol>
+    </section>
 
-  <!-- Footer with subgrid -->
-  <footer class="span-full subgrid has-py-xl">
+    <section class="text span-content has-my-xl">
+      <hr />
+    </section>
+
+    <section class="span-content text">
+      <h2 class="has-size-4">Dynamic color palette</h2>
+      <p>All colors use OKLCH for perceptual uniformity and <code>light-dark()</code> for automatic dark mode.
+        Override any color on <code>:root</code>.</p>
+      <div class="flow-row has-flex-wrap">
+        <div class="flow has-w-auto">
+          <h4 class="has-size-7">Neutral scale</h4>
+          <div class="flow-row has-flex-wrap has-gap-2xs has-bg-neutral-0 has-p-s has-w-auto has-radius">
+            <div class="has-bg-neutral-0 has-radius"
+              style="width: 3rem; height: 3rem; border: 1px solid var(--color-neutral-200)"></div>
+            <div class="has-bg-neutral-50 has-radius" style="width: 3rem; height: 3rem"></div>
+            <div class="has-bg-neutral-100 has-radius" style="width: 3rem; height: 3rem"></div>
+            <div class="has-bg-neutral-200 has-radius" style="width: 3rem; height: 3rem"></div>
+            <div class="has-bg-neutral-300 has-radius" style="width: 3rem; height: 3rem"></div>
+            <div class="has-bg-neutral-400 has-radius" style="width: 3rem; height: 3rem"></div>
+            <div class="has-bg-neutral-500 has-radius" style="width: 3rem; height: 3rem"></div>
+            <div class="has-bg-neutral-600 has-radius" style="width: 3rem; height: 3rem"></div>
+            <div class="has-bg-neutral-700 has-radius" style="width: 3rem; height: 3rem"></div>
+            <div class="has-bg-neutral-800 has-radius" style="width: 3rem; height: 3rem"></div>
+            <div class="has-bg-neutral-900 has-radius" style="width: 3rem; height: 3rem"></div>
+            <div class="has-bg-neutral-1000 has-radius" style="width: 3rem; height: 3rem"></div>
+          </div>
+        </div>
+        <div class="flow has-w-auto">
+          <h4 class="has-size-7">Semantic colors</h4>
+          <div class="flow-row has-flex-wrap has-gap-2xs has-bg-neutral-0 has-p-s has-w-auto has-radius">
+            <div class="has-bg-accent has-radius" style="width: 3rem; height: 3rem"></div>
+            <div class="has-bg-success has-radius" style="width: 3rem; height: 3rem"></div>
+            <div class="has-bg-warning has-radius" style="width: 3rem; height: 3rem"></div>
+            <div class="has-bg-error has-radius" style="width: 3rem; height: 3rem"></div>
+            <div class="has-bg-info has-radius" style="width: 3rem; height: 3rem"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="text span-content has-my-xl">
+      <hr />
+    </section>
+
+    <section class="span-content flow text">
+      <h2 class="has-size-4">The grid system</h2>
+      <p>A 14-column grid with named content and full-width zones. Elements snap to columns with
+        <code>.span-*</code> and <code>.start-*</code> classes. Add <code>:m</code>, <code>:l</code>, or other
+        breakpoint suffixes for responsive layouts.
+      </p>
+    </section>
+
     <div class="span-content subgrid">
+      <div class="span-9">
+        <div class="grid-block"></div>
+      </div>
+      <div class="span-10 subgrid">
+        <div class="span-4">
+          <div class="grid-block"></div>
+        </div>
+        <div class="span-6">
+          <div class="grid-block"></div>
+        </div>
+      </div>
       <div class="span-12 span-4:m">
         <div class="grid-block"></div>
       </div>
-      <div class="span-6 span-3:m">
+      <div class="span-12 span-4:m">
         <div class="grid-block"></div>
       </div>
-      <div class="span-4 span-3:m">
+      <div class="span-12 span-4:m">
         <div class="grid-block"></div>
       </div>
     </div>
-  </footer>
+
+
+    <section class="text span-content has-my-xl">
+      <hr />
+    </section>
+
+    <section class="span-content flow text">
+      <h4 class="has-size-4">Flow layout</h4>
+      <p>Use <code>.flow</code> for vertical stacking and <code>.flow-row</code> for horizontal layouts.
+        Control spacing with <code>.has-gap-*</code> classes.</p>
+      <div class="flow has-gap-2xs">
+        <div class="flow-block"></div>
+        <div class="flow-row has-gap-2xs">
+          <div class="flow-block"></div>
+          <div class="flow-block"></div>
+          <div class="flow-block"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="text span-content has-my-xl">
+      <hr />
+    </section>
+
+
+    <section class="span-content flow text">
+      <h2 class="has-size-4">Native HTML, styled by default</h2>
+      <p>Every form element, button, and table is styled out of the box. No extra classes needed on standard
+        elements, just write HTML.</p>
+    </section>
+
+    <div class="span-content subgrid">
+      <div class="span-12 span-6:m flow">
+        <div class="input">
+          <label for="contact-name">Name</label>
+          <input type="text" id="contact-name" placeholder="Your name">
+        </div>
+        <div class="input">
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" placeholder="you@example.com">
+        </div>
+        <div class="select">
+          <label for="contact-topic">Topic</label>
+          <select id="contact-topic">
+            <option disabled selected>Choose a topic</option>
+            <option>Bug report</option>
+            <option>Feature request</option>
+            <option>General question</option>
+          </select>
+        </div>
+        <div class="input">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" placeholder="Tell us what you think..."></textarea>
+        </div>
+      </div>
+      <div class="span-12 span-6:m flow">
+        <div class="flow has-gap-xs">
+          <label for="demo-progress"><strong>Progress</strong></label>
+          <progress id="demo-progress" value="65" max="100"></progress>
+        </div>
+        <div class="checkbox">
+          <label for="demo-checkbox">
+            <input type="checkbox" id="demo-checkbox" />
+            I agree to the terms and conditions
+          </label>
+        </div>
+        <div class="switch">
+          <label for="demo-switch">
+            <input type="checkbox" id="demo-switch" />
+            Enable notifications
+          </label>
+        </div>
+        <div class="flow has-gap-xs">
+          <div class="radio">
+            <label for="plan-free">
+              <input type="radio" id="plan-free" name="plan" />
+              Free
+            </label>
+          </div>
+          <div class="radio">
+            <label for="plan-pro">
+              <input type="radio" id="plan-pro" name="plan" />
+              Pro
+            </label>
+          </div>
+          <div class="radio">
+            <label for="plan-team">
+              <input type="radio" id="plan-team" name="plan" />
+              Team
+            </label>
+          </div>
+        </div>
+        <div class="flow-row has-flex-wrap has-gap-s">
+          <button>Submit</button>
+          <button class="button--outline">Outline</button>
+          <button class="button--ghost">Ghost</button>
+          <button disabled>Disabled</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <section class="text span-content has-my-xl">
+      <hr />
+    </section>
+
+
+    <section class="span-content span-6:m start-4:m flow text has-mb-xl">
+      <div class="has-w-full">
+        <details>
+          <summary>How do I install cleacss?</summary>
+          <p>Install via npm with <code>npm install cleacss</code>, or include the CSS file directly from a CDN.
+            Import <code>cleacss.css</code> in your project and start writing HTML — every element is styled by
+            default.</p>
+        </details>
+        <details>
+          <summary>Can I customize the colors and spacing?</summary>
+          <p>Every design token is a CSS custom property on <code>:root</code>. Override
+            <code>--color-accent</code>, <code>--space-s</code>, or any other variable to make it yours. No
+            build step required.
+          </p>
+        </details>
+      </div>
+      <div class="flow-row has-gap-s has-justify-center">
+        <button onclick="document.getElementById('demo-dialog').showModal()">I have another question</button>
+        <dialog id="demo-dialog">
+          <div class="flow">
+            <p class="has-size-5">Reach out</p>
+            <p>This is a native <code>&lt;dialog&gt;</code> element. Cleacss styles it with a backdrop, padding,
+              and typography — no JavaScript needed for the visuals.</p>
+          </div>
+          <form method="dialog" class="has-mt-s">
+            <button>Close</button>
+          </form>
+        </dialog>
+      </div>
+    </section>
+
+    <div class="grid-reset has-gap-y-0 span-full">
+      <section class="span-full subgrid has-bg-accent has-text-neutral-0">
+        <div class="span-content flow text has-py-xl has-items-center">
+          <style>
+            .button--white {
+              --button-background: var(--color-neutral-0);
+              --button-color: var(--color-neutral-1000);
+              --button-hover-background: var(--color-neutral-1000);
+            }
+          </style>
+          <h2>Get started</h2>
+          <p>Read the documentation or browse the source on GitHub.</p>
+          <div class="flow-row has-gap-s has-justify-center">
+            <a href="https://cleacss.dev" class="button button--white button--outline">Documentation</a>
+            <a href="https://github.com/JuKra00/cleacss" class="button button--white button--outline">GitHub</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="span-full subgrid has-py-l has-text-center has-bg-accent has-text-white">
+        <div class="span-content flow-row has-gap-s has-size-8">
+          <span class="has-mr-a">© 2026 Justus Kraft</span>
+          <span class="flow-row has-w-auto">
+            <a href="https://moinfra.me/privacy-policy">Privacy</a>
+            <a href="https://moinfra.me/imprint">Imprint</a>
+          </span>
+        </div>
+      </footer>
+    </div>
+  </main>
+
   <script type="module" src="/src/main.ts"></script>
 </body>
 

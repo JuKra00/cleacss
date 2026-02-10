@@ -103,7 +103,7 @@ class GridVisualizer extends HTMLElement {
 
   private generateColumnSpans() {
     return Array.from({ length: 14 }, (_, i) => {
-      return `<span data-col="${i > 0 && i < 13 ? i : ''}"></span>`;
+      return `<span data-col="${i > 0 && i < 13 ? i : '—'}"></span>`;
     }).join('');
   }
 
