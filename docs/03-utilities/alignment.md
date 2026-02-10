@@ -66,3 +66,37 @@ Responsive stacking pattern:
 ```html
 <div class="has-flex-1">Grow to fill available space</div>
 ```
+
+## Width and height
+
+```html
+<div class="has-w-full">Full width (100%)</div>
+<div class="has-h-full">Full height (100%)</div>
+```
+
+## Border radius
+
+```html
+<div class="has-radius-0">No border radius</div>
+<div class="has-radius-s">Small radius (2px)</div>
+<div class="has-radius">Default radius (4px)</div>
+<div class="has-radius-rounded">Fully rounded (pill shape)</div>
+```
+
+## Container queries
+
+Mark an element as a container query context:
+
+```html
+<div class="container">
+  <!-- Children can use @container queries -->
+</div>
+```
+
+Then write container queries in your CSS:
+
+```css
+@container (min-width: 400px) {
+  .card { flex-direction: row; }
+}
+```

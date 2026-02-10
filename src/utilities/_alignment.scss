@@ -28,63 +28,29 @@ $flexDirections: (
 
 
 @layer has {
-  @each $alignment, $value in $textAlignments {
 
+  // Base classes
+  @each $alignment, $value in $textAlignments {
     .has-#{$alignment} {
       text-align: #{$value};
-    }
-
-    @each $name, $value in bp.$breakpoints {
-      @media (--#{$name}) {
-        .has-#{$alignment}\:#{$name} {
-          text-align: #{$value};
-        }
-      }
     }
   }
 
   @each $alignment, $value in $itemAlignments {
-
     .has-#{$alignment} {
       align-items: #{$value};
-    }
-
-    @each $name, $value in bp.$breakpoints {
-      @media (--#{$name}) {
-        .has-#{$alignment}\:#{$name} {
-          align-items: #{$value};
-        }
-      }
     }
   }
 
   @each $alignment, $value in $justifyAlignments {
-
     .has-#{$alignment} {
       justify-content: #{$value};
-    }
-
-    @each $name, $value in bp.$breakpoints {
-      @media (--#{$name}) {
-        .has-#{$alignment}\:#{$name} {
-          justify-content: #{$value};
-        }
-      }
     }
   }
 
   @each $alignment, $value in $flexDirections {
-
     .has-#{$alignment} {
       flex-direction: #{$value};
-    }
-
-    @each $name, $value in bp.$breakpoints {
-      @media (--#{$name}) {
-        .has-#{$alignment}\:#{$name} {
-          flex-direction: #{$value};
-        }
-      }
     }
   }
 
@@ -94,5 +60,34 @@ $flexDirections: (
 
   .has-flex-nowrap {
     flex-wrap: nowrap;
+  }
+
+  // Responsive variants
+  @each $name, $bp in bp.$breakpoints {
+    @media (--#{$name}) {
+      @each $alignment, $value in $textAlignments {
+        .has-#{$alignment}\:#{$name} {
+          text-align: #{$value};
+        }
+      }
+
+      @each $alignment, $value in $itemAlignments {
+        .has-#{$alignment}\:#{$name} {
+          align-items: #{$value};
+        }
+      }
+
+      @each $alignment, $value in $justifyAlignments {
+        .has-#{$alignment}\:#{$name} {
+          justify-content: #{$value};
+        }
+      }
+
+      @each $alignment, $value in $flexDirections {
+        .has-#{$alignment}\:#{$name} {
+          flex-direction: #{$value};
+        }
+      }
+    }
   }
 }

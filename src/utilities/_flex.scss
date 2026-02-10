@@ -2,4 +2,32 @@
   .has-flex-1 {
     flex: 1 1 100%;
   }
+
+  .has-w-full {
+    width: 100%;
+  }
+
+  .has-h-full {
+    height: 100%;
+  }
+
+  .has-radius-0 {
+    border-radius: 0;
+  }
+
+  .has-radius {
+    border-radius: var(--border-radius);
+  }
+
+  .has-radius-s {
+    border-radius: var(--border-radius-s);
+  }
+
+  .has-radius-rounded {
+    border-radius: var(--border-radius-rounded);
+  }
+
+  .container {
+    container-type: inline-size;
+  }
 }
