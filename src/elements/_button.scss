@@ -8,7 +8,7 @@
     align-items: center;
     appearance: none;
     background: var(--button-background);
-    border: var(--button-border-width) solid var(--button-border-color);
+    border: var(--button-border-width) solid var(--button-border-color, var(--button-background));
     border-radius: var(--button-border-radius);
     color: var(--button-color);
     cursor: pointer;
@@ -18,16 +18,18 @@
     gap: var(--space-2xs);
     justify-content: center;
     line-height: var(--line-height);
-    padding: var(--button-padding-y) var(--button-padding-x);
+    padding: var(--button-padding-block) var(--button-padding-inline);
     text-decoration: none;
+    transition: color var(--animation-duration) var(--animation-ease),
+      background-color var(--animation-duration) var(--animation-ease),
+      border-color var(--animation-duration) var(--animation-ease);
     user-select: none;
     white-space: nowrap;
-    transition: all var(--animation-duration) var(--animation-ease);
 
     &:hover {
+      background: var(--button-hover-background, color-mix(in oklch, var(--button-background), var(--color-neutral-1000) 18%));
+      border-color: var(--button-hover-border-color, color-mix(in oklch, var(--button-border-color, var(--button-background)), var(--color-neutral-1000) 18%));
       color: var(--button-hover-color);
-      background: var(--button-hover-background);
-      border-color: var(--button-hover-border-color);
     }
 
     &:focus-visible {
@@ -42,6 +44,30 @@
         cursor: default;
         opacity: 0.5;
         pointer-events: none;
+      }
+    }
+
+    &.button--outline {
+      background: transparent;
+      border-color: var(--button-background);
+      color: var(--button-background);
+
+      &:hover {
+        background: var(--button-background);
+        border-color: var(--button-background);
+        color: var(--button-color);
+      }
+    }
+
+    &.button--ghost {
+      background: transparent;
+      border-color: transparent;
+      color: var(--button-background);
+
+      &:hover {
+        background: color-mix(in oklch, var(--button-background), transparent 85%);
+        border-color: transparent;
+        color: var(--button-background);
       }
     }
 
