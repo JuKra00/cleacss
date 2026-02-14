@@ -6,8 +6,26 @@ Having used many css frameworks over the years I shifted to building my own base
 
 ## Installation
 
+Use your prefered package manager to install the cleacss package, or just download the latest release from the [releases page](https://github.com/moinframe/cleacss/releases).
+
 ```bash
-npm install cleacss
+  npm install cleacss
+```
+
+## Usage
+
+## Import
+
+When you're using a bundler like vite you can import the css file directly from the cleacss package in your javascript or css file.
+
+### Javascript
+```js
+import "cleacss";
+```
+
+### CSS
+```css
+@import "cleacss";
 ```
 
 ## Features
