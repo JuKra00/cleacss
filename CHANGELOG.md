@@ -1,5 +1,36 @@
 # Changelog
 
+## [3.0.0-beta.0](https://github.com/moinframe/cleacss/compare/v2.0.0-beta.5...v3.0.0-beta.0) (2026-02-14)
+
+### Features
+
+* add black and white as static colors ([888a68e](https://github.com/moinframe/cleacss/commit/888a68eab27ef677a76ceb07d1dca9ad68d4f507))
+* add color helper ([420b824](https://github.com/moinframe/cleacss/commit/420b82464054a7133d39125ed7df32df94ee30c1))
+* add elements table, details, dialog, progress ([2ec15bb](https://github.com/moinframe/cleacss/commit/2ec15bb5e8512ee2f8914f5dfb893a0869dcf98b))
+* add flex helper ([06755cf](https://github.com/moinframe/cleacss/commit/06755cf0655eeefd80ca2fd2fd411e558394b5e0))
+* add has-w-auto, has-h-auto ([ca32dc2](https://github.com/moinframe/cleacss/commit/ca32dc2c33c63af2b030e725167b2afa8fea3b30))
+* add testing page ([47340ad](https://github.com/moinframe/cleacss/commit/47340ad19a92c2dcbe62a3f76d3828118b40fc81))
+* adjust colors ([03565b0](https://github.com/moinframe/cleacss/commit/03565b0688f2073caa0de5207562188b59f3b808))
+* extend alignment helpers ([b9643bf](https://github.com/moinframe/cleacss/commit/b9643bf63a95bafb6913eb0af7014ead12a23038))
+* extend buttons ([9a58e16](https://github.com/moinframe/cleacss/commit/9a58e16d47a4f10b67bd814abd1d4312878a3b75))
+* extend neutral colors ([0c6cbe0](https://github.com/moinframe/cleacss/commit/0c6cbe00c74c7e88ed0fb0b2d1b4d2d8ff78fafa))
+* extend visibility helper ([13bafbd](https://github.com/moinframe/cleacss/commit/13bafbdfda1368a94b5e27e86f04123c978a7f9b))
+* save grid-visualizer state to sessionStorage ([1b570a6](https://github.com/moinframe/cleacss/commit/1b570a63a523c145dc5b573b6dd1bde622754578))
+* update colors, remove accent-light & accent-dark ([31985f3](https://github.com/moinframe/cleacss/commit/31985f3892f3a23be7754b5f56c0f9436efd58a3))
+
+### Bug Fixes
+
+* adjust grid-width on desktop ([4c54f25](https://github.com/moinframe/cleacss/commit/4c54f250fc69cb49cea63445a8ff46d77a77d98a))
+* adjust typography scale ([d3a0887](https://github.com/moinframe/cleacss/commit/d3a0887ac625c2dfee59eaabff6db391a1537aca))
+* docs, update grid-width ([c50eff5](https://github.com/moinframe/cleacss/commit/c50eff5f3b4662d0ba605a499d58b30b0238ea85))
+* list style in text ([9a029df](https://github.com/moinframe/cleacss/commit/9a029dfaa3d0b6df63b5c1d18a4d94f8cde35743))
+* media-queries, export definitions only ([850afe0](https://github.com/moinframe/cleacss/commit/850afe012a91e810cf4e7f2c2a1a06c1a4e0ac1f))
+* update docs ([ec457cf](https://github.com/moinframe/cleacss/commit/ec457cf8cdfc76209f562ec5c6e5c73b8bd70962))
+* update readme, add logo, build ([715e743](https://github.com/moinframe/cleacss/commit/715e7435ef0f6e5147f299679ac16f5bfc224c38))
+* update reset with more base elements ([8f63155](https://github.com/moinframe/cleacss/commit/8f631554f5a2123f83062a2bef4f47b5f13cc38c))
+* update text ([ef2f787](https://github.com/moinframe/cleacss/commit/ef2f7878128877cc44c6e2cbcde51bc0a9c7c8b3))
+* update title line height ([2d35627](https://github.com/moinframe/cleacss/commit/2d35627baa5f7a2d485acf428fc2dc43159b0cb5))
+
 ## [2.0.0-beta.5](https://github.com/JuKra00/cleacss/compare/v2.0.0-beta.4...v2.0.0-beta.5) (2025-05-05)
 
 ### Bug Fixes
