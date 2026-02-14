@@ -3957,7 +3957,7 @@
     color: var(--button-background);
   }
 }
-h6, h5, h4, h3, h2, h1 {
+.title, h6, h5, h4, h3, h2, h1 {
   display: block;
   font-family: var(--font-family-title);
   font-weight: var(--font-weight-title);
@@ -3968,40 +3968,43 @@ h6, h5, h4, h3, h2, h1 {
   text-underline-offset: 0.125em;
   text-wrap: balance;
 }
-h6 u, h5 u, h4 u, h3 u, h2 u, h1 u {
+.title u, h6 u, h5 u, h4 u, h3 u, h2 u, h1 u {
   text-decoration-thickness: 0.1em;
 }
 
 @layer elements {
   h1 {
     font-size: var(--font-size-1);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-title);
     max-width: var(--max-width-size-1);
   }
   h2 {
     font-size: var(--font-size-2);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-title);
     max-width: var(--max-width-size-2);
   }
   h3 {
     font-size: var(--font-size-3);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-title);
     max-width: var(--max-width-size-3);
   }
   h4 {
     font-size: var(--font-size-4);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-title);
     max-width: var(--max-width-size-4);
   }
   h5 {
     font-size: var(--font-size-5);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-title);
     max-width: var(--max-width-size-5);
   }
   h6 {
     font-size: var(--font-size-6);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-title);
     max-width: var(--max-width-size-6);
+  }
+  .title {
+    font-weight: var(--font-weight-title);
   }
 }
 @layer elements {

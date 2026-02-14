@@ -20,8 +20,13 @@
     h#{$num} {
       @extend %title;
       font-size: var(--font-size-#{$num});
-      font-weight: var(--font-weight-bold);
+      font-weight: var(--font-weight-title);
       max-width: var(--max-width-size-#{$num});
     }
+  }
+
+  .title {
+    @extend %title;
+    font-weight: var(--font-weight-title);
   }
 }
