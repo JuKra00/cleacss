@@ -2,47 +2,52 @@
 
 # cleacss
 
-A thoughtfully designed CSS framework for developers who love writing CSS. Rather than abstracting away CSS or overwhelming you with utility classes, cleacss provides a solid foundation with essential defaults while empowering you to write your own custom styles.
-
-## Features
-
-- 🚀 Lightweight and performant
-- 🎯 Built on modern CSS features (custom properties, subgrid, responsive sizing)
-- 🎨 Customizable through CSS custom properties
-- 📱 Responsive design with 5 built-in breakpoints
-- 🔧 Available in both compiled and untranspiled versions
+Having used many css frameworks over the years I shifted to building my own based on modern standards. A CSS framework for developers who love writing CSS. Rather than abstracting away CSS or overwhelming you with utility classes, cleacss provides a solid foundation with essential defaults while empowering you to write your own styles.
 
 ## Installation
 
-> [!WARNING]
-> Version 2 is currently in beta.
-
 ```bash
-npm install cleacss@2.0.0-beta.5
+npm install cleacss
 ```
 
-## Quick Start
+## Features
 
-### JavaScript
-```js
-import "cleacss";
-```
+- Built on modern CSS features (custom properties, subgrid, `light-dark()`, container queries)
+- Fluid spacing and typography via `clamp()` - scales smoothly across viewports
+- OKLCH color system with automatic dark mode support
+- 5 responsive breakpoints (`s`, `m`, `l`, `xl`, `2xl`) usable on most utility classes
+- Customizable through CSS custom properties on `:root`
 
-### CSS
+## Variables
+
+All customization happens through CSS custom properties:
+
 ```css
-@import "cleacss";
+:root {
+  --color-accent: oklch(0.6 0.3 150);
+  --color-neutral-h: 150;
+  --font-family: "Inter", sans-serif;
+  --font-family-title: "Playfair Display", serif;
+  --space-default: var(--space-m-xl);
+}
 ```
 
-## What's Included
+Key variable groups: colors (neutral scale, semantic, selection), spacing (fixed, paired, and jump sizes), typography (fluid font sizes, families, weights, line heights).
 
-- **Layout**: Grid system and flow utilities
-- **Elements**: Styled buttons, inputs, text, and titles
-- **Utilities**: Spacing, visibility, and more
+## Usage
+
+```js
+import "cleacss";                    // compiled + minified CSS
+import "cleacss/untranspiled";       // unminified CSS with custom media queries
+import "cleacss/variables";          // only CSS custom properties
+import "cleacss/media-queries";      // only media query definitions
+import "cleacss/scss";               // source SCSS
+```
 
 ## Documentation
 
-Full documentation: https://cleacss.dev
+Full documentation at [moinfra.me](https://moinfra.me/docs/moinframe-cleacss)
 
 ## License
 
-MIT License - see the [LICENSE](LICENSE) file for details.
+MIT - see [LICENSE](LICENSE) for details.
