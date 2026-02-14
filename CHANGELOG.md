@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.1.0-beta.0](https://github.com/moinframe/cleacss/compare/v3.0.0-beta.0...v3.1.0-beta.0) (2026-02-14)
+
+### Bug Fixes
+
+* add missing .title class, use title-weight ([4ccb0be](https://github.com/moinframe/cleacss/commit/4ccb0be3adf864de8d16c4afa111f1fe45d8e2de))
+
 ## [3.0.0-beta.0](https://github.com/moinframe/cleacss/compare/v2.0.0-beta.5...v3.0.0-beta.0) (2026-02-14)
 
 ### Features
