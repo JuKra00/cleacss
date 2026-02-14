@@ -14,7 +14,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         testing: resolve(__dirname, 'testing.html'),
-        breakout: resolve(__dirname, 'examples/breakout/index.html'),
+        colors: resolve(__dirname, 'colors.html'),
       },
     },
   },

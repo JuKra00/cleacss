@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cleacss — Neutral Color Explorer</title>
+  <style>
+    .swatch {
+      width: 4rem;
+      height: 4rem;
+      border-radius: var(--border-radius);
+      flex-shrink: 0;
+    }
+
+    .swatch-label {
+      font-family: var(--font-family-mono);
+      font-size: var(--font-size-8);
+    }
+  </style>
+</head>
+
+<body>
+  <main class="grid">
+    <section class="span-content flow has-pt-xl">
+      <h1 class="has-size-3">Neutral Color Explorer</h1>
+      <p class="text">Adjust hue and chroma to explore the neutral scale. All colors use
+        <code>oklch(L var(--color-neutral-c) var(--color-neutral-h))</code>.
+      </p>
+
+      <div class="flow-row has-gap-m has-mt-l">
+        <div class="input">
+          <label for="hue-input">Hue (--color-neutral-h)</label>
+          <input type="range" id="hue-input" min="0" max="360" step="1" value="82">
+          <span id="hue-value" class="swatch-label">82</span>
+        </div>
+        <div class="input">
+          <label for="chroma-input">Chroma (--color-neutral-c)</label>
+          <input type="range" id="chroma-input" min="0" max="0.4" step="0.001" value="0.0131">
+          <span id="chroma-value" class="swatch-label">0.0131</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="span-content flow has-mt-l">
+      <h2 class="has-size-5">Neutral scale</h2>
+      <div id="swatches" class="flow-row has-flex-wrap has-gap-s has-bg-white has-p-m has-radius has-w-auto"></div>
+    </section>
+  </main>
+
+  <script type="module" src="/src/main.ts"></script>
+  <script>
+    const steps = [0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+    const swatchContainer = document.getElementById('swatches');
+    const hueInput = document.getElementById('hue-input');
+    const chromaInput = document.getElementById('chroma-input');
+    const hueValue = document.getElementById('hue-value');
+    const chromaValue = document.getElementById('chroma-value');
+
+    // Build swatch elements
+    steps.forEach(step => {
+      const col = document.createElement('div');
+      col.className = 'flow has-items-center has-gap-2xs has-w-auto';
+
+      const swatch = document.createElement('div');
+      swatch.className = `swatch has-bg-neutral-${step}`;
+      if (step === 0) swatch.style.border = '1px solid var(--color-neutral-200)';
+
+      const label = document.createElement('span');
+      label.className = 'swatch-label';
+      label.textContent = step;
+
+      const hex = document.createElement('code');
+      hex.className = 'swatch-label';
+      hex.id = `hex-${step}`;
+
+      col.appendChild(swatch);
+      col.appendChild(label);
+      col.appendChild(hex);
+      swatchContainer.appendChild(col);
+    });
+
+    const ctx = document.createElement('canvas').getContext('2d');
+
+    function colorToHex(cssColor) {
+      ctx.fillStyle = cssColor;
+      ctx.fillRect(0, 0, 1, 1);
+      const [r, g, b] = ctx.getImageData(0, 0, 1, 1).data;
+      return '#' + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
+    }
+
+    function updateHexValues() {
+      steps.forEach(step => {
+        const swatch = swatchContainer.querySelector(`.has-bg-neutral-${step}`);
+        const computed = getComputedStyle(swatch).backgroundColor;
+        document.getElementById(`hex-${step}`).textContent = colorToHex(computed);
+      });
+    }
+
+    function update() {
+      const h = hueInput.value;
+      const c = chromaInput.value;
+      hueValue.textContent = h;
+      chromaValue.textContent = c;
+      document.documentElement.style.setProperty('--color-neutral-h', h);
+      document.documentElement.style.setProperty('--color-neutral-c', c);
+      requestAnimationFrame(updateHexValues);
+    }
+
+    hueInput.addEventListener('input', update);
+    chromaInput.addEventListener('input', update);
+
+    document.addEventListener('DOMContentLoaded', updateHexValues);
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+      requestAnimationFrame(updateHexValues);
+    });
+  </script>
+</body>
+
+</html>
