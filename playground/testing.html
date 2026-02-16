@@ -1,604 +1,588 @@
-<!DOCTYPE html>
-<html lang="en">
+{{#> layoutDefault }}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>cleacss — Testing All Styles</title>
-</head>
+<grid-visualizer></grid-visualizer>
 
-<body class="grid">
-  <grid-visualizer></grid-visualizer>
+<!-- Header -->
+<header class="span-content flow text has-pt-xl has-pb-l">
+	<h1 class="title has-size-2">cleacss Style Testing</h1>
+	<p class="has-text-neutral-500">Every styled element, utility, and variant in one page.</p>
+	<hr />
+</header>
 
-  <!-- Header -->
-  <header class="span-content flow text has-pt-xl has-pb-l">
-    <h1 class="title has-size-2">cleacss Style Testing</h1>
-    <p class="has-text-neutral-500">Every styled element, utility, and variant in one page.</p>
-    <hr />
-  </header>
+<!-- ==================== BUTTONS ==================== -->
+<section class="span-content flow text has-pb-xl" id="buttons">
+	<h2 class="title has-size-3 has-mb-l">Buttons</h2>
 
-  <!-- ==================== BUTTONS ==================== -->
-  <section class="span-content flow text has-pb-xl" id="buttons">
-    <h2 class="title has-size-3 has-mb-l">Buttons</h2>
+	<h3 class="title has-size-5">Default</h3>
+	<div class="flow-row has-gap-s">
+		<button>Default button</button>
+		<a href="#" class="button">Link button</a>
+		<button disabled>Disabled</button>
+		<button class="is-disabled">is-disabled</button>
+	</div>
 
-    <h3 class="title has-size-5">Default</h3>
-    <div class="flow-row has-gap-s">
-      <button>Default button</button>
-      <a href="#" class="button">Link button</a>
-      <button disabled>Disabled</button>
-      <button class="is-disabled">is-disabled</button>
-    </div>
+	<h3 class="title has-size-5">Outline variant</h3>
+	<div class="flow-row has-gap-s">
+		<button class="button--outline">Outline</button>
+		<button class="button--outline" disabled>Disabled outline</button>
+	</div>
 
-    <h3 class="title has-size-5">Outline variant</h3>
-    <div class="flow-row has-gap-s">
-      <button class="button--outline">Outline</button>
-      <button class="button--outline" disabled>Disabled outline</button>
-    </div>
+	<h3 class="title has-size-5">Ghost variant</h3>
+	<div class="flow-row has-gap-s">
+		<button class="button--ghost">Ghost</button>
+		<button class="button--ghost" disabled>Disabled ghost</button>
+	</div>
 
-    <h3 class="title has-size-5">Ghost variant</h3>
-    <div class="flow-row has-gap-s">
-      <button class="button--ghost">Ghost</button>
-      <button class="button--ghost" disabled>Disabled ghost</button>
-    </div>
+	<h3 class="title has-size-5">Custom colors</h3>
+	<div class="flow-row has-gap-s">
+		<button
+			style="--button-background: var(--color-success); --button-border-color: var(--color-success);">Success</button>
+		<button style="--button-background: var(--color-error); --button-border-color: var(--color-error);">Error</button>
+		<button
+			style="--button-background: var(--color-warning); --button-border-color: var(--color-warning);">Warning</button>
+		<button style="--button-background: var(--color-info); --button-border-color: var(--color-info);">Info</button>
+	</div>
 
-    <h3 class="title has-size-5">Custom colors</h3>
-    <div class="flow-row has-gap-s">
-      <button
-        style="--button-background: var(--color-success); --button-border-color: var(--color-success);">Success</button>
-      <button style="--button-background: var(--color-error); --button-border-color: var(--color-error);">Error</button>
-      <button
-        style="--button-background: var(--color-warning); --button-border-color: var(--color-warning);">Warning</button>
-      <button style="--button-background: var(--color-info); --button-border-color: var(--color-info);">Info</button>
-    </div>
+	<h3 class="title has-size-5">Input buttons</h3>
+	<div class="flow-row has-gap-s">
+		<input type="submit" value="Submit">
+		<input type="button" value="Input button">
+		<input type="reset" value="Reset">
+	</div>
+</section>
 
-    <h3 class="title has-size-5">Input buttons</h3>
-    <div class="flow-row has-gap-s">
-      <input type="submit" value="Submit">
-      <input type="button" value="Input button">
-      <input type="reset" value="Reset">
-    </div>
-  </section>
+<!-- ==================== TYPOGRAPHY ==================== -->
+<section class="span-content flow text has-pb-xl" id="typography">
+	<h2 class="title has-size-3 has-mb-l">Typography</h2>
 
-  <!-- ==================== TYPOGRAPHY ==================== -->
-  <section class="span-content flow text has-pb-xl" id="typography">
-    <h2 class="title has-size-3 has-mb-l">Typography</h2>
+	<h3 class="title has-size-5">Font sizes</h3>
+	<p class="has-size-1">Size 1 — Hero headline</p>
+	<p class="has-size-2">Size 2 — Page title</p>
+	<p class="has-size-3">Size 3 — Section heading</p>
+	<p class="has-size-4">Size 4 — Subheading</p>
+	<p class="has-size-5">Size 5 — Lead text</p>
+	<p class="has-size-6">Size 6 — Body (default)</p>
+	<p class="has-size-7">Size 7 — Small text</p>
+	<p class="has-size-8">Size 8 — Caption</p>
 
-    <h3 class="title has-size-5">Font sizes</h3>
-    <p class="has-size-1">Size 1 — Hero headline</p>
-    <p class="has-size-2">Size 2 — Page title</p>
-    <p class="has-size-3">Size 3 — Section heading</p>
-    <p class="has-size-4">Size 4 — Subheading</p>
-    <p class="has-size-5">Size 5 — Lead text</p>
-    <p class="has-size-6">Size 6 — Body (default)</p>
-    <p class="has-size-7">Size 7 — Small text</p>
-    <p class="has-size-8">Size 8 — Caption</p>
+	<h3 class="title has-size-5">Font weights</h3>
+	<div class="flow-row has-gap-m">
+		<span class="has-text-light">Light (300)</span>
+		<span class="has-text-normal">Normal (400)</span>
+		<span class="has-text-bold">Bold (700)</span>
+	</div>
 
-    <h3 class="title has-size-5">Font weights</h3>
-    <div class="flow-row has-gap-m">
-      <span class="has-text-light">Light (300)</span>
-      <span class="has-text-normal">Normal (400)</span>
-      <span class="has-text-bold">Bold (700)</span>
-    </div>
+	<h3 class="title has-size-5">Text styles</h3>
+	<div class="flow-row has-gap-m">
+		<em class="has-text-italic">Italic</em>
+		<span class="has-text-uppercase">Uppercase</span>
+	</div>
+</section>
 
-    <h3 class="title has-size-5">Text styles</h3>
-    <div class="flow-row has-gap-m">
-      <em class="has-text-italic">Italic</em>
-      <span class="has-text-uppercase">Uppercase</span>
-    </div>
-  </section>
+<!-- ==================== TEXT ELEMENT ==================== -->
+<section class="span-content flow text has-pb-xl" id="text">
+	<h2 class="title has-size-3 has-mb-l">Text element</h2>
 
-  <!-- ==================== TEXT ELEMENT ==================== -->
-  <section class="span-content flow text has-pb-xl" id="text">
-    <h2 class="title has-size-3 has-mb-l">Text element</h2>
+	<h3 class="title has-size-5">Paragraphs and links</h3>
+	<p>
+		Lorem ipsum dolor sit amet, <strong>consetetur sadipscing</strong> elitr,
+		sed diam nonumy eirmod tempor invidunt. At vero eos et accusam et
+		<a href="#">justo duo dolores</a> et ea rebum. <em>Italic text here</em>.
+	</p>
 
-    <h3 class="title has-size-5">Paragraphs and links</h3>
-    <p>
-      Lorem ipsum dolor sit amet, <strong>consetetur sadipscing</strong> elitr,
-      sed diam nonumy eirmod tempor invidunt. At vero eos et accusam et
-      <a href="#">justo duo dolores</a> et ea rebum. <em>Italic text here</em>.
-    </p>
+	<h3 class="title has-size-5">Unordered lists (nested)</h3>
+	<ul>
+		<li>Level 1 — square</li>
+		<li>
+			Level 1 item
+			<ul>
+				<li>Level 2 — disc</li>
+				<li>
+					Level 2 item
+					<ul>
+						<li>Level 3 — circle</li>
+						<li>Level 3 item</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>Level 1 item</li>
+	</ul>
 
-    <h3 class="title has-size-5">Unordered lists (nested)</h3>
-    <ul>
-      <li>Level 1 — square</li>
-      <li>
-        Level 1 item
-        <ul>
-          <li>Level 2 — disc</li>
-          <li>
-            Level 2 item
-            <ul>
-              <li>Level 3 — circle</li>
-              <li>Level 3 item</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Level 1 item</li>
-    </ul>
+	<h3 class="title has-size-5">Ordered lists (nested)</h3>
+	<ol>
+		<li>Level 1 — decimal</li>
+		<li>
+			Level 1 item
+			<ol>
+				<li>Level 2 — lower-alpha</li>
+				<li>
+					Level 2 item
+					<ol>
+						<li>Level 3 — lower-roman</li>
+						<li>Level 3 item</li>
+					</ol>
+				</li>
+			</ol>
+		</li>
+		<li>Level 1 item</li>
+	</ol>
 
-    <h3 class="title has-size-5">Ordered lists (nested)</h3>
-    <ol>
-      <li>Level 1 — decimal</li>
-      <li>
-        Level 1 item
-        <ol>
-          <li>Level 2 — lower-alpha</li>
-          <li>
-            Level 2 item
-            <ol>
-              <li>Level 3 — lower-roman</li>
-              <li>Level 3 item</li>
-            </ol>
-          </li>
-        </ol>
-      </li>
-      <li>Level 1 item</li>
-    </ol>
+	<h3 class="title has-size-5">Blockquote</h3>
+	<blockquote>
+		<p>This is a blockquote with an accent-colored left border. It can contain multiple paragraphs.</p>
+		<p>Second paragraph inside the blockquote.</p>
+	</blockquote>
 
-    <h3 class="title has-size-5">Blockquote</h3>
-    <blockquote>
-      <p>This is a blockquote with an accent-colored left border. It can contain multiple paragraphs.</p>
-      <p>Second paragraph inside the blockquote.</p>
-    </blockquote>
-
-    <h3 class="title has-size-5">Code</h3>
-    <p>Inline <code>code element</code> inside a paragraph.</p>
-    <pre><code>// Code block
+	<h3 class="title has-size-5">Code</h3>
+	<p>Inline <code>code element</code> inside a paragraph.</p>
+	<pre><code>// Code block
 const greeting = "Hello, cleacss!";
 console.log(greeting);</code></pre>
 
-    <h3 class="title has-size-5">Horizontal rule</h3>
-    <hr />
-  </section>
+	<h3 class="title has-size-5">Horizontal rule</h3>
+	<hr />
+</section>
 
-  <!-- ==================== INLINE ELEMENTS ==================== -->
-  <section class="span-content flow text has-pb-xl" id="inline-elements">
-    <h2 class="title has-size-3 has-mb-l">Inline elements</h2>
+<!-- ==================== INLINE ELEMENTS ==================== -->
+<section class="span-content flow text has-pb-xl" id="inline-elements">
+	<h2 class="title has-size-3 has-mb-l">Inline elements</h2>
 
-    <p>Use <mark>mark</mark> to highlight important text.</p>
-    <p>Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> to open the command palette.</p>
-    <p>The <abbr title="World Wide Web Consortium">W3C</abbr> maintains web standards.</p>
-    <p><strong>Bold text</strong> and <em>italic text</em> and <u>underlined text</u>.</p>
-  </section>
+	<p>Use <mark>mark</mark> to highlight important text.</p>
+	<p>Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> to open the command palette.</p>
+	<p>The <abbr title="World Wide Web Consortium">W3C</abbr> maintains web standards.</p>
+	<p><strong>Bold text</strong> and <em>italic text</em> and <u>underlined text</u>.</p>
+</section>
 
-  <!-- ==================== DIALOG ==================== -->
-  <section class="span-content flow has-pb-xl" id="dialog">
-    <h2 class="title has-size-3 has-mb-l">Dialog</h2>
+<!-- ==================== DIALOG ==================== -->
+<section class="span-content flow has-pb-xl" id="dialog">
+	<h2 class="title has-size-3 has-mb-l">Dialog</h2>
 
-    <button onclick="document.getElementById('test-dialog').showModal()">Open dialog</button>
+	<button onclick="document.getElementById('test-dialog').showModal()">Open dialog</button>
 
-    <dialog id="test-dialog">
-      <div class="flow has-gap-s">
-        <h3 class="title has-size-5">Dialog title</h3>
-        <p>This is a native HTML dialog element with cleacss styling. <br /> It includes a styled backdrop and sensible
-          defaults.</p>
-        <div class="flow-row has-gap-xs has-mt-xs">
-          <button class="has-w-full" onclick="this.closest('dialog').close()">Ok</button>
-          <button class="has-w-full button--ghost" onclick="this.closest('dialog').close()">Cancel</button>
-        </div>
-      </div>
-    </dialog>
-  </section>
+	<dialog id="test-dialog">
+		<div class="flow has-gap-s">
+			<h3 class="title has-size-5">Dialog title</h3>
+			<p>This is a native HTML dialog element with cleacss styling. <br /> It includes a styled backdrop and sensible
+				defaults.</p>
+			<div class="flow-row has-gap-xs has-mt-xs">
+				<button class="has-w-full" onclick="this.closest('dialog').close()">Ok</button>
+				<button class="has-w-full button--ghost" onclick="this.closest('dialog').close()">Cancel</button>
+			</div>
+		</div>
+	</dialog>
+</section>
 
-  <!-- ==================== DETAILS / SUMMARY ==================== -->
-  <section class="span-content flow text has-pb-xl" id="details">
-    <h2 class="title has-size-3 has-mb-l">Details / Summary (Accordion)</h2>
+<!-- ==================== DETAILS / SUMMARY ==================== -->
+<section class="span-content flow text has-pb-xl" id="details">
+	<h2 class="title has-size-3 has-mb-l">Details / Summary (Accordion)</h2>
 
-    <h3 class="title has-size-5">Single</h3>
-    <details class="has-w-full">
-      <summary>Click to expand this section</summary>
-      <p>This is the hidden content that appears when the details element is open.</p>
-    </details>
+	<h3 class="title has-size-5">Single</h3>
+	<details class="has-w-full">
+		<summary>Click to expand this section</summary>
+		<p>This is the hidden content that appears when the details element is open.</p>
+	</details>
 
-    <h3 class="title has-size-5">Accordion group</h3>
-    <div class="has-w-full">
-      <details>
-        <summary>Section one</summary>
-        <p>Content for section one. The borders merge between stacked details elements.</p>
-      </details>
-      <details>
-        <summary>Section two</summary>
-        <p>Content for section two.</p>
-      </details>
-      <details>
-        <summary>Section three</summary>
-        <p>Content for section three.</p>
-      </details>
-    </div>
-  </section>
+	<h3 class="title has-size-5">Accordion group</h3>
+	<div class="has-w-full">
+		<details>
+			<summary>Section one</summary>
+			<p>Content for section one. The borders merge between stacked details elements.</p>
+		</details>
+		<details>
+			<summary>Section two</summary>
+			<p>Content for section two.</p>
+		</details>
+		<details>
+			<summary>Section three</summary>
+			<p>Content for section three.</p>
+		</details>
+	</div>
+</section>
 
-  <!-- ==================== PROGRESS ==================== -->
-  <section class="span-content flow text has-pb-xl" id="progress">
-    <h2 class="title has-size-3 has-mb-l">Progress</h2>
+<!-- ==================== PROGRESS ==================== -->
+<section class="span-content flow text has-pb-xl" id="progress">
+	<h2 class="title has-size-3 has-mb-l">Progress</h2>
 
-    <progress value="25" max="100">25%</progress>
-    <progress value="50" max="100">50%</progress>
-    <progress value="75" max="100">75%</progress>
-    <progress value="100" max="100">100%</progress>
-  </section>
+	<progress value="25" max="100">25%</progress>
+	<progress value="50" max="100">50%</progress>
+	<progress value="75" max="100">75%</progress>
+	<progress value="100" max="100">100%</progress>
+</section>
 
-  <!-- ==================== TABLE ==================== -->
-  <section class="span-content flow text has-pb-xl" id="table">
-    <h2 class="title has-size-3 has-mb-l">Table</h2>
+<!-- ==================== TABLE ==================== -->
+<section class="span-content flow text has-pb-xl" id="table">
+	<h2 class="title has-size-3 has-mb-l">Table</h2>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Role</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Alice</td>
-          <td>Developer</td>
-          <td><span class="has-text-success">Active</span></td>
-        </tr>
-        <tr>
-          <td>Bob</td>
-          <td>Designer</td>
-          <td><span class="has-text-warning">Pending</span></td>
-        </tr>
-        <tr>
-          <td>Charlie</td>
-          <td>Manager</td>
-          <td><span class="has-text-error">Inactive</span></td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="3"><span class="has-text-neutral-400">3 members total</span></td>
-        </tr>
-      </tfoot>
-    </table>
-  </section>
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Role</th>
+				<th>Status</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Alice</td>
+				<td>Developer</td>
+				<td><span class="has-text-success">Active</span></td>
+			</tr>
+			<tr>
+				<td>Bob</td>
+				<td>Designer</td>
+				<td><span class="has-text-warning">Pending</span></td>
+			</tr>
+			<tr>
+				<td>Charlie</td>
+				<td>Manager</td>
+				<td><span class="has-text-error">Inactive</span></td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="3"><span class="has-text-neutral-400">3 members total</span></td>
+			</tr>
+		</tfoot>
+	</table>
+</section>
 
-  <!-- ==================== TITLE ==================== -->
-  <section class="span-content flow text has-pb-xl" id="titles">
-    <h2 class="title has-size-3 has-mb-l">Title element</h2>
+<!-- ==================== TITLE ==================== -->
+<section class="span-content flow text has-pb-xl" id="titles">
+	<h2 class="title has-size-3 has-mb-l">Title element</h2>
 
-    <h1 class="title">Title h1</h1>
-    <h2 class="title">Title h2</h2>
-    <h3 class="title">Title h3</h3>
-    <h4 class="title">Title h4</h4>
-    <h5 class="title">Title h5</h5>
-    <h6 class="title">Title h6</h6>
-  </section>
+	<h1 class="title">Title h1</h1>
+	<h2 class="title">Title h2</h2>
+	<h3 class="title">Title h3</h3>
+	<h4 class="title">Title h4</h4>
+	<h5 class="title">Title h5</h5>
+	<h6 class="title">Title h6</h6>
+</section>
 
-  <!-- ==================== FORMS ==================== -->
-  <section class="span-content subgrid has-pb-xl" id="forms">
-    <div class="span-12 text">
-      <h2 class="title has-size-3 has-mb-l">Form inputs</h2>
-    </div>
+<!-- ==================== FORMS ==================== -->
+<section class="span-content subgrid has-pb-xl" id="forms">
+	<div class="span-12 text">
+		<h2 class="title has-size-3 has-mb-l">Form inputs</h2>
+	</div>
 
-    <div class="span-6 flow">
-      <div class="input">
-        <label for="t-text">Text</label>
-        <input type="text" id="t-text" placeholder="Enter text...">
-        <span class="message">Helpful message</span>
-      </div>
-      <div class="input">
-        <label for="t-email">Email</label>
-        <input type="email" id="t-email" placeholder="name@example.com">
-      </div>
-      <div class="input">
-        <label for="t-password">Password</label>
-        <input type="password" id="t-password" placeholder="********">
-      </div>
-      <div class="input">
-        <label for="t-number">Number</label>
-        <input type="number" id="t-number" placeholder="0">
-      </div>
-      <div class="input">
-        <label for="t-date">Date</label>
-        <input type="date" id="t-date">
-      </div>
-      <div class="input">
-        <label for="t-color">Color</label>
-        <input type="color" id="t-color">
-      </div>
-      <div class="input">
-        <label for="t-file">File</label>
-        <input type="file" id="t-file">
-      </div>
-      <div class="input">
-        <label for="t-range">Range</label>
-        <input type="range" id="t-range" min="0" max="100">
-      </div>
-      <div class="input">
-        <label for="t-textarea">Textarea</label>
-        <textarea id="t-textarea" placeholder="Write something..."></textarea>
-      </div>
-    </div>
+	<div class="span-6 flow">
+		<div class="input">
+			<label for="t-text">Text</label>
+			<input type="text" id="t-text" placeholder="Enter text...">
+			<span class="message">Helpful message</span>
+		</div>
+		<div class="input">
+			<label for="t-email">Email</label>
+			<input type="email" id="t-email" placeholder="name@example.com">
+		</div>
+		<div class="input">
+			<label for="t-password">Password</label>
+			<input type="password" id="t-password" placeholder="********">
+		</div>
+		<div class="input">
+			<label for="t-number">Number</label>
+			<input type="number" id="t-number" placeholder="0">
+		</div>
+		<div class="input">
+			<label for="t-date">Date</label>
+			<input type="date" id="t-date">
+		</div>
+		<div class="input">
+			<label for="t-color">Color</label>
+			<input type="color" id="t-color">
+		</div>
+		<div class="input">
+			<label for="t-file">File</label>
+			<input type="file" id="t-file">
+		</div>
+		<div class="input">
+			<label for="t-range">Range</label>
+			<input type="range" id="t-range" min="0" max="100">
+		</div>
+		<div class="input">
+			<label for="t-textarea">Textarea</label>
+			<textarea id="t-textarea" placeholder="Write something..."></textarea>
+		</div>
+	</div>
 
-    <div class="span-6 flow">
-      <div class="select">
-        <label for="t-select">Select</label>
-        <select id="t-select">
-          <option disabled selected>Choose an option</option>
-          <option>Option A</option>
-          <option>Option B</option>
-          <option>Option C</option>
-        </select>
-      </div>
-      <div class="input">
-        <label for="t-readonly">Readonly</label>
-        <input type="text" readonly id="t-readonly" value="Read-only value">
-      </div>
-      <div class="input">
-        <label for="t-disabled">Disabled</label>
-        <input type="text" disabled id="t-disabled" value="Disabled input">
-      </div>
-      <div class="input">
-        <label for="t-error">With error</label>
-        <input type="text" id="t-error" value="Bad value">
-        <span class="message message--error">This field has an error.</span>
-      </div>
+	<div class="span-6 flow">
+		<div class="select">
+			<label for="t-select">Select</label>
+			<select id="t-select">
+				<option disabled selected>Choose an option</option>
+				<option>Option A</option>
+				<option>Option B</option>
+				<option>Option C</option>
+			</select>
+		</div>
+		<div class="input">
+			<label for="t-readonly">Readonly</label>
+			<input type="text" readonly id="t-readonly" value="Read-only value">
+		</div>
+		<div class="input">
+			<label for="t-disabled">Disabled</label>
+			<input type="text" disabled id="t-disabled" value="Disabled input">
+		</div>
+		<div class="input">
+			<label for="t-error">With error</label>
+			<input type="text" id="t-error" value="Bad value">
+			<span class="message message--error">This field has an error.</span>
+		</div>
 
-      <div class="switch">
-        <label for="t-switch">
-          <input type="checkbox" id="t-switch" />
-          Toggle switch
-        </label>
-      </div>
-      <div class="switch">
-        <label for="t-switch-disabled">
-          <input type="checkbox" id="t-switch-disabled" disabled />
-          Disabled switch
-        </label>
-      </div>
-      <div class="checkbox">
-        <label for="t-checkbox">
-          <input type="checkbox" id="t-checkbox" />
-          Checkbox option
-        </label>
-      </div>
-      <div class="flow has-gap-xs">
-        <div class="radio">
-          <label for="t-radio1">
-            <input type="radio" id="t-radio1" name="t-radio" />
-            Radio option A
-          </label>
-        </div>
-        <div class="radio">
-          <label for="t-radio2">
-            <input type="radio" id="t-radio2" name="t-radio" />
-            Radio option B
-          </label>
-        </div>
-      </div>
-    </div>
-  </section>
+		<div class="switch">
+			<label for="t-switch">
+				<input type="checkbox" id="t-switch" />
+				Toggle switch
+			</label>
+		</div>
+		<div class="switch">
+			<label for="t-switch-disabled">
+				<input type="checkbox" id="t-switch-disabled" disabled />
+				Disabled switch
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="t-checkbox">
+				<input type="checkbox" id="t-checkbox" />
+				Checkbox option
+			</label>
+		</div>
+		<div class="flow has-gap-xs">
+			<div class="radio">
+				<label for="t-radio1">
+					<input type="radio" id="t-radio1" name="t-radio" />
+					Radio option A
+				</label>
+			</div>
+			<div class="radio">
+				<label for="t-radio2">
+					<input type="radio" id="t-radio2" name="t-radio" />
+					Radio option B
+				</label>
+			</div>
+		</div>
+	</div>
+</section>
 
-  <!-- ==================== TEXT COLORS ==================== -->
-  <section class="span-content flow text has-pb-xl" id="text-colors">
-    <h2 class="title has-size-3 has-mb-l">Text color utilities</h2>
+<!-- ==================== TEXT COLORS ==================== -->
+<section class="span-content flow text has-pb-xl" id="text-colors">
+	<h2 class="title has-size-3 has-mb-l">Text color utilities</h2>
 
-    <h3 class="title has-size-5">Neutral</h3>
-    <div class="flow-row has-gap-s" style="flex-wrap: wrap;">
-      <span class="has-text-neutral-0 has-bg-neutral-800 has-p-2xs has-radius">0</span>
-      <span class="has-text-neutral-50 has-bg-neutral-800 has-p-2xs has-radius">50</span>
-      <span class="has-text-neutral-100 has-bg-neutral-800 has-p-2xs has-radius">100</span>
-      <span class="has-text-neutral-200 has-bg-neutral-800 has-p-2xs has-radius">200</span>
-      <span class="has-text-neutral-300 has-p-2xs has-radius">300</span>
-      <span class="has-text-neutral-400 has-p-2xs has-radius">400</span>
-      <span class="has-text-neutral-500 has-p-2xs has-radius">500</span>
-      <span class="has-text-neutral-600 has-p-2xs has-radius">600</span>
-      <span class="has-text-neutral-700 has-p-2xs has-radius">700</span>
-      <span class="has-text-neutral-800 has-p-2xs has-radius">800</span>
-      <span class="has-text-neutral-900 has-p-2xs has-radius">900</span>
-      <span class="has-text-neutral-1000 has-p-2xs has-radius">1000</span>
-    </div>
+	<h3 class="title has-size-5">Neutral</h3>
+	<div class="flow-row has-gap-s" style="flex-wrap: wrap;">
+		<span class="has-text-neutral-0 has-background-neutral-800 has-p-2xs has-radius">0</span>
+		<span class="has-text-neutral-50 has-background-neutral-800 has-p-2xs has-radius">50</span>
+		<span class="has-text-neutral-100 has-background-neutral-800 has-p-2xs has-radius">100</span>
+		<span class="has-text-neutral-200 has-background-neutral-800 has-p-2xs has-radius">200</span>
+		<span class="has-text-neutral-300 has-p-2xs has-radius">300</span>
+		<span class="has-text-neutral-400 has-p-2xs has-radius">400</span>
+		<span class="has-text-neutral-500 has-p-2xs has-radius">500</span>
+		<span class="has-text-neutral-600 has-p-2xs has-radius">600</span>
+		<span class="has-text-neutral-700 has-p-2xs has-radius">700</span>
+		<span class="has-text-neutral-800 has-p-2xs has-radius">800</span>
+		<span class="has-text-neutral-900 has-p-2xs has-radius">900</span>
+		<span class="has-text-neutral-1000 has-p-2xs has-radius">1000</span>
+	</div>
 
-    <h3 class="title has-size-5">Semantic</h3>
-    <div class="flow-row has-gap-m">
-      <span class="has-text-accent">Accent</span>
-      <span class="has-text-success">Success</span>
-      <span class="has-text-warning">Warning</span>
-      <span class="has-text-error">Error</span>
-      <span class="has-text-info">Info</span>
-    </div>
-  </section>
+	<h3 class="title has-size-5">Semantic</h3>
+	<div class="flow-row has-gap-m">
+		<span class="has-text-accent">Accent</span>
+		<span class="has-text-success">Success</span>
+		<span class="has-text-warning">Warning</span>
+		<span class="has-text-error">Error</span>
+		<span class="has-text-info">Info</span>
+	</div>
+</section>
 
-  <!-- ==================== BACKGROUND COLORS ==================== -->
-  <section class="span-content flow text has-pb-xl" id="bg-colors">
-    <h2 class="title has-size-3 has-mb-l">Background color utilities</h2>
+<!-- ==================== BACKGROUND COLORS ==================== -->
+<section class="span-content flow text has-pb-xl" id="bg-colors">
+	<h2 class="title has-size-3 has-mb-l">Background color utilities</h2>
 
-    <h3 class="title has-size-5">Neutral backgrounds</h3>
-    <div class="flow-row has-gap-xs" style="flex-wrap: wrap;">
-      <span class="has-bg-neutral-0 has-p-xs has-radius">0</span>
-      <span class="has-bg-neutral-50 has-p-xs has-radius">50</span>
-      <span class="has-bg-neutral-100 has-p-xs has-radius">100</span>
-      <span class="has-bg-neutral-200 has-p-xs has-radius">200</span>
-      <span class="has-bg-neutral-300 has-p-xs has-radius">300</span>
-      <span class="has-bg-neutral-400 has-p-xs has-radius">400</span>
-      <span class="has-bg-neutral-500 has-text-neutral-0 has-p-xs has-radius">500</span>
-      <span class="has-bg-neutral-600 has-text-neutral-0 has-p-xs has-radius">600</span>
-      <span class="has-bg-neutral-700 has-text-neutral-0 has-p-xs has-radius">700</span>
-      <span class="has-bg-neutral-800 has-text-neutral-0 has-p-xs has-radius">800</span>
-      <span class="has-bg-neutral-900 has-text-neutral-0 has-p-xs has-radius">900</span>
-      <span class="has-bg-neutral-1000 has-text-neutral-0 has-p-xs has-radius">1000</span>
-    </div>
+	<h3 class="title has-size-5">Neutral backgrounds</h3>
+	<div class="flow-row has-gap-xs" style="flex-wrap: wrap;">
+		<span class="has-background-neutral-0 has-p-xs has-radius">0</span>
+		<span class="has-background-neutral-50 has-p-xs has-radius">50</span>
+		<span class="has-background-neutral-100 has-p-xs has-radius">100</span>
+		<span class="has-background-neutral-200 has-p-xs has-radius">200</span>
+		<span class="has-background-neutral-300 has-p-xs has-radius">300</span>
+		<span class="has-background-neutral-400 has-p-xs has-radius">400</span>
+		<span class="has-background-neutral-500 has-text-neutral-0 has-p-xs has-radius">500</span>
+		<span class="has-background-neutral-600 has-text-neutral-0 has-p-xs has-radius">600</span>
+		<span class="has-background-neutral-700 has-text-neutral-0 has-p-xs has-radius">700</span>
+		<span class="has-background-neutral-800 has-text-neutral-0 has-p-xs has-radius">800</span>
+		<span class="has-background-neutral-900 has-text-neutral-0 has-p-xs has-radius">900</span>
+		<span class="has-background-neutral-1000 has-text-neutral-0 has-p-xs has-radius">1000</span>
+	</div>
 
-    <h3 class="title has-size-5">Accent backgrounds</h3>
-    <div class="flow-row has-gap-xs">
-      <span class="has-bg-accent has-p-xs has-radius">Accent</span>
-    </div>
+	<h3 class="title has-size-5">Accent backgrounds</h3>
+	<div class="flow-row has-gap-xs">
+		<span class="has-background-accent has-p-xs has-radius">Accent</span>
+	</div>
 
-    <h3 class="title has-size-5">Semantic backgrounds</h3>
-    <div class="flow-row has-gap-xs">
-      <span class="has-bg-success has-p-xs has-radius">Success</span>
-      <span class="has-bg-warning has-p-xs has-radius">Warning</span>
-      <span class="has-bg-error has-p-xs has-radius">Error</span>
-      <span class="has-bg-info has-p-xs has-radius">Info</span>
-    </div>
-  </section>
+	<h3 class="title has-size-5">Semantic backgrounds</h3>
+	<div class="flow-row has-gap-xs">
+		<span class="has-background-success has-p-xs has-radius">Success</span>
+		<span class="has-background-warning has-p-xs has-radius">Warning</span>
+		<span class="has-background-error has-p-xs has-radius">Error</span>
+		<span class="has-background-info has-p-xs has-radius">Info</span>
+	</div>
+</section>
 
-  <!-- ==================== BORDER RADIUS ==================== -->
-  <section class="span-content flow text has-pb-xl" id="radius">
-    <h2 class="title has-size-3 has-mb-l">Border radius utilities</h2>
+<!-- ==================== BORDER RADIUS ==================== -->
+<section class="span-content flow text has-pb-xl" id="radius">
+	<h2 class="title has-size-3 has-mb-l">Border radius utilities</h2>
 
-    <div class="flow-row has-gap-m">
-      <div class="has-bg-neutral-200 has-p-s has-radius-0">has-radius-0</div>
-      <div class="has-bg-neutral-200 has-p-s has-radius-s">has-radius-s</div>
-      <div class="has-bg-neutral-200 has-p-s has-radius">has-radius</div>
-      <div class="has-bg-neutral-200 has-p-s has-radius-rounded">has-radius-rounded</div>
-    </div>
-  </section>
+	<div class="flow-row has-gap-m">
+		<div class="has-background-neutral-200 has-p-s has-radius-0">has-radius-0</div>
+		<div class="has-background-neutral-200 has-p-s has-radius-s">has-radius-s</div>
+		<div class="has-background-neutral-200 has-p-s has-radius">has-radius</div>
+		<div class="has-background-neutral-200 has-p-s has-radius-rounded">has-radius-rounded</div>
+	</div>
+</section>
 
-  <!-- ==================== SIZE UTILITIES ==================== -->
-  <section class="span-content flow text has-pb-xl" id="sizes">
-    <h2 class="title has-size-3 has-mb-l">Width & height utilities</h2>
+<!-- ==================== SIZE UTILITIES ==================== -->
+<section class="span-content flow text has-pb-xl" id="sizes">
+	<h2 class="title has-size-3 has-mb-l">Width & height utilities</h2>
 
-    <div class="has-bg-neutral-100 has-p-xs has-radius has-w-full">has-w-full (100% width)</div>
-    <div class="has-bg-neutral-100 has-p-xs has-radius" style="height: 200px;">
-      <div class="has-bg-neutral-300 has-p-2xs has-radius has-h-full">has-h-full inside 200px parent</div>
-    </div>
-  </section>
+	<div class="has-background-neutral-100 has-p-xs has-radius has-w-full">has-w-full (100% width)</div>
+	<div class="has-background-neutral-100 has-p-xs has-radius" style="height: 200px;">
+		<div class="has-background-neutral-300 has-p-2xs has-radius has-h-full">has-h-full inside 200px parent</div>
+	</div>
+</section>
 
-  <!-- ==================== VISIBILITY ==================== -->
-  <section class="span-content flow text has-pb-xl" id="visibility">
-    <h2 class="title has-size-3 has-mb-l">Visibility utilities</h2>
+<!-- ==================== VISIBILITY ==================== -->
+<section class="span-content flow text has-pb-xl" id="visibility">
+	<h2 class="title has-size-3 has-mb-l">Visibility utilities</h2>
 
-    <h3 class="title has-size-5">is-hidden / is-visible</h3>
-    <p class="is-hidden:m">This text is <strong>hidden on medium+</strong> screens (is-hidden:m)</p>
-    <p class="is-visible:m">This text is <strong>visible on medium+</strong> screens only (is-visible:m)</p>
-    <p class="is-visible:l">This text is <strong>visible on large+</strong> screens only (is-visible:l)</p>
+	<h3 class="title has-size-5">is-hidden / is-visible</h3>
+	<p class="is-hidden:m">This text is <strong>hidden on medium+</strong> screens (is-hidden:m)</p>
+	<p class="is-visible:m">This text is <strong>visible on medium+</strong> screens only (is-visible:m)</p>
+	<p class="is-visible:l">This text is <strong>visible on large+</strong> screens only (is-visible:l)</p>
 
-    <h3 class="title has-size-5">Screen reader only</h3>
-    <p>
-      The button below has a visually hidden label:
-      <button>
-        X
-        <span class="sr-only">Close dialog</span>
-      </button>
-    </p>
-  </section>
+	<h3 class="title has-size-5">Screen reader only</h3>
+	<p>
+		The button below has a visually hidden label:
+		<button>
+			X
+			<span class="sr-only">Close dialog</span>
+		</button>
+	</p>
+</section>
 
-  <!-- ==================== LOADING SKELETON ==================== -->
-  <section class="span-content flow text has-pb-xl" id="loading">
-    <h2 class="title has-size-3 has-mb-l">Loading skeleton</h2>
+<!-- ==================== LOADING SKELETON ==================== -->
+<section class="span-content flow text has-pb-xl" id="loading">
+	<h2 class="title has-size-3 has-mb-l">Loading skeleton</h2>
 
-    <div class="flow has-gap-s">
-      <div class="is-loading has-radius" style="height: 1.5em; width: 60%;">Loading title</div>
-      <div class="is-loading has-radius" style="height: 1em; width: 100%;">Loading text line</div>
-      <div class="is-loading has-radius" style="height: 1em; width: 80%;">Loading text line</div>
-      <div class="is-loading has-radius-rounded" style="height: 2.5em; width: 120px;">Loading button</div>
-    </div>
-  </section>
+	<div class="flow has-gap-s">
+		<div class="is-loading has-radius" style="height: 1.5em; width: 60%;">Loading title</div>
+		<div class="is-loading has-radius" style="height: 1em; width: 100%;">Loading text line</div>
+		<div class="is-loading has-radius" style="height: 1em; width: 80%;">Loading text line</div>
+		<div class="is-loading has-radius-rounded" style="height: 2.5em; width: 120px;">Loading button</div>
+	</div>
+</section>
 
-  <!-- ==================== SPACING ==================== -->
-  <section class="span-content flow text has-pb-xl" id="spacing">
-    <h2 class="title has-size-3 has-mb-l">Spacing utilities</h2>
+<!-- ==================== SPACING ==================== -->
+<section class="span-content flow text has-pb-xl" id="spacing">
+	<h2 class="title has-size-3 has-mb-l">Spacing utilities</h2>
 
-    <div class="flow has-gap-xs">
-      <div class="has-bg-neutral-100 has-p-2xs has-radius"><code>has-p-2xs</code></div>
-      <div class="has-bg-neutral-100 has-p-xs has-radius"><code>has-p-xs</code></div>
-      <div class="has-bg-neutral-100 has-p-s has-radius"><code>has-p-s</code></div>
-      <div class="has-bg-neutral-100 has-p-m has-radius"><code>has-p-m</code></div>
-      <div class="has-bg-neutral-100 has-p-l has-radius"><code>has-p-l</code></div>
-      <div class="has-bg-neutral-100 has-p-xl has-radius"><code>has-p-xl</code></div>
-    </div>
-  </section>
+	<div class="flow has-gap-xs">
+		<div class="has-background-neutral-100 has-p-2xs has-radius"><code>has-p-2xs</code></div>
+		<div class="has-background-neutral-100 has-p-xs has-radius"><code>has-p-xs</code></div>
+		<div class="has-background-neutral-100 has-p-s has-radius"><code>has-p-s</code></div>
+		<div class="has-background-neutral-100 has-p-m has-radius"><code>has-p-m</code></div>
+		<div class="has-background-neutral-100 has-p-l has-radius"><code>has-p-l</code></div>
+		<div class="has-background-neutral-100 has-p-xl has-radius"><code>has-p-xl</code></div>
+	</div>
+</section>
 
-  <!-- ==================== ALIGNMENT ==================== -->
-  <section class="span-content flow text has-pb-xl" id="alignment">
-    <h2 class="title has-size-3 has-mb-l">Alignment utilities</h2>
+<!-- ==================== ALIGNMENT ==================== -->
+<section class="span-content flow text has-pb-xl" id="alignment">
+	<h2 class="title has-size-3 has-mb-l">Alignment utilities</h2>
 
-    <div class="has-bg-neutral-100 has-p-xs has-radius has-text-left">has-text-left</div>
-    <div class="has-bg-neutral-100 has-p-xs has-radius has-text-center">has-text-center</div>
-    <div class="has-bg-neutral-100 has-p-xs has-radius has-text-right">has-text-right</div>
+	<div class="has-background-neutral-100 has-p-xs has-radius has-text-left">has-text-left</div>
+	<div class="has-background-neutral-100 has-p-xs has-radius has-text-center">has-text-center</div>
+	<div class="has-background-neutral-100 has-p-xs has-radius has-text-right">has-text-right</div>
 
-    <h3 class="title has-size-5">Flex direction</h3>
-    <div class="flow-row has-gap-xs has-flex-column has-flex-row:m"
-      style="border: 1px dashed var(--color-neutral-300); padding: var(--space-xs);">
-      <div class="has-bg-neutral-200 has-p-xs has-radius">Column on mobile</div>
-      <div class="has-bg-neutral-200 has-p-xs has-radius">Row on medium+</div>
-    </div>
-  </section>
+	<h3 class="title has-size-5">Flex direction</h3>
+	<div class="flow-row has-gap-xs has-flex-column has-flex-row:m"
+		style="border: 1px dashed var(--color-neutral-300); padding: var(--space-xs);">
+		<div class="has-background-neutral-200 has-p-xs has-radius">Column on mobile</div>
+		<div class="has-background-neutral-200 has-p-xs has-radius">Row on medium+</div>
+	</div>
+</section>
 
-  <!-- ==================== CONTAINER QUERIES ==================== -->
-  <section class="span-content flow text has-pb-xl" id="container-queries">
-    <h2 class="title has-size-3 has-mb-l">Container queries</h2>
+<!-- ==================== CONTAINER QUERIES ==================== -->
+<section class="span-content flow text has-pb-xl" id="container-queries">
+	<h2 class="title has-size-3 has-mb-l">Container queries</h2>
 
-    <p>The <code>.container</code> class sets <code>container-type: inline-size</code> for use with
-      <code>@container</code> queries in your CSS.
-    </p>
-    <style>
-      @container (min-width: 400px) {
-        .test-container-query {
-          background: var(--color-accent-light);
-        }
-      }
-    </style>
-    <div class="container has-bg-neutral-100 has-p-s has-radius has-w-full">
-      <p class="test-container-query">This is a container query context. Write <code>@container</code> rules in your CSS
-        to respond to this element's
-        width.</p>
-    </div>
-  </section>
+	<p>The <code>.container</code> class sets <code>container-type: inline-size</code> for use with
+		<code>@container</code> queries in your CSS.
+	</p>
+	<style>
+		@container (min-width: 400px) {
+			.test-container-query {
+				background: var(--color-accent-light);
+			}
+		}
+	</style>
+	<div class="container has-background-neutral-100 has-p-s has-radius has-w-full">
+		<p class="test-container-query">This is a container query context. Write <code>@container</code> rules in your CSS
+			to respond to this element's
+			width.</p>
+	</div>
+</section>
 
-  <!-- ==================== SELECTION ==================== -->
-  <section class="span-content flow text has-pb-xl" id="selection">
-    <h2 class="title has-size-3 has-mb-l">::selection styling</h2>
+<!-- ==================== SELECTION ==================== -->
+<section class="span-content flow text has-pb-xl" id="selection">
+	<h2 class="title has-size-3 has-mb-l">::selection styling</h2>
 
-    <p>Select this text to see the custom selection colors (accent text on base background). Selection colors are
-      customizable via <code>--selection-background</code> and <code>--selection-color</code>.</p>
-  </section>
+	<p>Select this text to see the custom selection colors (accent text on base background). Selection colors are
+		customizable via <code>--selection-background</code> and <code>--selection-color</code>.</p>
+</section>
 
-  <!-- ==================== SCROLL TARGET ==================== -->
-  <section class="span-content flow text has-pb-xl" id="scroll-target">
-    <h2 class="title has-size-3 has-mb-l">Anchor scroll margin</h2>
+<!-- ==================== SCROLL TARGET ==================== -->
+<section class="span-content flow text has-pb-xl" id="scroll-target">
+	<h2 class="title has-size-3 has-mb-l">Anchor scroll margin</h2>
 
-    <p>Click this link to jump to the <a href="#buttons">Buttons section</a>. The <code>:target</code> pseudo-class
-      applies <code>scroll-margin-top</code> so content isn't hidden behind sticky headers.</p>
-  </section>
+	<p>Click this link to jump to the <a href="#buttons">Buttons section</a>. The <code>:target</code> pseudo-class
+		applies <code>scroll-margin-top</code> so content isn't hidden behind sticky headers.</p>
+</section>
 
-  <!-- ==================== MAX WIDTH ==================== -->
-  <section class="span-content flow text has-pb-xl" id="max-width">
-    <h2 class="title has-size-3 has-mb-l">Max width utilities</h2>
+<!-- ==================== MAX WIDTH ==================== -->
+<section class="span-content flow text has-pb-xl" id="max-width">
+	<h2 class="title has-size-3 has-mb-l">Max width utilities</h2>
 
-    <div class="flow has-gap-xs">
-      <p class="has-max-width-1 has-bg-neutral-100 has-p-m has-radius">max-width-1 (15ch): Torquent
-        gravida luctus
-        tempus sodales ad viverra lacinia donec ipsum tellus faucibus ut sem nam, imperdiet suscipit habitant ex ante
-        aenean senectus dapibus fringilla quisque facilisi ligula auctor.</p>
-      <p class="has-max-width-2 has-bg-neutral-100 has-p-m has-radius">max-width-2 (15ch): Torquent
-        gravida luctus tempus sodales ad viverra lacinia donec ipsum tellus faucibus ut sem nam, imperdiet suscipit
-        habitant ex ante
-        aenean senectus dapibus fringilla quisque facilisi ligula auctor.</p>
-      <p class="has-max-width-3 has-bg-neutral-100 has-p-m has-radius">max-width-3 (20ch): Torquent gravida luctus
-        tempus sodales ad viverra lacinia donec ipsum tellus faucibus ut sem nam, imperdiet suscipit habitant ex ante
-        aenean senectus dapibus fringilla quisque facilisi ligula auctor.</p>
-      <p class="has-max-width-5 has-bg-neutral-100 has-p-m has-radius">max-width-5 (45ch): Torquent gravida luctus
-        tempus sodales ad viverra lacinia donec ipsum tellus faucibus ut sem nam, imperdiet suscipit habitant ex ante
-        aenean senectus dapibus fringilla quisque facilisi ligula auctor.</p>
-      <p class="has-max-width-6 has-bg-neutral-100 has-p-m has-radius">max-width-6 (65ch) — optimal reading width:
-        Torquent gravida luctus
-        tempus sodales ad viverra lacinia donec ipsum tellus faucibus ut sem nam, imperdiet suscipit habitant ex ante
-        aenean senectus dapibus fringilla quisque facilisi ligula auctor.</p>
-      <p class="has-max-width-8 has-bg-neutral-100 has-p-m has-radius">max-width-8 (75ch): Torquent gravida luctus
-        tempus sodales ad viverra lacinia donec ipsum tellus faucibus ut sem nam, imperdiet suscipit habitant ex ante
-        aenean senectus dapibus fringilla quisque facilisi ligula auctor.</p>
-    </div>
-  </section>
+	<div class="flow has-gap-xs">
+		<p class="has-max-width-1 has-background-neutral-100 has-p-m has-radius">max-width-1 (15ch): Torquent
+			gravida luctus
+			tempus sodales ad viverra lacinia donec ipsum tellus faucibus ut sem nam, imperdiet suscipit habitant ex ante
+			aenean senectus dapibus fringilla quisque facilisi ligula auctor.</p>
+		<p class="has-max-width-2 has-background-neutral-100 has-p-m has-radius">max-width-2 (15ch): Torquent
+			gravida luctus tempus sodales ad viverra lacinia donec ipsum tellus faucibus ut sem nam, imperdiet suscipit
+			habitant ex ante
+			aenean senectus dapibus fringilla quisque facilisi ligula auctor.</p>
+		<p class="has-max-width-3 has-background-neutral-100 has-p-m has-radius">max-width-3 (20ch): Torquent gravida luctus
+			tempus sodales ad viverra lacinia donec ipsum tellus faucibus ut sem nam, imperdiet suscipit habitant ex ante
+			aenean senectus dapibus fringilla quisque facilisi ligula auctor.</p>
+		<p class="has-max-width-5 has-background-neutral-100 has-p-m has-radius">max-width-5 (45ch): Torquent gravida luctus
+			tempus sodales ad viverra lacinia donec ipsum tellus faucibus ut sem nam, imperdiet suscipit habitant ex ante
+			aenean senectus dapibus fringilla quisque facilisi ligula auctor.</p>
+		<p class="has-max-width-6 has-background-neutral-100 has-p-m has-radius">max-width-6 (65ch) — optimal reading width:
+			Torquent gravida luctus
+			tempus sodales ad viverra lacinia donec ipsum tellus faucibus ut sem nam, imperdiet suscipit habitant ex ante
+			aenean senectus dapibus fringilla quisque facilisi ligula auctor.</p>
+		<p class="has-max-width-8 has-background-neutral-100 has-p-m has-radius">max-width-8 (75ch): Torquent gravida luctus
+			tempus sodales ad viverra lacinia donec ipsum tellus faucibus ut sem nam, imperdiet suscipit habitant ex ante
+			aenean senectus dapibus fringilla quisque facilisi ligula auctor.</p>
+	</div>
+</section>
 
-  <!-- ==================== PREFERS-REDUCED-MOTION ==================== -->
-  <section class="span-content flow text has-pb-xl">
-    <h2 class="title has-size-3 has-mb-l">Accessibility</h2>
+<!-- ==================== PREFERS-REDUCED-MOTION ==================== -->
+<section class="span-content flow text has-pb-xl">
+	<h2 class="title has-size-3 has-mb-l">Accessibility</h2>
 
-    <p>This page respects <code>prefers-reduced-motion: reduce</code>. When enabled, all animations and transitions are
-      effectively disabled, and <code>scroll-behavior</code> is set to <code>auto</code>.</p>
-  </section>
+	<p>This page respects <code>prefers-reduced-motion: reduce</code>. When enabled, all animations and transitions are
+		effectively disabled, and <code>scroll-behavior</code> is set to <code>auto</code>.</p>
+</section>
 
-  <!-- Footer -->
-  <footer class="span-content has-py-xl">
-    <p class="has-text-neutral-400 has-text-center">cleacss style testing page</p>
-  </footer>
-
-  <script type="module" src="/src/main.ts"></script>
-</body>
-
-</html>
+{{/layoutDefault }}

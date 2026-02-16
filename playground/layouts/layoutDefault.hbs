@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cleacss — a framework for css enthusiasts</title>
+</head>
+
+<body>
+  <main class="grid">
+    {{#if showHeader}}
+    {{> header}}
+    {{/if}}
+    {{> @partial-block }}
+    {{> footer }}
+  </main>
+  <script type="module" src="/@src/main.ts"></script>
+</body>
+
+</html>

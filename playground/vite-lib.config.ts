@@ -11,8 +11,7 @@ export default defineConfig({
     outDir: resolve(__dirname, '../dist/lib'),
     lib: {
       entry: {
-        'grid-visualizer': resolve(__dirname, 'src/grid-visualizer.ts'),
-        'playground': resolve(__dirname, 'src/playground.ts'),
+        'grid-visualizer': resolve(__dirname, 'src/grid-visualizer.ts')
       },
       name: "cleacss",
       formats: ["es"],

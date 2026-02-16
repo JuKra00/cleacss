@@ -3,7 +3,8 @@ import browserslist from "browserslist";
 import { browserslistToTargets } from "lightningcss";
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import cssClassChecker from './vite-css-class-checker';
+import handlebars from "vite-plugin-handlebars";
+
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -28,8 +29,38 @@ export default defineConfig({
     },
   },
   plugins: [
-    cssClassChecker({
-      ignoredClasses: ['dynamic-class', 'generated-class'],
+    handlebars({
+      helpers: {
+        ifEquals: function (arg1: string, arg2: string, options: any) {
+          if (arg1 === arg2) {
+            return options.fn(this);
+          } else {
+            return options.inverse(this);
+          }
+        },
+        ifNotEquals: function (arg1: string, arg2: string, options: any) {
+          if (arg1 !== arg2) {
+            return options.fn(this);
+          } else {
+            return options.inverse(this);
+          }
+        },
+      },
+      context: {
+        version: "v" + require("../package.json").version,
+      },
+      partialDirectory: [
+        resolve(__dirname, "./layouts/"),
+        resolve(__dirname, "./partials/"),
+      ],
     }),
-  ]
+  ],
+  resolve: {
+    alias: [
+      {
+        find: '/@src',
+        replacement: resolve(__dirname, 'src')
+      }
+    ]
+  }
 });

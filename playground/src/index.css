@@ -8,6 +8,11 @@
 @import "../../dist/cleacss.untranspiled.css";
 
 @layer demo {
+
+  .logo {
+    width: 130px;
+  }
+
   :root {
     --logo-color: var(--color-neutral-900);
   }
@@ -48,6 +53,18 @@
 
   .flow-block::after {
     content: attr(class);
+  }
+
+  .swatch {
+    width: 4rem;
+    height: 4rem;
+    border-radius: var(--border-radius);
+    flex-shrink: 0;
+  }
+
+  .swatch-label {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-8);
   }
 
 }
