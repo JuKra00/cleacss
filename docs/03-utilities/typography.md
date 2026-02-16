@@ -19,7 +19,7 @@ Apply any of the 8 font size levels:
 <p class="has-size-8">Tiny (captions)</p>
 ```
 
-Sizes are fluid and scale smoothly between viewports. See [Typography Variables](/docs/moinframe-cleacss/00-variables/typography.md) for exact values.
+Sizes are fluid and scale smoothly between viewports. See [Typography Variables](https://moinfra.me/docs/moinframe-cleacss/04-variables/typography.md) for exact values.
 
 ## Font weights
 
@@ -55,13 +55,14 @@ Limit line length for readability:
 </p>
 ```
 
-| Class             | Width |
-| ----------------- | ----- |
-| `has-max-width-1` | 15ch  |
-| `has-max-width-2` | 18ch  |
-| `has-max-width-3` | 20ch  |
-| `has-max-width-4` | 25ch  |
-| `has-max-width-5` | 45ch  |
-| `has-max-width-6` | 65ch  |
-| `has-max-width-7` | 70ch  |
-| `has-max-width-8` | 75ch  |
+| Class                | Width |
+| -------------------- | ----- |
+| `has-max-width-1`    | 15ch  |
+| `has-max-width-2`    | 18ch  |
+| `has-max-width-3`    | 20ch  |
+| `has-max-width-4`    | 25ch  |
+| `has-max-width-5`    | 45ch  |
+| `has-max-width-6`    | 65ch  |
+| `has-max-width-7`    | 70ch  |
+| `has-max-width-8`    | 75ch  |
+| `has-max-width-none` | none  |
