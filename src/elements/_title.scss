@@ -1,32 +1,37 @@
-%title {
-  display: block;
-  font-family: var(--font-family-title);
-  font-weight: var(--font-weight-title);
-  font-feature-settings: "liga", "kern", "calt";
-  hyphens: auto;
-  line-height: var(--line-height-title);
-  text-decoration-thickness: 0.1em;
-  text-underline-offset: 0.125em;
-  text-wrap: balance;
+@for $num from 1 through 6 {
+  @layer elements {
+    h#{$num} {
+      display: block;
+      font-family: var(--font-family-title);
+      font-weight: var(--font-weight-title);
+      font-feature-settings: "liga", "kern", "calt";
+      hyphens: auto;
+      line-height: var(--line-height-title);
+      text-decoration-thickness: 0.1em;
+      text-underline-offset: 0.125em;
+      text-wrap: balance;
+      font-size: var(--font-size-#{$num});
+      font-weight: var(--font-weight-title);
+      max-width: var(--max-width-size-#{$num});
 
-  u {
-    text-decoration-thickness: 0.1em;
+      u {
+        text-decoration-thickness: 0.1em;
+      }
+    }
   }
 }
 
 @layer elements {
-
-  @for $num from 1 through 6 {
-    h#{$num} {
-      @extend %title;
-      font-size: var(--font-size-#{$num});
-      font-weight: var(--font-weight-title);
-      max-width: var(--max-width-size-#{$num});
-    }
-  }
-
   .title {
-    @extend %title;
+    display: block;
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-title);
+    font-feature-settings: "liga", "kern", "calt";
+    hyphens: auto;
+    line-height: var(--line-height-title);
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.125em;
+    text-wrap: balance;
     font-weight: var(--font-weight-title);
   }
 }
