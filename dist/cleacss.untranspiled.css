@@ -2322,6 +2322,9 @@
   .has-max-width-8 {
     max-width: var(--max-width-size-8);
   }
+  .has-max-width-none {
+    max-width: none;
+  }
 }
 @layer has {
   .has-text-center {
@@ -2594,6 +2597,9 @@
   }
 }
 @layer has {
+  .has-flex {
+    display: flex;
+  }
   .has-flex-1 {
     flex: 1 1 100%;
   }
@@ -3799,67 +3805,67 @@
   .has-text-info {
     color: var(--color-info);
   }
-  .has-bg-neutral-0 {
+  .has-background-neutral-0 {
     background-color: var(--color-neutral-0);
   }
-  .has-bg-neutral-50 {
+  .has-background-neutral-50 {
     background-color: var(--color-neutral-50);
   }
-  .has-bg-neutral-100 {
+  .has-background-neutral-100 {
     background-color: var(--color-neutral-100);
   }
-  .has-bg-neutral-200 {
+  .has-background-neutral-200 {
     background-color: var(--color-neutral-200);
   }
-  .has-bg-neutral-300 {
+  .has-background-neutral-300 {
     background-color: var(--color-neutral-300);
   }
-  .has-bg-neutral-400 {
+  .has-background-neutral-400 {
     background-color: var(--color-neutral-400);
   }
-  .has-bg-neutral-500 {
+  .has-background-neutral-500 {
     background-color: var(--color-neutral-500);
   }
-  .has-bg-neutral-600 {
+  .has-background-neutral-600 {
     background-color: var(--color-neutral-600);
   }
-  .has-bg-neutral-700 {
+  .has-background-neutral-700 {
     background-color: var(--color-neutral-700);
   }
-  .has-bg-neutral-800 {
+  .has-background-neutral-800 {
     background-color: var(--color-neutral-800);
   }
-  .has-bg-neutral-900 {
+  .has-background-neutral-900 {
     background-color: var(--color-neutral-900);
   }
-  .has-bg-neutral-1000 {
+  .has-background-neutral-1000 {
     background-color: var(--color-neutral-1000);
   }
-  .has-bg-white {
+  .has-background-white {
     background-color: var(--color-white);
   }
-  .has-bg-black {
+  .has-background-black {
     background-color: var(--color-black);
   }
-  .has-bg-accent {
+  .has-background-accent {
     background-color: var(--color-accent);
   }
-  .has-bg-accent-light {
+  .has-background-accent-light {
     background-color: var(--color-accent-light);
   }
-  .has-bg-accent-dark {
+  .has-background-accent-dark {
     background-color: var(--color-accent-dark);
   }
-  .has-bg-success {
+  .has-background-success {
     background-color: var(--color-success);
   }
-  .has-bg-warning {
+  .has-background-warning {
     background-color: var(--color-warning);
   }
-  .has-bg-error {
+  .has-background-error {
     background-color: var(--color-error);
   }
-  .has-bg-info {
+  .has-background-info {
     background-color: var(--color-info);
   }
 }
@@ -3957,53 +3963,131 @@
     color: var(--button-background);
   }
 }
-.title, h6, h5, h4, h3, h2, h1 {
-  display: block;
-  font-family: var(--font-family-title);
-  font-weight: var(--font-weight-title);
-  font-feature-settings: "liga", "kern", "calt";
-  hyphens: auto;
-  line-height: var(--line-height-title);
-  text-decoration-thickness: 0.1em;
-  text-underline-offset: 0.125em;
-  text-wrap: balance;
-}
-.title u, h6 u, h5 u, h4 u, h3 u, h2 u, h1 u {
-  text-decoration-thickness: 0.1em;
-}
-
 @layer elements {
   h1 {
+    display: block;
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-title);
+    font-feature-settings: "liga", "kern", "calt";
+    hyphens: auto;
+    line-height: var(--line-height-title);
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.125em;
+    text-wrap: balance;
     font-size: var(--font-size-1);
     font-weight: var(--font-weight-title);
     max-width: var(--max-width-size-1);
   }
+  h1 u {
+    text-decoration-thickness: 0.1em;
+  }
+}
+@layer elements {
   h2 {
+    display: block;
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-title);
+    font-feature-settings: "liga", "kern", "calt";
+    hyphens: auto;
+    line-height: var(--line-height-title);
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.125em;
+    text-wrap: balance;
     font-size: var(--font-size-2);
     font-weight: var(--font-weight-title);
     max-width: var(--max-width-size-2);
   }
+  h2 u {
+    text-decoration-thickness: 0.1em;
+  }
+}
+@layer elements {
   h3 {
+    display: block;
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-title);
+    font-feature-settings: "liga", "kern", "calt";
+    hyphens: auto;
+    line-height: var(--line-height-title);
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.125em;
+    text-wrap: balance;
     font-size: var(--font-size-3);
     font-weight: var(--font-weight-title);
     max-width: var(--max-width-size-3);
   }
+  h3 u {
+    text-decoration-thickness: 0.1em;
+  }
+}
+@layer elements {
   h4 {
+    display: block;
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-title);
+    font-feature-settings: "liga", "kern", "calt";
+    hyphens: auto;
+    line-height: var(--line-height-title);
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.125em;
+    text-wrap: balance;
     font-size: var(--font-size-4);
     font-weight: var(--font-weight-title);
     max-width: var(--max-width-size-4);
   }
+  h4 u {
+    text-decoration-thickness: 0.1em;
+  }
+}
+@layer elements {
   h5 {
+    display: block;
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-title);
+    font-feature-settings: "liga", "kern", "calt";
+    hyphens: auto;
+    line-height: var(--line-height-title);
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.125em;
+    text-wrap: balance;
     font-size: var(--font-size-5);
     font-weight: var(--font-weight-title);
     max-width: var(--max-width-size-5);
   }
+  h5 u {
+    text-decoration-thickness: 0.1em;
+  }
+}
+@layer elements {
   h6 {
+    display: block;
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-title);
+    font-feature-settings: "liga", "kern", "calt";
+    hyphens: auto;
+    line-height: var(--line-height-title);
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.125em;
+    text-wrap: balance;
     font-size: var(--font-size-6);
     font-weight: var(--font-weight-title);
     max-width: var(--max-width-size-6);
   }
+  h6 u {
+    text-decoration-thickness: 0.1em;
+  }
+}
+@layer elements {
   .title {
+    display: block;
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-title);
+    font-feature-settings: "liga", "kern", "calt";
+    hyphens: auto;
+    line-height: var(--line-height-title);
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.125em;
+    text-wrap: balance;
     font-weight: var(--font-weight-title);
   }
 }
