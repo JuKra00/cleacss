@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.1.0-beta.2](https://github.com/moinframe/cleacss/compare/v3.1.0-beta.1...v3.1.0-beta.2) (2026-02-16)
+
+### Features
+
+* add has-flex helper ([160658d](https://github.com/moinframe/cleacss/commit/160658ddc18bb3180d610176bb020b2b24202357))
+* rename has-bg- to has-background- ([ca504fa](https://github.com/moinframe/cleacss/commit/ca504fa6602726247c31e8c5be35efa86337497f))
+
+### Bug Fixes
+
+* title ([5f6c8e7](https://github.com/moinframe/cleacss/commit/5f6c8e700c253bb73389fe9d525c1504bf42e51f))
+
 ## [3.1.0-beta.1](https://github.com/moinframe/cleacss/compare/v3.1.0-beta.0...v3.1.0-beta.1) (2026-02-16)
 
 ### Features
