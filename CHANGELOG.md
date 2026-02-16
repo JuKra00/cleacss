@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.1.0-beta.1](https://github.com/moinframe/cleacss/compare/v3.1.0-beta.0...v3.1.0-beta.1) (2026-02-16)
+
+### Features
+
+* add max-width-none class ([7829e0a](https://github.com/moinframe/cleacss/commit/7829e0aebf5da357f85836e7862b45c964857abe))
+
 ## [3.1.0-beta.0](https://github.com/moinframe/cleacss/compare/v3.0.0-beta.0...v3.1.0-beta.0) (2026-02-14)
 
 ### Bug Fixes
