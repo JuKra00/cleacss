@@ -1,4 +1,8 @@
 @layer has {
+  .has-flex {
+    display: flex;
+  }
+
   .has-flex-1 {
     flex: 1 1 100%;
   }
