@@ -95,6 +95,15 @@
     touch-action: manipulation;
   }
 
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+
   a {
     color: currentColor;
     text-decoration: none;
