@@ -364,6 +364,17 @@
   --outline-offset: 0.15em;
 }
 
+:root,
+:host {
+  --tooltip-background: var(--color-neutral-900);
+  --tooltip-color: var(--color-neutral-0);
+  --tooltip-border-radius: var(--border-radius-s);
+  --tooltip-padding-block: var(--space-2xs);
+  --tooltip-padding-inline: var(--space-xs);
+  --tooltip-font-size: var(--font-size-8);
+  --tooltip-border: none;
+}
+
 @layer layout {
   .subgrid,
   .grid .grid {
@@ -3870,11 +3881,7 @@
   }
 }
 @layer elements {
-  .button,
-  input[type=submit],
-  input[type=button],
-  input[type=reset],
-  button {
+  .button {
     align-items: center;
     appearance: none;
     background: var(--button-background);
@@ -3894,70 +3901,38 @@
     user-select: none;
     white-space: nowrap;
   }
-  .button:hover,
-  input[type=submit]:hover,
-  input[type=button]:hover,
-  input[type=reset]:hover,
-  button:hover {
+  .button:hover {
     background: var(--button-hover-background, color-mix(in oklch, var(--button-background), var(--color-neutral-1000) 18%));
     border-color: var(--button-hover-border-color, color-mix(in oklch, var(--button-border-color, var(--button-background)), var(--color-neutral-1000) 18%));
     color: var(--button-hover-color);
   }
-  .button:focus-visible,
-  input[type=submit]:focus-visible,
-  input[type=button]:focus-visible,
-  input[type=reset]:focus-visible,
-  button:focus-visible {
+  .button:focus-visible {
     outline: var(--outline-width) solid var(--outline-color);
     outline-offset: var(--outline-offset);
   }
   @layer is {
-    .button[disabled], .button.is-disabled,
-    input[type=submit][disabled],
-    input[type=submit].is-disabled,
-    input[type=button][disabled],
-    input[type=button].is-disabled,
-    input[type=reset][disabled],
-    input[type=reset].is-disabled,
-    button[disabled],
-    button.is-disabled {
+    .button[disabled], .button.is-disabled {
       cursor: default;
       opacity: 0.5;
       pointer-events: none;
     }
   }
-  .button.button--outline,
-  input[type=submit].button--outline,
-  input[type=button].button--outline,
-  input[type=reset].button--outline,
-  button.button--outline {
+  .button.button--outline {
     background: transparent;
     border-color: var(--button-background);
     color: var(--button-background);
   }
-  .button.button--outline:hover,
-  input[type=submit].button--outline:hover,
-  input[type=button].button--outline:hover,
-  input[type=reset].button--outline:hover,
-  button.button--outline:hover {
+  .button.button--outline:hover {
     background: var(--button-background);
     border-color: var(--button-background);
     color: var(--button-color);
   }
-  .button.button--ghost,
-  input[type=submit].button--ghost,
-  input[type=button].button--ghost,
-  input[type=reset].button--ghost,
-  button.button--ghost {
+  .button.button--ghost {
     background: transparent;
     border-color: transparent;
     color: var(--button-background);
   }
-  .button.button--ghost:hover,
-  input[type=submit].button--ghost:hover,
-  input[type=button].button--ghost:hover,
-  input[type=reset].button--ghost:hover,
-  button.button--ghost:hover {
+  .button.button--ghost:hover {
     background: color-mix(in oklch, var(--button-background), transparent 85%);
     border-color: transparent;
     color: var(--button-background);
@@ -4661,6 +4636,22 @@
   progress::-moz-progress-bar {
     background-color: var(--color-accent);
     border-radius: var(--border-radius-rounded);
+  }
+}
+@layer elements {
+  .tooltip {
+    inset: unset;
+    position: absolute;
+    top: calc(anchor(bottom) + var(--space-2xs));
+    justify-self: anchor-center;
+    margin: 0;
+    padding-block: var(--tooltip-padding-block);
+    padding-inline: var(--tooltip-padding-inline);
+    border-radius: var(--tooltip-border-radius);
+    background: var(--tooltip-background);
+    color: var(--tooltip-color);
+    border: var(--tooltip-border);
+    font-size: var(--tooltip-font-size);
   }
 }
 
