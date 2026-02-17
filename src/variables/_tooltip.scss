@@ -1,0 +1,10 @@
+:root,
+:host {
+  --tooltip-background: var(--color-neutral-900);
+  --tooltip-color: var(--color-neutral-0);
+  --tooltip-border-radius: var(--border-radius-s);
+  --tooltip-padding-block: var(--space-2xs);
+  --tooltip-padding-inline: var(--space-xs);
+  --tooltip-font-size: var(--font-size-8);
+  --tooltip-border: none;
+}

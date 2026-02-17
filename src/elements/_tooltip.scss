@@ -1,0 +1,16 @@
+@layer elements {
+  .tooltip {
+    inset: unset;
+    position: absolute;
+    top: calc(anchor(bottom) + var(--space-2xs));
+    justify-self: anchor-center;
+    margin: 0;
+    padding-block: var(--tooltip-padding-block);
+    padding-inline: var(--tooltip-padding-inline);
+    border-radius: var(--tooltip-border-radius);
+    background: var(--tooltip-background);
+    color: var(--tooltip-color);
+    border: var(--tooltip-border);
+    font-size: var(--tooltip-font-size);
+  }
+}

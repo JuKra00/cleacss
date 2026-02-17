@@ -92,8 +92,10 @@
     <div class="flow has-w-auto">
       <h4 class="has-size-7">Neutral scale</h4>
       <div class="flow-row has-flex-wrap has-gap-2xs has-background-neutral-0 has-p-s has-w-auto has-radius">
-        <div class="has-background-neutral-0 has-radius"
-          style="width: 3rem; height: 3rem; border: 1px solid var(--color-neutral-200)"></div>
+        <button class="has-background-neutral-0 has-radius" data-demo-tooltip
+          style="width: 3rem; height: 3rem; border: 1px solid var(--color-neutral-200)">
+          <span class="tooltip" popover="hint">Lorem</span>
+        </button>
         <div class="has-background-neutral-50 has-radius" style="width: 3rem; height: 3rem"></div>
         <div class="has-background-neutral-100 has-radius" style="width: 3rem; height: 3rem"></div>
         <div class="has-background-neutral-200 has-radius" style="width: 3rem; height: 3rem"></div>
@@ -248,10 +250,10 @@
       </div>
     </div>
     <div class="flow-row has-flex-wrap has-gap-s">
-      <button>Submit</button>
-      <button class="button--outline">Outline</button>
-      <button class="button--ghost">Ghost</button>
-      <button disabled>Disabled</button>
+      <button class="button">Submit</button>
+      <button class="button button--outline">Outline</button>
+      <button class="button button--ghost">Ghost</button>
+      <button class="button" disabled>Disabled</button>
     </div>
   </div>
 </div>
