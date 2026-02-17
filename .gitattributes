@@ -8,7 +8,9 @@
 pnpm-lock.yaml export-ignore
 .editorconfig export-ignore
 dist/playground export-ignore
+playground export-ignore
 node_modules export-ignore
 .stylelintrc.json export-ignore
 .paradocs.json export-ignore
-assets/logo-cleacss.svg export-ignore
+assets export-ignore
+CLAUDE.md export-ignore
