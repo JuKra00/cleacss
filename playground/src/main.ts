@@ -82,3 +82,28 @@ const generateColorPalette = () => {
 
 
 document.addEventListener('DOMContentLoaded', generateColorPalette);
+
+const tooltips = document.querySelectorAll("[popover='hint']") as NodeListOf<HTMLElement>;
+const buttons = document.querySelectorAll("[data-demo-tooltip]") as NodeListOf<HTMLButtonElement>;
+
+function addEventListeners(i: number) {
+  buttons[i].addEventListener("mouseover", () => {
+    tooltips[i].showPopover({ source: buttons[i] });
+  });
+
+  buttons[i].addEventListener("mouseout", () => {
+    tooltips[i].hidePopover();
+  });
+
+  buttons[i].addEventListener("focus", () => {
+    tooltips[i].showPopover({ source: buttons[i] });
+  });
+
+  buttons[i].addEventListener("blur", () => {
+    tooltips[i].hidePopover();
+  });
+}
+
+for (let i = 0; i < buttons.length; i++) {
+  addEventListeners(i);
+}
