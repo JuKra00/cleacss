@@ -1,10 +1,6 @@
 @layer elements {
 
-  .button,
-  input[type="submit"],
-  input[type="button"],
-  input[type="reset"],
-  button {
+  .button {
     align-items: center;
     appearance: none;
     background: var(--button-background);
