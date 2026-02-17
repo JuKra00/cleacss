@@ -88,7 +88,7 @@ const buttons = document.querySelectorAll("[data-demo-tooltip]") as NodeListOf<H
 
 function addEventListeners(i: number) {
   buttons[i].addEventListener("mouseover", () => {
-    tooltips[i].showPopover({ source: buttons[i] });
+    tooltips[i].showPopover();
   });
 
   buttons[i].addEventListener("mouseout", () => {
@@ -96,7 +96,7 @@ function addEventListeners(i: number) {
   });
 
   buttons[i].addEventListener("focus", () => {
-    tooltips[i].showPopover({ source: buttons[i] });
+    tooltips[i].showPopover();
   });
 
   buttons[i].addEventListener("blur", () => {
