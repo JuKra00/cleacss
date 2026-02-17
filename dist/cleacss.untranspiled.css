@@ -86,6 +86,14 @@
     font-size: inherit;
     touch-action: manipulation;
   }
+  button,
+  input[type=button],
+  input[type=reset],
+  input[type=submit] {
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
   a {
     color: currentColor;
     text-decoration: none;
@@ -172,8 +180,8 @@
   --color-neutral-h: 300;
   --color-neutral-c: 0.01;
   --color-neutral-0: light-dark(oklch(1 var(--color-neutral-c) var(--color-neutral-h)), oklch(0 var(--color-neutral-c) var(--color-neutral-h)));
-  --color-neutral-50: light-dark(oklch(0.95 var(--color-neutral-c) var(--color-neutral-h)), oklch(0.15 var(--color-neutral-c) var(--color-neutral-h)));
-  --color-neutral-100: light-dark(oklch(0.9 var(--color-neutral-c) var(--color-neutral-h)), oklch(0.1 var(--color-neutral-c) var(--color-neutral-h)));
+  --color-neutral-50: light-dark(oklch(0.95 var(--color-neutral-c) var(--color-neutral-h)), oklch(0.1 var(--color-neutral-c) var(--color-neutral-h)));
+  --color-neutral-100: light-dark(oklch(0.9 var(--color-neutral-c) var(--color-neutral-h)), oklch(0.15 var(--color-neutral-c) var(--color-neutral-h)));
   --color-neutral-200: light-dark(oklch(0.8 var(--color-neutral-c) var(--color-neutral-h)), oklch(0.2 var(--color-neutral-c) var(--color-neutral-h)));
   --color-neutral-300: light-dark(oklch(0.7 var(--color-neutral-c) var(--color-neutral-h)), oklch(0.3 var(--color-neutral-c) var(--color-neutral-h)));
   --color-neutral-400: light-dark(oklch(0.6 var(--color-neutral-c) var(--color-neutral-h)), oklch(0.4 var(--color-neutral-c) var(--color-neutral-h)));
