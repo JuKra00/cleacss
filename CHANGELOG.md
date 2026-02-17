@@ -1,5 +1,7 @@
 # Changelog
 
+## [3.1.0](https://github.com/moinframe/cleacss/compare/v3.1.0-beta.3...v3.1.0) (2026-02-17)
+
 ## [3.1.0-beta.3](https://github.com/moinframe/cleacss/compare/v3.1.0-beta.2...v3.1.0-beta.3) (2026-02-17)
 
 ### Features
