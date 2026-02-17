@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.1.0-beta.3](https://github.com/moinframe/cleacss/compare/v3.1.0-beta.2...v3.1.0-beta.3) (2026-02-17)
+
+### Features
+
+* add docs for tooltip element ([8770b54](https://github.com/moinframe/cleacss/commit/8770b5429fa6f854d8a3fb21cdde098173c27aea))
+* add tooltip element ([c237e0d](https://github.com/moinframe/cleacss/commit/c237e0d2c8d997cd708c5ca70702d193ebce23d6))
+
+### Bug Fixes
+
+* add base reset for buttons ([bb03371](https://github.com/moinframe/cleacss/commit/bb0337115f08648c0ffb228ab560ea9ea7905825))
+* neutral colors in dark mode ([23f3fa5](https://github.com/moinframe/cleacss/commit/23f3fa5534ad3b8326084f2aa40ea67f4df80955))
+* only allow explicit .button styles ([b7a4479](https://github.com/moinframe/cleacss/commit/b7a447934837819d74a0dd23031de48dff91f3b1))
+
 ## [3.1.0-beta.2](https://github.com/moinframe/cleacss/compare/v3.1.0-beta.1...v3.1.0-beta.2) (2026-02-16)
 
 ### Features
