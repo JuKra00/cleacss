@@ -92,31 +92,63 @@
     <div class="flow has-w-auto">
       <h4 class="has-size-7">Neutral scale</h4>
       <div class="flow-row has-flex-wrap has-gap-2xs has-background-neutral-0 has-p-s has-w-auto has-radius">
-        <button class="has-background-neutral-0 has-radius" data-demo-tooltip
+        <button data-demo-tooltip class="has-background-neutral-0 has-radius"
           style="width: 3rem; height: 3rem; border: 1px solid var(--color-neutral-200)">
-          <span class="tooltip" popover="hint">Lorem</span>
+          <span class="tooltip" popover="hint">--color-neutral-0</span>
         </button>
-        <div class="has-background-neutral-50 has-radius" style="width: 3rem; height: 3rem"></div>
-        <div class="has-background-neutral-100 has-radius" style="width: 3rem; height: 3rem"></div>
-        <div class="has-background-neutral-200 has-radius" style="width: 3rem; height: 3rem"></div>
-        <div class="has-background-neutral-300 has-radius" style="width: 3rem; height: 3rem"></div>
-        <div class="has-background-neutral-400 has-radius" style="width: 3rem; height: 3rem"></div>
-        <div class="has-background-neutral-500 has-radius" style="width: 3rem; height: 3rem"></div>
-        <div class="has-background-neutral-600 has-radius" style="width: 3rem; height: 3rem"></div>
-        <div class="has-background-neutral-700 has-radius" style="width: 3rem; height: 3rem"></div>
-        <div class="has-background-neutral-800 has-radius" style="width: 3rem; height: 3rem"></div>
-        <div class="has-background-neutral-900 has-radius" style="width: 3rem; height: 3rem"></div>
-        <div class="has-background-neutral-1000 has-radius" style="width: 3rem; height: 3rem"></div>
+        <button data-demo-tooltip class="has-background-neutral-50 has-radius" style="width: 3rem; height: 3rem">
+          <span class="tooltip" popover="hint">--color-neutral-50</span>
+        </button>
+        <button data-demo-tooltip class="has-background-neutral-100 has-radius" style="width: 3rem; height: 3rem">
+          <span class="tooltip" popover="hint">--color-neutral-100</span>
+        </button>
+        <button data-demo-tooltip class="has-background-neutral-200 has-radius" style="width: 3rem; height: 3rem">
+          <span class="tooltip" popover="hint">--color-neutral-200</span>
+        </button>
+        <button data-demo-tooltip class="has-background-neutral-300 has-radius" style="width: 3rem; height: 3rem">
+          <span class="tooltip" popover="hint">--color-neutral-300</span>
+        </button>
+        <button data-demo-tooltip class="has-background-neutral-400 has-radius" style="width: 3rem; height: 3rem">
+          <span class="tooltip" popover="hint">--color-neutral-400</span>
+        </button>
+        <button data-demo-tooltip class="has-background-neutral-500 has-radius" style="width: 3rem; height: 3rem">
+          <span class="tooltip" popover="hint">--color-neutral-500</span>
+        </button>
+        <button data-demo-tooltip class="has-background-neutral-600 has-radius" style="width: 3rem; height: 3rem">
+          <span class="tooltip" popover="hint">--color-neutral-600</span>
+        </button>
+        <button data-demo-tooltip class="has-background-neutral-700 has-radius" style="width: 3rem; height: 3rem">
+          <span class="tooltip" popover="hint">--color-neutral-700</span>
+        </button>
+        <button data-demo-tooltip class="has-background-neutral-800 has-radius" style="width: 3rem; height: 3rem">
+          <span class="tooltip" popover="hint">--color-neutral-800</span>
+        </button>
+        <button data-demo-tooltip class="has-background-neutral-900 has-radius" style="width: 3rem; height: 3rem">
+          <span class="tooltip" popover="hint">--color-neutral-900</span>
+        </button>
+        <button data-demo-tooltip class="has-background-neutral-1000 has-radius" style="width: 3rem; height: 3rem">
+          <span class="tooltip" popover="hint">--color-neutral-1000</span>
+        </button>
       </div>
     </div>
     <div class="flow has-w-auto">
       <h4 class="has-size-7">Semantic colors</h4>
       <div class="flow-row has-flex-wrap has-gap-2xs has-background-neutral-0 has-p-s has-w-auto has-radius">
-        <div class="has-background-accent has-radius" style="width: 3rem; height: 3rem"></div>
-        <div class="has-background-success has-radius" style="width: 3rem; height: 3rem"></div>
-        <div class="has-background-warning has-radius" style="width: 3rem; height: 3rem"></div>
-        <div class="has-background-error has-radius" style="width: 3rem; height: 3rem"></div>
-        <div class="has-background-info has-radius" style="width: 3rem; height: 3rem"></div>
+        <button data-demo-tooltip class="has-background-accent has-radius" style="width: 3rem; height: 3rem">
+          <span class="tooltip" popover="hint">--color-accent</span>
+        </button>
+        <button data-demo-tooltip class="has-background-success has-radius" style="width: 3rem; height: 3rem">
+          <span class="tooltip" popover="hint">--color-success</span>
+        </button>
+        <button data-demo-tooltip class="has-background-warning has-radius" style="width: 3rem; height: 3rem">
+          <span class="tooltip" popover="hint">--color-warning</span>
+        </button>
+        <button data-demo-tooltip class="has-background-error has-radius" style="width: 3rem; height: 3rem">
+          <span class="tooltip" popover="hint">--color-error</span>
+        </button>
+        <button data-demo-tooltip class="has-background-info has-radius" style="width: 3rem; height: 3rem">
+          <span class="tooltip" popover="hint">--color-info</span>
+        </button>
       </div>
     </div>
   </div>
@@ -276,7 +308,7 @@
     </details>
   </div>
   <div class="flow-row has-gap-s has-justify-center">
-    <button onclick="document.getElementById('demo-dialog').showModal()">I have another question</button>
+    <button onclick="document.getElementById('demo-dialog').showModal()" class="button">I have another question</button>
     <dialog id="demo-dialog">
       <div class="flow">
         <p class="has-size-5">Create an issue</p>
@@ -284,7 +316,7 @@
             rel="nofollow">Github</a>.</p>
       </div>
       <form method="dialog" class="has-mt-s has-text-right">
-        <button>OK</button>
+        <button class="button">OK</button>
       </form>
     </dialog>
   </div>
