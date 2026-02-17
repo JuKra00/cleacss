@@ -9,6 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 export default defineConfig({
   build: {
     outDir: resolve(__dirname, '../dist/lib'),
+    copyPublicDir: false,
     lib: {
       entry: {
         'grid-visualizer': resolve(__dirname, 'src/grid-visualizer.ts')
